@@ -1,14 +1,21 @@
-import "./Mobile_Navbar.css";
+import "./MobileNavbar.css";
 import { useContext, useState, useEffect } from "react";
 import { AppContext } from "../../../Context/Appcontext";
-import Mobile_Menu from "../Mobile_Menu/Mobile_Menu";
-import Mobile_Cart from "../Mobile_Cart/Mobile_Cart";
 import { useLocation, Link } from "react-router-dom";
+import MobileMenu from "./Components/MobileMenu/MobileMenu";
+import MobileCart from "./Components/MobileCart/MobileCart";
 
-const Mobile_Navbar = () => {
+const MobileNavbar = () => {
   const location = useLocation();
-  const { OpenMenu, setOpenMenu, OpenCart, setOpenCart } =
-    useContext(AppContext);
+  const {
+    OpenMenu,
+    setOpenMenu,
+    OpenCart,
+    setOpenCart,
+    setOpenMenu1,
+    setOpenMenu2,
+    setOpenMenu3,
+  } = useContext(AppContext);
   const [Color, SetColor] = useState(false);
 
   const changeColor = () => {
@@ -30,21 +37,29 @@ const Mobile_Navbar = () => {
       document.body.className = undefined;
     }
   }, [OpenMenu]);
+
+  useEffect(() => {
+    if (!OpenMenu) {
+      setOpenMenu1(false);
+      setOpenMenu2(false);
+      setOpenMenu3(false);
+    }
+  }, [OpenMenu, setOpenMenu1, setOpenMenu2, setOpenMenu3]);
   return (
-    <div>
-      {OpenMenu && <Mobile_Menu />}
-      {OpenCart && <Mobile_Cart />}
+    <div className="MobileNavbar">
+      {OpenMenu && <MobileMenu />}
+      {OpenCart && <MobileCart />}
       <div
         className={
           location.pathname === "/"
             ? Color
-              ? "NM1-background NM1-background-scroll"
-              : "NM1-background"
-            : "NM1-background NM1-background-scroll"
+              ? "MobileNavbar-background MobileNavbar-background-scroll"
+              : "MobileNavbar-background"
+            : "MobileNavbar-background MobileNavbar-background-scroll"
         }
       >
-        <div className="NM1-content">
-          <div className="NM1-C-B1" onClick={() => setOpenMenu(true)}>
+        <div className="MobileNavbar-content">
+          <div className="MobileNavbar-C-B1" onClick={() => setOpenMenu(true)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -53,9 +68,9 @@ const Mobile_Navbar = () => {
               className={
                 location.pathname === "/"
                   ? Color
-                    ? "NM1-svg-1 NM1-svg-1-scroll"
-                    : "NM1-svg-1"
-                  : "NM1-svg-1 NM1-svg-1-scroll"
+                    ? "MobileNavbar-svg-1 MobileNavbar-svg-1-scroll"
+                    : "MobileNavbar-svg-1"
+                  : "MobileNavbar-svg-1 MobileNavbar-svg-1-scroll"
               }
               viewBox="0 0 16 16"
             >
@@ -65,20 +80,20 @@ const Mobile_Navbar = () => {
               />
             </svg>
           </div>
-          <Link to={"/"} className="NM1-C-B2">
+          <Link to={"/"} className="MobileNavbar-C-B2">
             <p
               className={
                 location.pathname === "/"
                   ? Color
-                    ? "NM1-txt-1 NM1-txt-1-scroll"
-                    : "NM1-txt-1"
-                  : "NM1-txt-1 NM1-txt-1-scroll"
+                    ? "MobileNavbar-txt-1 MobileNavbar-txt-1-scroll"
+                    : "MobileNavbar-txt-1"
+                  : "MobileNavbar-txt-1 MobileNavbar-txt-1-scroll"
               }
             >
               LA CAMISETA NO SE MANCHA
             </p>
           </Link>
-          <div className="NM1-C-B3" onClick={() => setOpenCart(true)}>
+          <div className="MobileNavbar-C-B3" onClick={() => setOpenCart(true)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -86,9 +101,9 @@ const Mobile_Navbar = () => {
               className={
                 location.pathname === "/"
                   ? Color
-                    ? "NM1-svg-1 NM1-svg-1-scroll"
-                    : "NM1-svg-1"
-                  : "NM1-svg-1 NM1-svg-1-scroll"
+                    ? "MobileNavbar-svg-1 MobileNavbar-svg-1-scroll"
+                    : "MobileNavbar-svg-1"
+                  : "MobileNavbar-svg-1 MobileNavbar-svg-1-scroll"
               }
               viewBox="0 0 16 16"
             >
@@ -101,4 +116,4 @@ const Mobile_Navbar = () => {
   );
 };
 
-export default Mobile_Navbar;
+export default MobileNavbar;

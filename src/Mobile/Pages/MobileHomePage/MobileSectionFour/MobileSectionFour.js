@@ -17,7 +17,7 @@ const MobileSectionFour = () => {
     );
   }, []);
 
-  const S4dbProducts = data
+  const MobileSectionFour_DB_Products = data
     .sort(() => Math.random() - 0.5)
     .filter((item) => item.destacado === true)
     .slice(0, 4)
@@ -26,22 +26,22 @@ const MobileSectionFour = () => {
         to={`/producto/${Item.id}`}
         className={
           Loaded
-            ? "S4dbProducts-background"
-            : "S4dbProducts-background-notdisplayed"
+            ? "MobileSectionFour_DB_Products-background"
+            : "MobileSectionFour_DB_Products-background-notdisplayed"
         }
         key={index}
       >
-        <div className="S4dbProducts-B1">
+        <div className="MobileSectionFour_DB_Products-B1">
           <img
             src={Item.imagen1}
-            className="S4dbProducts-img"
+            className="MobileSectionFour_DB_Products-img"
             alt=""
             onLoad={() => setLoaded(true)}
           />
         </div>
-        <div className="S4dbProducts-B2">
-          <p className="S4dbProducts-txt-1">{Item.nombre}</p>
-          <p className="S4dbProducts-txt-2">
+        <div className="MobileSectionFour_DB_Products-B2">
+          <p className="MobileSectionFour_DB_Products-txt-1">{Item.nombre}</p>
+          <p className="MobileSectionFour_DB_Products-txt-2">
             {new Intl.NumberFormat("es-AR", {
               style: "currency",
               currency: "ARS",
@@ -51,52 +51,52 @@ const MobileSectionFour = () => {
       </Link>
     ));
 
-  const S4dbProductsLoader = (
+  const MobileSectionFour_DB_Products_Loader = (
     <>
       <div
         className={
           Loaded
-            ? "S4dbProductsLoader-background-notdisplayed"
-            : "S4dbProductsLoader-background"
+            ? "MobileSectionFour-Loader-background-notdisplayed"
+            : "MobileSectionFour-Loader-background"
         }
       ></div>
       <div
         className={
           Loaded
-            ? "S4dbProductsLoader-background-notdisplayed"
-            : "S4dbProductsLoader-background"
+            ? "MobileSectionFour-Loader-background-notdisplayed"
+            : "MobileSectionFour-Loader-background"
         }
       ></div>
       <div
         className={
           Loaded
-            ? "S4dbProductsLoader-background-notdisplayed"
-            : "S4dbProductsLoader-background"
+            ? "MobileSectionFour-Loader-background-notdisplayed"
+            : "MobileSectionFour-Loader-background"
         }
       ></div>
       <div
         className={
           Loaded
-            ? "S4dbProductsLoader-background-notdisplayed"
-            : "S4dbProductsLoader-background"
+            ? "MobileSectionFour-Loader-background-notdisplayed"
+            : "MobileSectionFour-Loader-background"
         }
       ></div>
     </>
   );
 
   return (
-    <div className="S4-background">
-      <div className="S4-content">
-        <div className="S4-C-B1"></div>
-        <div className="S4-C-B2">
-          <p className="S4-txt-1">PRODUCTOS DESTACADOS</p>
+    <div className="MobileSectionFour-background">
+      <div className="MobileSectionFour-content">
+        <div className="MobileSectionFour-C-B1"></div>
+        <div className="MobileSectionFour-C-B2">
+          <p className="MobileSectionFour-txt-1">PRODUCTOS DESTACADOS</p>
         </div>
-        <div className="S4-C-B3">
-          {S4dbProducts}
-          {S4dbProductsLoader}
+        <div className="MobileSectionFour-C-B3">
+          {MobileSectionFour_DB_Products}
+          {MobileSectionFour_DB_Products_Loader}
         </div>
-        <div className="S4-C-B4">
-          <a href={`/destacados`} className="S4-btn">
+        <div className="MobileSectionFour-C-B4">
+          <a href={`/destacados`} className="MobileSectionFour-btn">
             VER TODOS
           </a>
         </div>

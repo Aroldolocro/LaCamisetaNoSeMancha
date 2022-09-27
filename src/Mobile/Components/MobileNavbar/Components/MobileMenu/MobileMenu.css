@@ -1,0 +1,110 @@
+/*Disable on desktop*/
+
+.MobileMenu-background {
+  display: none;
+}
+
+@media (max-width: 1199.98px) {
+  .MobileMenu-background {
+    background-color: whitesmoke;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: 0.2s ease MobileMenu-animation;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+  }
+
+  @keyframes MobileMenu-animation {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  .MobileMenu-content {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 8vh auto;
+  }
+
+  .MobileMenu-C-B1 {
+    border-bottom: 0.1vh solid rgb(128, 128, 128, 0.3);
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0vh 3vh 0vh 3vh;
+  }
+
+  .MobileMenu-C-B1B1 {
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .MobileMenu-svg-1 {
+    height: 3vh;
+    width: auto;
+    fill: rgb(94, 94, 94);
+  }
+
+  .MobileMenu-C-B2 {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: min-content 8vh 8vh 8vh;
+    align-content: flex-start;
+  }
+
+  .MobileMenu-C-B2-notdisplayed {
+    display: none;
+  }
+
+  .MobileMenu-C-B2B1 {
+    border-bottom: 0.1vh solid rgb(128, 128, 128, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .MobileMenu-C-B2B2 {
+    border-bottom: 0.1vh solid rgb(128, 128, 128, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0vh 3vh 0vh 3vh;
+  }
+
+  .MobileMenu-C-B2B3 {
+    border-bottom: 0.1vh solid rgb(128, 128, 128, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0vh 3vh 0vh 3vh;
+  }
+
+  .MobileMenu-C-B2B4 {
+    border-bottom: 0.1vh solid rgb(128, 128, 128, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0vh 3vh 0vh 3vh;
+  }
+
+  .MobileMenu-txt-1 {
+    margin: 0;
+    font-size: 3.5vw;
+    font-weight: 500;
+    color: rgb(94, 94, 94);
+  }
+}

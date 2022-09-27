@@ -1,12 +1,12 @@
+import "./SwiperJsSlider.css";
+import "swiper/css";
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
 import { getFirestore, getDoc, doc } from "firebase/firestore";
 import { Link } from "react-router-dom";
-import "swiper/css";
-import "./SwiperJsSlider.css";
 
-const SectionThreeSlider = () => {
+const SwiperJsSlider = () => {
   const [data, setData] = useState({});
   const [data2, setData2] = useState({});
   const [data3, setData3] = useState({});
@@ -35,19 +35,18 @@ const SectionThreeSlider = () => {
   return (
     <>
       <Swiper
-        className="mySwiper-HP"
+        className="SwiperJsSlider-background"
         spaceBetween={10}
         loop={true}
         autoplay={{ delay: 3000 }}
         modules={[Autoplay]}
       >
         <SwiperSlide>
-          <Link
-            to={`/equipos/${data.EquipoNombre2}`}
+          <div
             className={
               Loaded
-                ? "mySwiper-background"
-                : "mySwiper-background-notdisplayed"
+                ? "SwiperSlide-background"
+                : "SwiperSlide-background-notdisplayed"
             }
           >
             <img
@@ -56,14 +55,22 @@ const SectionThreeSlider = () => {
               alt=""
               onLoad={() => setLoaded(true)}
             />
-            <div className="mySwiper-B1">{data.EquipoNombre}</div>
-          </Link>
+            <Link
+              to={`/equipos/${data.EquipoNombre2}`}
+              className="SwiperSlide-btn"
+            >
+              {data.EquipoNombre}
+            </Link>
+          </div>
           {SectionThreeSliderImageLoader}
         </SwiperSlide>
         <SwiperSlide>
-          <Link
-            to={`/equipos/${data2.EquipoNombre2}`}
-            className="mySwiper-background"
+          <div
+            className={
+              Loaded
+                ? "SwiperSlide-background"
+                : "SwiperSlide-background-notdisplayed"
+            }
           >
             <img
               src={data2.HP_section3_image}
@@ -71,14 +78,22 @@ const SectionThreeSlider = () => {
               alt=""
               onLoad={() => setLoaded(true)}
             />
-            <div className="mySwiper-B1">{data2.EquipoNombre}</div>
-          </Link>
+            <Link
+              to={`/equipos/${data2.EquipoNombre2}`}
+              className="SwiperSlide-btn"
+            >
+              {data2.EquipoNombre}
+            </Link>
+          </div>
           {SectionThreeSliderImageLoader}
         </SwiperSlide>
         <SwiperSlide>
-          <Link
-            to={`/equipos/${data3.EquipoNombre2}`}
-            className="mySwiper-background"
+          <div
+            className={
+              Loaded
+                ? "SwiperSlide-background"
+                : "SwiperSlide-background-notdisplayed"
+            }
           >
             <img
               src={data3.HP_section3_image}
@@ -86,8 +101,13 @@ const SectionThreeSlider = () => {
               alt=""
               onLoad={() => setLoaded(true)}
             />
-            <div className="mySwiper-B1">{data3.EquipoNombre}</div>
-          </Link>
+            <Link
+              to={`/equipos/${data3.EquipoNombre2}`}
+              className="SwiperSlide-btn"
+            >
+              {data3.EquipoNombre}
+            </Link>
+          </div>
           {SectionThreeSliderImageLoader}
         </SwiperSlide>
       </Swiper>
@@ -95,4 +115,4 @@ const SectionThreeSlider = () => {
   );
 };
 
-export default SectionThreeSlider;
+export default SwiperJsSlider;

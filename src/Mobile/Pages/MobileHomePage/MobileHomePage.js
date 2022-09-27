@@ -1,8 +1,8 @@
 import "./MobileHomePage.css";
 import MobileSectionOne from "./MobileSectionOne/MobileSectionOne";
 import MobileSecitonTwo from "./MobileSectionTwo/MobileSectionTwo";
-// import MobileSectionThree from "./MobileSectionThree/MobileSectionThree";
-// import MobileSectiFour from "./MobileSectionFour/MobileSectionFour";
+import MobileSectionThree from "./MobileSectionThree/MobileSectionThree";
+import MobileSectiFour from "./MobileSectionFour/MobileSectionFour";
 
 const MobileHomePage = () => {
   window.scrollTo(0, 0);
@@ -10,8 +10,8 @@ const MobileHomePage = () => {
     <div className="MobileHomePage-background">
       <MobileSectionOne />
       <MobileSecitonTwo />
-      {/* <MobileSectionThree />
-      <MobileSectiFour /> */}
+      <MobileSectionThree />
+      <MobileSectiFour />
     </div>
   );
 };

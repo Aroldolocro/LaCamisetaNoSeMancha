@@ -1,8 +1,8 @@
-import "./Mobile_Menu_Search.css";
+import "./MobileMenuSearch.css";
 import { useState, useEffect } from "react";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
 
-const Mobile_Menu_Search = () => {
+const MobileMenuSearch = () => {
   const [data, setData] = useState([]);
   const [filtrado, setFiltrado] = useState([]);
 
@@ -29,43 +29,45 @@ const Mobile_Menu_Search = () => {
     }
   };
 
-  const resultado = filtrado.slice(0, 4).map((valor, index) => {
-    return (
-      <a
-        href={`/producto/${valor.id}`}
-        className="resultado-background"
-        key={index}
-      >
-        <div className="resultado-B1">
-          <img src={valor.imagen1} className="resultado-img" alt="" />
-        </div>
-        <div className="resultado-B2">
-          <p className="resultado-txt-1">{valor.nombre}</p>
-          <p className="resultado-txt-2">
-            {new Intl.NumberFormat("es-AR", {
-              style: "currency",
-              currency: "ARS",
-            }).format(valor.precio)}
-          </p>
-        </div>
-      </a>
-    );
-  });
+  const MobileMenuSearch_DB_Products = filtrado
+    .slice(0, 4)
+    .map((valor, index) => {
+      return (
+        <a
+          href={`/producto/${valor.id}`}
+          className="MobileMenuSearch_DB_Products-background"
+          key={index}
+        >
+          <div className="MobileMenuSearch_DB_Products-B1">
+            <img src={valor.imagen1} className="MobileMenuSearch_DB_Products-img" alt="" />
+          </div>
+          <div className="MobileMenuSearch_DB_Products-B2">
+            <p className="MobileMenuSearch_DB_Products-txt-1">{valor.nombre}</p>
+            <p className="MobileMenuSearch_DB_Products-txt-2">
+              {new Intl.NumberFormat("es-AR", {
+                style: "currency",
+                currency: "ARS",
+              }).format(valor.precio)}
+            </p>
+          </div>
+        </a>
+      );
+    });
 
   return (
-    <div className="NavbarMobileSearch-bacground">
-      <div className="NavbarMobileSearch-content">
-        <div className="NavbarMobileSearch-C-B1">
+    <div className="MobileMenuSearch-bacground">
+      <div className="MobileMenuSearch-content">
+        <div className="MobileMenuSearch-C-B1">
           <input
-            className="NavbarMobileSearch-input"
+            className="MobileMenuSearch-input"
             placeholder="Buscar..."
             onChange={handefiltrado}
           />
         </div>
-        <div className="NavbarMobileSearch-C-B2">
+        <div className="MobileMenuSearch-C-B2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="NavbarMobileSearch-svg-1"
+            className="MobileMenuSearch-svg-1"
             width="16"
             height="16"
             viewBox="0 0 16 16"
@@ -77,14 +79,14 @@ const Mobile_Menu_Search = () => {
       <div
         className={
           filtrado.length === 0
-            ? "NavbarMobileSearch-content-2-notdisplayed"
-            : "NavbarMobileSearch-content-2"
+            ? "MobileMenuSearch-content-2-notdisplayed"
+            : "MobileMenuSearch-content-2"
         }
       >
-        {resultado}
+        {MobileMenuSearch_DB_Products}
       </div>
     </div>
   );
 };
 
-export default Mobile_Menu_Search;
+export default MobileMenuSearch;

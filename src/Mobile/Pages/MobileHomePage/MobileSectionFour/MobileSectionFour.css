@@ -1,51 +1,57 @@
+/*Disable on desktop*/
+
+.MobileSectionFour-background {
+  display: none;
+}
+
 @media (max-width: 1199.98px) {
-  .S4-background {
+  .MobileSectionFour-background {
     background-color: whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .S4-content {
+  .MobileSectionFour-content {
     height: 100%;
     width: 90%;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 6% 6% 70% 18%;
+    grid-template-rows: 6% 6% 73% 15%;
   }
 
-  .S4-C-B1 {
+  .MobileSectionFour-C-B1 {
     border: none;
   }
 
-  .S4-C-B2 {
+  .MobileSectionFour-C-B2 {
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .S4-txt-1 {
+  .MobileSectionFour-txt-1 {
     margin: 0;
     font-size: 5.5vw;
     font-weight: 700;
     color: rgb(94, 94, 94);
   }
 
-  .S4-C-B3 {
+  .MobileSectionFour-C-B3 {
     display: grid;
     grid-template-columns: repeat(2, 40%);
-    grid-template-rows: repeat(2, 41%);
+    grid-template-rows: repeat(2, 49%);
     justify-content: space-around;
     align-content: space-around;
   }
 
-  .S4-C-B4 {
+  .MobileSectionFour-C-B4 {
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .S4-btn {
+  .MobileSectionFour-btn {
     border: 0.1vh solid rgb(141, 141, 141);
     color: rgb(141, 141, 141);
     font-size: 3vw;
@@ -55,25 +61,26 @@
     transition: 0.2s;
   }
 
-  .S4-btn:hover {
+  .MobileSectionFour-btn:hover {
     background-color: rgb(250, 250, 250);
   }
 
-  /*S4dbProducts*/
+  /*MobileSectionFour_DB_Products*/
 
-  .S4dbProducts-background {
+  .MobileSectionFour_DB_Products-background {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 70% min-content;
-    align-content: space-around;
+    grid-template-rows: 70% 24%;
+    align-content: space-between;
     text-decoration: none;
   }
 
-  .S4dbProducts-background:hover {
-    animation: S4dbProducts-animation-2 0.6s ease-in-out infinite alternate;
+  .MobileSectionFour_DB_Products-background:hover {
+    animation: MobileSectionFour_DB_Products-animation 0.6s ease-in-out infinite
+      alternate;
   }
 
-  @keyframes S4dbProducts-animation-2 {
+  @keyframes MobileSectionFour_DB_Products-animation {
     0% {
       transform: translateY(0);
     }
@@ -82,30 +89,30 @@
     }
   }
 
-  .S4dbProducts-background-notdisplayed {
+  .MobileSectionFour_DB_Products-background-notdisplayed {
     display: none;
   }
 
-  .S4dbProducts-B1 {
+  .MobileSectionFour_DB_Products-B1 {
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .S4dbProducts-img {
+  .MobileSectionFour_DB_Products-img {
     height: 100%;
     width: 100%;
     object-fit: contain;
   }
 
-  .S4dbProducts-B2 {
+  .MobileSectionFour_DB_Products-B2 {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto auto;
-    align-items: center;
+    align-content: space-between;
   }
 
-  .S4dbProducts-txt-1 {
+  .MobileSectionFour_DB_Products-txt-1 {
     margin: 0;
     text-align: center;
     font-size: 2.8vw;
@@ -113,7 +120,7 @@
     color: rgb(128, 128, 128);
   }
 
-  .S4dbProducts-txt-2 {
+  .MobileSectionFour_DB_Products-txt-2 {
     margin: 0;
     text-align: center;
     font-size: 2.8vw;
@@ -123,11 +130,11 @@
 
   /*S4dbProductsLoader*/
 
-  .S4dbProductsLoader-background {
+  .MobileSectionFour-Loader-background {
     animation: skeleton-loading 1s linear infinite alternate;
   }
 
-  .S4dbProductsLoader-background-notdisplayed {
+  .MobileSectionFour-Loader-background-notdisplayed {
     display: none;
   }
 

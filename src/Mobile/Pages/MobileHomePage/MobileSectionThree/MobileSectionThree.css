@@ -1,12 +1,18 @@
+/*Disable on desktop*/
+
+.MobileSectionThree-background {
+  display: none;
+}
+
 @media (max-width: 1199.98px) {
-  .S3-background {
+  .MobileSectionThree-background {
     background-color: whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .S3-content {
+  .MobileSectionThree-content {
     width: 90%;
     height: 100%;
     display: grid;
@@ -14,23 +20,13 @@
     grid-template-columns: 100%;
   }
 
-  .S3-C-B1 {
-    background-color: none;
+  .MobileSectionThree-C-B1 {
+    border: none;
   }
 
-  .S3-C-B2 {
+  .MobileSectionThree-C-B2 {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-
-  /*S3dbProducts*/
-  .S3dbProducts-background {
-    display: none;
-  }
-  /*S3dbProductsLoader*/
-  .S3dbProductsLoader-background {
-    animation: skeleton-loading 1s linear infinite alternate;
-    display: none;
   }
 }

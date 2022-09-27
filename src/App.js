@@ -18,12 +18,14 @@ import PreguntasFrecuentes from "./Desktop/Components/Footer/Components/Pregunta
 /*Mobile Pages & Components*/
 
 import MobileHomePage from "./Mobile/Pages/MobileHomePage/MobileHomePage";
+import MobileNavbar from "./Mobile/Components/MobileNavbar/MobileNavbar";
 
 export default function App() {
   return (
     <ConstAppContext>
       <BrowserRouter>
         <Navbar />
+        <MobileNavbar />
         <Routes>
           <Route
             path="/"

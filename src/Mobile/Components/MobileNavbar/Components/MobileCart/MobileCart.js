@@ -1,8 +1,8 @@
-import "./Mobile_Cart.css";
-import { AppContext } from "../../../../Appcontext";
+import "./MobileCart.css";
+import { AppContext } from "../../../../../Context/Appcontext";
 import { useContext } from "react";
 
-const Mobile_Cart = () => {
+const MobileCart = () => {
   const { setOpenCart } = useContext(AppContext);
   return (
     <div className="NavbarMobileCart-background">
@@ -31,4 +31,4 @@ const Mobile_Cart = () => {
   );
 };
 
-export default Mobile_Cart;
+export default MobileCart;

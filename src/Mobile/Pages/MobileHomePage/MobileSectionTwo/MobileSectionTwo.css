@@ -58,7 +58,7 @@
   .MobileSectionTwo_DB_Products-background {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 70% min-content;
+    grid-template-rows: 70% 24%;
     align-content: space-between;
     animation: 0.7s ease-in MobileSectionTwo_DB_Products-background-animation;
     text-decoration: none;
@@ -93,7 +93,7 @@
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto auto;
-    align-items: center;
+    align-content: space-between;
   }
 
   .MobileSectionTwo_DB_Products-txt-1 {
