@@ -1,0 +1,205 @@
+.TB-background {
+  height: 100%;
+  width: 100%;
+}
+
+/*RenderOfPendingOrder*/
+
+.ROFO-background {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ROFO-content {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 30% 30% 10% 10%;
+  align-content: space-between;
+}
+
+.ROFO-C-B1 {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 70% 20% 10%;
+}
+
+.ROFO-C-B1B1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ROFO-C-B1B2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ROFO-svg {
+  height: 50%;
+  width: fit-content;
+  fill: rgb(94, 94, 94);
+  border-radius: 50%;
+  padding: 1vh;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.ROFO-C-B1B3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ROFO-C-B2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ROFO-txt-1 {
+  margin: 0;
+  font-size: 0.8vw;
+  font-weight: 400;
+  color: rgb(94, 94, 94);
+}
+
+.ROFO-txt-2 {
+  margin: 0;
+  font-size: 0.8vw;
+  color: rgb(102, 102, 102);
+}
+
+.ROFO-C-B3 {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 20% 70%;
+  align-content: space-between;
+}
+
+.ROFO-C-B3B1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.ROFO-txt-3 {
+  margin: 0;
+  font-size: 0.8vw;
+  font-weight: 400;
+  color: rgb(94, 94, 94);
+}
+
+.ROFO-C-B3B2 {
+  padding: 0 0 2vh 0;
+  display: grid;
+  grid-template-rows: 100%;
+  grid-auto-columns: max-content;
+  grid-auto-flow: column;
+  grid-column-gap: 8vh;
+  overflow-y: hidden;
+}
+
+.ROFO-C-B3B2::-webkit-scrollbar {
+  height: 1.5vh;
+}
+
+.ROFO-C-B4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ROFO-txt-4 {
+  margin: 0;
+  font-size: 0.8vw;
+  font-weight: 400;
+  color: rgb(64, 64, 64);
+  text-align: center;
+  padding: 2vh;
+  border: 0.1vh solid rgb(128, 128, 128, 0.3);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.ROFO-txt-4:hover {
+  opacity: 0.8;
+}
+
+.ROFO-C-B5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ROFO-btn {
+  background-color: rgb(64, 64, 64);
+  border-radius: 0.5vh;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  border: none;
+  text-decoration: none;
+  color: whitesmoke;
+  margin: 0;
+  font-size: 0.7vw;
+  font-weight: 500;
+  padding: 2vh;
+}
+
+.ROFO-btn:hover {
+  background-color: rgb(94, 94, 94);
+  color: white;
+}
+
+/*RenderOfProductsOrdered*/
+
+.ROPO-background {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 60% 30%;
+  align-content: space-between;
+  text-decoration: none;
+}
+
+.ROPO-B1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ROPO-img {
+  height: 100%;
+  width: fit-content;
+}
+
+.ROPO-B2 {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.ROPO-txt-1 {
+  margin: 0;
+  font-size: 0.6vw;
+  font-weight: 500;
+  color: rgb(94, 94, 94);
+  text-align: center;
+}
+
+.ROPO-txt-2 {
+  margin: 0;
+  font-size: 0.6vw;
+  font-weight: 400;
+  color: rgb(94, 94, 94);
+  text-align: center;
+}

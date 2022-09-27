@@ -1,0 +1,143 @@
+.PreguntasFrecuentes-background {
+  background-color: whitesmoke;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.PreguntasFrecuentes-content {
+  height: 100%;
+  width: 60%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 6% 94%;
+}
+
+.PreguntasFrecuentes-C-B1 {
+  border: none;
+}
+
+.PreguntasFrecuentes-C-B2 {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 20% 20% 60%;
+}
+
+.PreguntasFrecuentes-C-B2B1 {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 30% 50%;
+  align-content: space-around;
+  border-bottom: 0.1vh solid rgb(128, 128, 128, 0.5);
+}
+
+.PreguntasFrecuentes-C-B2B1B1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.PreguntasFrecuentes-txt-1 {
+  margin: 0;
+  font-size: 1.5vw;
+  font-weight: 600;
+  color: rgb(94, 94, 94);
+}
+
+.PreguntasFrecuentes-C-B2B1B2 {
+  display: grid;
+  grid-template-columns: min-content min-content;
+  grid-template-rows: 100%;
+  align-items: center;
+  grid-column-gap: 1vh;
+}
+
+.PreguntasFrecuentes-txt-2 {
+  margin: 0;
+  width: max-content;
+  font-size: 2.5vw;
+  font-weight: 800;
+  color: black;
+}
+
+.PreguntasFrecuentes-txt-3 {
+  margin: 0;
+  width: max-content;
+  font-size: 1.2vw;
+  font-weight: 400;
+  color: rgb(128, 128, 128);
+}
+
+.PreguntasFrecuentes-C-B2B2 {
+  border-bottom: 0.1vh solid rgb(128, 128, 128, 0.5);
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 40% 20%;
+  align-content: space-around;
+}
+
+.PreguntasFrecuentes-C-B2B2B1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.PreguntasFrecuentes-txt-4 {
+  margin: 0;
+  font-size: 1.2vw;
+  font-weight: 400;
+  color: black;
+}
+
+.PreguntasFrecuentes-C-B2B2B2 {
+  width: fit-content;
+  display: grid;
+  grid-template-columns: min-content min-content min-content;
+  grid-template-rows: 100%;
+  grid-column-gap: 3vh;
+}
+
+.PreguntasFrecuentes-C-B2B2B2B1 {
+  text-decoration: none;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: min-content min-content;
+  grid-template-rows: 100%;
+  align-items: center;
+  grid-column-gap: 1vh;
+}
+
+.PreguntasFrecuentes-C-B2B2B2B1B1 {
+  height: 100%;
+  width: 3vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.PreguntasFrecuentes-svg-1 {
+  height: 50%;
+  width: fit-content;
+  fill: black;
+}
+
+.PreguntasFrecuentes-txt-5 {
+  margin: 0;
+  width: max-content;
+  font-size: 0.7vw;
+  font-weight: 400;
+  color: black;
+}
+
+.PreguntasFrecuentes-txt-5:hover {
+  text-decoration: underline;
+}
+
+.PreguntasFrecuentes-C-B2B3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+}

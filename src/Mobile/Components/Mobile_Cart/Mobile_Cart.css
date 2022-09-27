@@ -1,0 +1,61 @@
+.NavbarMobileCart-background {
+  background-color: whitesmoke;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  animation: 0.2s ease NavbarMobileCart-animation;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+@keyframes NavbarMobileCart-animation {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.NavbarMobileCart-content {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 8vh auto;
+}
+
+.NavbarMobileCart-C-B1 {
+  border-bottom: 0.1vh solid rgb(128, 128, 128, 0.3);
+  display: grid;
+  grid-template-columns: auto 10%;
+  grid-template-rows: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0vh 3vh 0vh 3vh;
+}
+
+.NavbarMobileCart-txt-1 {
+  margin: 0;
+  font-size: 3.5vw;
+  font-weight: 500;
+  color: rgb(94, 94, 94);
+}
+
+.NavbarMobileCart-C-B1B1 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.NavbarMobileCart-svg-1 {
+  height: 50%;
+  width: 50%;
+  fill: rgb(94, 94, 94);
+}

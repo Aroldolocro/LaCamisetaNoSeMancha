@@ -1,0 +1,35 @@
+@keyframes dropdown4animation {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.DD4-background {
+  grid-row: 2/3;
+}
+
+.DD4-txt-1 {
+  margin: 0;
+  font-size: 0.7vw;
+  font-weight: 400;
+  color: black;
+  line-height: 1vw;
+  letter-spacing: 0.03vw;
+}
+
+.DD4-background-loader {
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+/*Loaders*/
+
+.DD4dbDescripcionLoader-background {
+  height: 10vh;
+  width: 100%;
+  animation: skeleton-loading 1s linear infinite alternate;
+}

@@ -1,0 +1,642 @@
+.SP-background {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: whitesmoke;
+}
+
+.SP-content {
+  height: 100%;
+  width: 60%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 6% 94%;
+}
+
+.SP-C-B1 {
+  background-color: none;
+}
+
+.SP-C-B2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.SP-C-B2B1 {
+  border-radius: 0.5vh;
+  border: 0.1vh solid rgb(128, 128, 128, 0.5);
+  height: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.SP-C-B2B1B1 {
+  height: 50%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 80%;
+  grid-template-rows: repeat(3, 30%);
+  align-content: space-between;
+  justify-content: center;
+}
+
+.SP-C-B2B1B1B1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.SP-C-B2B1B1B2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.SP-C-B2B1B1B3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.SP-btn {
+  padding: 2vh;
+  background-color: black;
+  border-radius: 0.5vh;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 0.7vw;
+  font-weight: 500;
+}
+
+.SP-btn:hover {
+  background-color: rgb(40, 40, 40);
+  color: white;
+}
+
+/*INPUT*/
+
+.SP-INPUT-B1 {
+  position: relative;
+  height: 80%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.SP-INPUT-inp {
+  height: 70%;
+  width: 100%;
+  font-size: 0.8vw;
+  font-weight: 500;
+  color: black;
+  background-color: transparent;
+  border-radius: 0.5vh;
+  border: 0.1vh solid rgb(128, 128, 128, 0.5);
+  padding-left: 1vh;
+  padding-top: 1vh;
+}
+
+.SP-INPUT-label {
+  left: 0;
+  position: absolute;
+  transition: 0.2s ease-in-out;
+  transform-origin: 1vh 0;
+  padding-left: 1vh;
+  font-size: 0.8vw;
+  font-weight: 400;
+  color: rgb(64, 64, 64);
+  pointer-events: none;
+}
+
+.SP-INPUT-inp:focus + .SP-INPUT-label,
+.SP-INPUT-inp:not(:placeholder-shown) + .SP-INPUT-label {
+  transform: translateY(-1vh) scale(0.8);
+}
+
+/*Render of loader*/
+
+.SP-Loader {
+  border: 0.3vh solid transparent;
+  border-radius: 50%;
+  border-top: 0.3vh solid rgb(128, 128, 128, 1);
+  width: 2vh;
+  height: 2vh;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 1.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*RenderOfNotFoundOrder*/
+
+.RenderOfNotFoundOrder-background {
+  background-color: none;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.RenderOfNotFoundOrder-content {
+  height: 80%;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 50% 30% 20%;
+}
+
+.RenderOfNotFoundOrder-C-B1 {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 70% 30%;
+}
+
+.RenderOfNotFoundOrder-C-B1B1 {
+  background-color: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.RenderOfNotFoundOrder-svg {
+  height: 60%;
+  width: fit-content;
+  border-radius: 50%;
+  padding: 1vh;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.RenderOfNotFoundOrder-C-B1B2 {
+  background-color: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.RenderOfNotFoundOrder-txt-1 {
+  margin: 0;
+  font-size: 0.9vw;
+  font-weight: 400;
+  color: rgb(40, 40, 40);
+}
+
+.RenderOfNotFoundOrder-C-B2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.RenderOfNotFoundOrder-C-B2B1 {
+  height: 60%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto;
+  align-content: space-around;
+}
+
+.RenderOfNotFoundOrder-txt-2 {
+  margin: 0;
+  font-size: 0.8vw;
+  font-weight: 400;
+  color: rgb(40, 40, 40);
+  text-align: center;
+}
+
+.RenderOfNotFoundOrder-C-B3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.RenderOfNotFoundOrder-btn {
+  padding: 2vh;
+  background-color: black;
+  border-radius: 0.5vh;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 0.7vw;
+  font-weight: 500;
+}
+
+.RenderOfNotFoundOrder-btn:hover {
+  background-color: rgb(40, 40, 40);
+  color: white;
+}
+
+/*RenderOfPendigOrApprovedOrder*/
+
+.RenderOfPendigOrApprovedOrder-background {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.RenderOfPendigOrApprovedOrder-content {
+  height: 90%;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 10% 20% 20% 25% 15%;
+  align-content: space-around;
+}
+
+.RenderOfPendigOrApprovedOrder-C-B1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.RenderOfPendigOrApprovedOrder-txt-1 {
+  margin: 0;
+  font-size: 0.9vw;
+  font-weight: 400;
+  color: rgb(40, 40, 40);
+}
+
+.RenderOfPendigOrApprovedOrder-C-B2 {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto auto;
+}
+
+.RenderOfPendigOrApprovedOrder-txt-2 {
+  margin: 0;
+  font-size: 0.8vw;
+  font-weight: 400;
+  color: rgb(40, 40, 40);
+}
+
+.RenderOfPendigOrApprovedOrder-C-B3 {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 100%;
+  grid-auto-columns: max-content;
+  grid-auto-flow: column;
+  grid-column-gap: 5vh;
+  overflow-y: hidden;
+  align-items: center;
+}
+
+.RenderOfPendigOrApprovedOrder-C-B3::-webkit-scrollbar {
+  height: 1vh;
+}
+
+.RenderOfPendigOrApprovedOrder-C-B4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.RenderOfPendigOrApprovedOrder-C-B5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*SP-RenderOfProductsOrdered-background*/
+
+.SP-RenderOfProductsOrdered-background {
+  height: 80%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 30% auto auto;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5vh;
+  border: 0.1vh solid rgb(128, 128, 128, 0.5);
+  padding: 0.5vh;
+}
+
+.SP-RenderOfProductsOrdered-B1 {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 100%;
+  grid-column-gap: 1vh;
+  align-items: center;
+  text-decoration: none;
+}
+
+.SP-RenderOfProductsOrdered-txt-1 {
+  margin: 0;
+  font-size: 0.7vw;
+  font-weight: 500;
+  color: rgb(40, 40, 40);
+}
+
+.SP-RenderOfProductsOrdered-svg {
+  height: 70%;
+  width: fit-content;
+  fill: black;
+}
+
+.SP-RenderOfProductsOrdered-B2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.SP-RenderOfProductsOrdered-txt-2 {
+  margin: 0;
+  font-size: 0.7vw;
+  font-weight: 400;
+  color: rgb(40, 40, 40);
+}
+
+.SP-RenderOfProductsOrdered-B3 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/*RenderOfRoadMap*/
+
+.RenderOfRoadMap-background {
+  height: 90%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.RenderOfRoadMap-B1 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 100%;
+}
+
+.RenderOfRoadMap-B1B1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.RenderOfRoadMap-txt-1 {
+  margin: 0;
+  font-size: 0.7vw;
+  font-weight: 400;
+  color: rgb(80, 80, 80);
+}
+
+.RenderOfRoadMap-txt-1-black {
+  margin: 0;
+  font-size: 0.7vw;
+  font-weight: 400;
+  color: black;
+}
+
+.RenderOfRoadMap-B1B2 {
+  border: none;
+}
+
+.RenderOfRoadMap-B1B3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.RenderOfRoadMap-B1B4 {
+  border: none;
+}
+
+.RenderOfRoadMap-B2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 100%;
+}
+
+.RenderOfRoadMap-B2B1 {
+  display: grid;
+  grid-template-columns: 50%;
+  grid-template-rows: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.RenderOfRoadMap-Line-1 {
+  background-color: rgb(188, 188, 188);
+  height: 10%;
+  width: 100%;
+}
+
+.RenderOfRoadMap-Line-1-black {
+  background-color: rgb(40, 40, 40);
+  height: 10%;
+  width: 100%;
+}
+
+.RenderOfRoadMap-Circle-1 {
+  background-color: rgb(188, 188, 188);
+  height: 1.4vh;
+  width: 1.4vh;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+}
+
+.RenderOfRoadMap-Circle-1-black {
+  background-color: rgb(40, 40, 40);
+  height: 1.4vh;
+  width: 1.4vh;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+}
+
+.RenderOfRoadMap-B2B2 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+  align-items: center;
+  position: relative;
+}
+
+.RenderOfRoadMap-Line-2 {
+  background-color: rgb(188, 188, 188);
+  height: 10%;
+  width: 100%;
+}
+
+.RenderOfRoadMap-Line-2-black {
+  background-color: rgb(40, 40, 40);
+  height: 10%;
+  width: 100%;
+}
+
+.RenderOfRoadMap-Line-3 {
+  background-color: rgb(188, 188, 188);
+  height: 10%;
+  width: 100%;
+}
+
+.RenderOfRoadMap-Line-3-black {
+  background-color: rgb(40, 40, 40);
+  height: 10%;
+  width: 100%;
+}
+
+.RenderOfRoadMap-Circle-2 {
+  background-color: rgb(188, 188, 188);
+  height: 1.4vh;
+  width: 1.4vh;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+}
+
+.RenderOfRoadMap-Circle-2-black {
+  background-color: rgb(40, 40, 40);
+  height: 1.4vh;
+  width: 1.4vh;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+}
+
+.RenderOfRoadMap-B2B3 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+  align-items: center;
+  position: relative;
+}
+
+.RenderOfRoadMap-Line-4 {
+  background-color: rgb(188, 188, 188);
+  height: 10%;
+  width: 100%;
+}
+
+.RenderOfRoadMap-Line-4-black {
+  background-color: rgb(40, 40, 40);
+  height: 10%;
+  width: 100%;
+}
+
+.RenderOfRoadMap-Line-5 {
+  background-color: rgb(188, 188, 188);
+  height: 10%;
+  width: 100%;
+}
+
+.RenderOfRoadMap-Line-5-black {
+  background-color: rgb(40, 40, 40);
+  height: 10%;
+  width: 100%;
+}
+
+.RenderOfRoadMap-Circle-3 {
+  background-color: rgb(188, 188, 188);
+  height: 1.4vh;
+  width: 1.4vh;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+}
+
+.RenderOfRoadMap-Circle-3-black {
+  background-color: rgb(40, 40, 40);
+  height: 1.4vh;
+  width: 1.4vh;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+}
+
+.RenderOfRoadMap-B2B4 {
+  display: grid;
+  grid-template-columns: 50%;
+  grid-template-rows: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.RenderOfRoadMap-Line-6 {
+  background-color: rgb(188, 188, 188);
+  height: 10%;
+  width: 100%;
+}
+
+.RenderOfRoadMap-Line-6-black {
+  background-color: rgb(40, 40, 40);
+  height: 10%;
+  width: 100%;
+}
+
+.RenderOfRoadMap-Circle-4 {
+  background-color: rgb(188, 188, 188);
+  height: 1.4vh;
+  width: 1.4vh;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+}
+
+.RenderOfRoadMap-Circle-4-black {
+  background-color: rgb(40, 40, 40);
+  height: 1.4vh;
+  width: 1.4vh;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+}
+
+.RenderOfRoadMap-B3 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 100%;
+}
+
+.RenderOfRoadMap-B3B1 {
+  border: none;
+}
+
+.RenderOfRoadMap-B3B2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.RenderOfRoadMap-B3B3 {
+  border: none;
+}
+
+.RenderOfRoadMap-B3B4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

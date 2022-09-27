@@ -1,0 +1,43 @@
+.Notification1-background {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(230, 230, 230);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: not-allowed;
+}
+
+.loader {
+  border: 0.3vh solid transparent;
+  border-radius: 50%;
+  border-top: 0.3vh solid rgb(128, 128, 128, 1);
+  width: 2vh;
+  height: 2vh;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 1.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.Notification1-svg {
+  height: 40%;
+  width: fit-content;
+  fill: rgb(128, 128, 128, 1);
+}

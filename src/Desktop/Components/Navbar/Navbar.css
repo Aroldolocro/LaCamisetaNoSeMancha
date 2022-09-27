@@ -1,0 +1,295 @@
+.N-background {
+  height: 6%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: none;
+  transition: 0.2s;
+  z-index: 1;
+}
+
+.N-background-scroll {
+  background-color: rgb(245, 245, 245, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.N-background-scroll:hover {
+  background-color: rgb(245, 245, 245, 1);
+  backdrop-filter: blur(10px);
+}
+
+.N-background-notdisplayed {
+  display: none;
+}
+
+.N-content {
+  height: 100%;
+  width: 96%;
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+}
+
+.N-C-B1 {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.N-txt-1 {
+  margin: 0;
+  font-size: 1.4vw;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+}
+
+.N-txt-1-scroll {
+  color: rgb(94, 94, 94);
+}
+
+.N-C-B2 {
+  width: fit-content;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-template-rows: 100% 100%;
+}
+
+.N-C-B2B1 {
+  cursor: pointer;
+  padding: 0vh 2vh 0vh 2vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.N-Underline-closed {
+  display: block;
+  height: 0.2vh;
+  width: 0;
+  position: absolute;
+  background-color: white;
+  transition: 0.2s;
+}
+
+.N-Underline-opened {
+  display: block;
+  height: 0.2vh;
+  width: 100%;
+  position: absolute;
+  background-color: white;
+  transition: 0.2s;
+}
+
+.Underline-closed-scroll {
+  display: block;
+  height: 0.2vh;
+  width: 0;
+  position: absolute;
+  background-color: rgb(94, 94, 94);
+  transition: 0.2s;
+}
+
+.Underline-opened-scroll {
+  display: block;
+  height: 0.2vh;
+  width: 100%;
+  position: absolute;
+  background-color: rgb(94, 94, 94);
+  transition: 0.2s;
+}
+
+.N-txt-2 {
+  margin: 0;
+  font-size: 0.65vw;
+  font-weight: 400;
+  color: white;
+  position: relative;
+}
+
+.N-txt-2-scroll {
+  color: rgb(94, 94, 94);
+}
+
+.N-C-B2B2 {
+  cursor: pointer;
+  padding: 0vh 2vh 0vh 2vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.N-C-B2B3 {
+  cursor: pointer;
+  padding: 0vh 2vh 0vh 2vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.N-C-B2B4 {
+  cursor: pointer;
+  padding: 0vh 2vh 0vh 2vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.N-C-B2B4-backgroundAnimation-closed {
+  background-color: rgb(255, 255, 255, 0);
+  transition: 0.2s;
+  border-radius: 50%;
+  height: 2vh;
+  width: 2vh;
+  position: absolute;
+  z-index: 0;
+}
+
+.N-C-B2B4-backgroundAnimation-opened {
+  background-color: rgb(255, 255, 255, 0.1);
+  transition: 0.2s;
+  border-radius: 50%;
+  height: 5vh;
+  width: 5vh;
+  position: absolute;
+  z-index: 0;
+}
+
+.N-C-B2B4-backgroundAnimation-closed-scroll {
+  background-color: rgb(22, 22, 22, 0);
+  transition: 0.2s;
+  border-radius: 50%;
+  height: 2vh;
+  width: 2vh;
+  position: absolute;
+  z-index: 0;
+}
+
+.N-C-B2B4-backgroundAnimation-opened-scroll {
+  background-color: rgb(22, 22, 22, 0.1);
+  transition: 0.2s;
+  border-radius: 50%;
+  height: 5vh;
+  width: 5vh;
+  position: absolute;
+  z-index: 0;
+}
+
+.N-svg {
+  height: 35%;
+  width: fit-content;
+  fill: white;
+  z-index: 1;
+}
+
+.N-svg-scroll {
+  fill: rgb(94, 94, 94);
+}
+
+.N-C-B2B5 {
+  cursor: pointer;
+  padding: 0vh 0vh 0vh 2vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.N-C-B2B5-backgroundAnimation-closed {
+  background-color: rgb(255, 255, 255, 0);
+  transition: 0.2s;
+  border-radius: 50%;
+  height: 2vh;
+  width: 2vh;
+  position: absolute;
+  z-index: 0;
+}
+
+.N-C-B2B5-backgroundAnimation-opened {
+  background-color: rgb(255, 255, 255, 0.1);
+  transition: 0.2s;
+  border-radius: 50%;
+  height: 5vh;
+  width: 5vh;
+  position: absolute;
+  z-index: 0;
+}
+
+.N-C-B2B5-backgroundAnimation-closed-scroll {
+  background-color: rgb(22, 22, 22, 0);
+  transition: 0.2s;
+  border-radius: 50%;
+  height: 2vh;
+  width: 2vh;
+  position: absolute;
+  z-index: 0;
+}
+
+.N-C-B2B5-backgroundAnimation-opened-scroll {
+  background-color: rgb(22, 22, 22, 0.1);
+  transition: 0.2s;
+  border-radius: 50%;
+  height: 5vh;
+  width: 5vh;
+  position: absolute;
+  z-index: 0;
+}
+
+.N-C-B3 {
+  background-color: rgb(245, 245, 245, 1);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  width: fit-content;
+  grid-column: 1/6;
+  grid-row: 2/3;
+}
+
+.N-C-B4 {
+  background-color: rgb(245, 245, 245, 1);
+  backdrop-filter: blur(10px);
+  height: fit-content;
+  width: fit-content;
+  grid-column: 2/6;
+  grid-row: 2/3;
+}
+
+.N-C-B5 {
+  background-color: rgb(245, 245, 245, 1);
+  backdrop-filter: blur(10px);
+  height: fit-content;
+  width: fit-content;
+  grid-column: 3/6;
+  grid-row: 2/3;
+}
+
+/*N-RenderOfFulledCartAnimation*/
+
+.N-ROFCA-background {
+  margin: -3vh 0 0 0;
+  position: absolute;
+  background-color: white;
+  border-radius: 100%;
+  height: 1vh;
+  width: 1vh;
+  animation: N-ROFCA-animation 0.6s ease-in-out infinite alternate;
+  z-index: 1;
+}
+
+.N-ROFCA-background-scroll {
+  background-color: rgb(94, 94, 94);
+}
+
+@keyframes N-ROFCA-animation {
+  0% {
+    transform: translateY(-25%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

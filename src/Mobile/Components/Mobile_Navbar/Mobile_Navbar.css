@@ -1,0 +1,84 @@
+@media (max-width: 1199.98px) {
+  .NoScroll {
+    /* when modal active */
+    -webkit-overflow-scrolling: none;
+    overflow: hidden;
+    /* Other browsers */
+    overscroll-behavior: none;
+    scroll-behavior: none;
+  }
+
+  .NM1-background {
+    height: 12vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    transition: 0.2s;
+    z-index: 2;
+  }
+
+  .NM1-background-scroll {
+    background-color: rgb(245, 245, 245, 0.8);
+    backdrop-filter: blur(10px);
+  }
+
+  .NM1-background-scroll:hover {
+    background-color: rgb(245, 245, 245, 1);
+    backdrop-filter: blur(10px);
+  }
+
+  .NM1-content {
+    height: 100%;
+    width: 95%;
+    display: grid;
+    grid-template-columns: 10% 70% 10%;
+    grid-template-rows: 100%;
+    justify-content: space-between;
+  }
+
+  .NM1-C-B1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .NM1-svg-1 {
+    height: 30%;
+    width: 100%;
+    fill: white;
+  }
+
+  .NM1-svg-1-scroll {
+    fill: rgb(94, 94, 94);
+  }
+
+  .NM1-C-B2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+
+  .NM1-txt-1 {
+    margin: 0;
+    text-align: center;
+    font-size: 5vw;
+    font-weight: 600;
+    color: white;
+    line-height: 6vw;
+  }
+
+  .NM1-txt-1-scroll {
+    color: rgb(94, 94, 94);
+  }
+
+  .NM1-C-B3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

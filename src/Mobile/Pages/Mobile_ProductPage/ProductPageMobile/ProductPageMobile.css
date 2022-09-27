@@ -1,0 +1,11 @@
+.ProductPageMobile-background {
+  display: none;
+}
+
+@media (max-width: 1199.98px) {
+  .ProductPageMobile-background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

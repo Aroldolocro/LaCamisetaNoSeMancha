@@ -1,0 +1,489 @@
+.CheckoutPayment-background {
+  background-color: none;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.CheckoutPayment-content {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 30% 10% 60%;
+}
+
+.CheckoutPayment-C-B1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 0.1vh solid rgb(128, 128, 128, 0.5);
+}
+
+.CheckoutPayment-C-B1B1 {
+  background-color: white;
+  border: 0.1vh solid rgb(128, 128, 128, 0.5);
+  border-radius: 0.5vh;
+  height: 55%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(3, 1fr);
+  padding: 0 1vh 0 1vh;
+}
+
+.CheckoutPayment-C-B1B1B1 {
+  border-bottom: 0.1vh solid rgb(128, 128, 128, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.CheckoutPayment-C-B1B1B1B1 {
+  height: 70%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: 100%;
+}
+
+.CheckoutPayment-C-B1B1B1B1B1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 0.8vw;
+  font-weight: 400;
+  color: rgb(128, 128, 128);
+}
+
+.CheckoutPayment-C-B1B1B1B1B2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 0.8vw;
+  font-weight: 400;
+  color: black;
+}
+
+.CheckoutPayment-C-B1B1B1B1B3 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.CheckoutPayment-txt-1 {
+  margin: 0;
+  font-size: 0.7vw;
+  font-weight: 400;
+  color: black;
+  cursor: pointer;
+}
+
+.CheckoutPayment-C-B1B1B2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.CheckoutPayment-C-B2 {
+  border-bottom: 0.1vh solid rgb(128, 128, 128, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.CheckoutPayment-C-B2B1 {
+  height: 60%;
+  width: 50%;
+  display: grid;
+  grid-template-columns: min-content min-content;
+  grid-template-rows: 100%;
+  grid-column-gap: 1vh;
+  cursor: pointer;
+}
+
+.CheckoutPayment-C-B2B1:hover {
+  opacity: 0.7;
+}
+
+.CheckoutPayment-C-B2B1B1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.CheckoutPayment-svg-1 {
+  height: 50%;
+  width: fit-content;
+  fill: black;
+}
+
+.CheckoutPayment-C-B2B1B2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  font-size: 0.8vw;
+  font-weight: 400;
+  color: black;
+  text-decoration: underline;
+}
+
+.CheckoutPayment-C-B3 {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 20% 80%;
+}
+
+.CheckoutPayment-C-B3B1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.CheckoutPayment-C-B3B1B1 {
+  height: 70%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.CheckoutPayment-C-B3B1B1B1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.CheckoutPayment-txt-2 {
+  margin: 0;
+  font-size: 1vw;
+  font-weight: 400;
+  color: rgb(64, 64, 64);
+}
+
+.CheckoutPayment-txt-3 {
+  margin: 0;
+  font-size: 0.7vw;
+  font-weight: 400;
+  color: rgb(64, 64, 64);
+}
+
+.CheckoutPayment-C-B3B2 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.CheckoutPayment-C-B3B2B1 {
+  height: fit-content;
+  width: 100%;
+  background-color: white;
+  border-top: 0.1vh solid rgb(128, 128, 128, 0.5);
+  border-left: 0.1vh solid rgb(128, 128, 128, 0.5);
+  border-right: 0.1vh solid rgb(128, 128, 128, 0.5);
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: min-content min-content min-content min-content;
+}
+
+.CheckoutPayment-C-B3B2B1B1 {
+  background-color: white;
+  height: 6vh;
+  border-bottom: 0.1vh solid rgb(128, 128, 128, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0 1vh 0 1vh;
+}
+
+.CheckoutPayment-C-B3B2B1B1B1 {
+  background-color: none;
+  height: 70%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 8% 50% 42%;
+  grid-template-rows: 100%;
+}
+
+.CheckoutPayment-C-B3B2B1B1B1B1 {
+  border: 1px solid none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.CheckoutPayment-CircleCheck-background {
+  height: 1.8vh;
+  width: 1.8vh;
+  border-radius: 100%;
+  border: 0.1vh solid rgb(128, 128, 128, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes CheckoutPayment-CircleCheck-animation {
+  0% {
+    height: 0vh;
+    width: 0vh;
+  }
+  100% {
+    height: 1.8vh;
+    width: 1.8vh;
+  }
+}
+
+.CheckoutPayment-CircleCheck-background2 {
+  background-color: black;
+  height: 1.8vh;
+  width: 1.8vh;
+  border-radius: 100%;
+  border: 0.1vh solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: 0.2s ease-in-out CheckoutPayment-CircleCheck-animation;
+}
+
+.CheckoutPayment-CircleCheck-background2::after {
+  content: "";
+  width: 0.6vh;
+  height: 0.6vh;
+  background-color: white;
+  border-radius: 100%;
+}
+
+.CheckoutPayment-C-B3B2B1B1B1B2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 0.8vw;
+  font-weight: 500;
+  color: black;
+}
+
+.CheckoutPayment-C-B3B2B1B1B1B3 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.CheckoutPayment-C-B3B2B1B1B1B3-v2 {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  grid-template-rows: 100%;
+  grid-column-gap: 0.9vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.CheckoutPayment-img-1 {
+  height: 60%;
+  width: fit-content;
+  border: 0.1vh solid rgb(128, 128, 128, 0.3);
+  border-radius: 0.2vw;
+}
+
+.CheckoutPayment-txt-4 {
+  margin: 0;
+  font-size: 0.7vw;
+  font-weight: 400;
+  color: rgb(128, 128, 128);
+  width: max-content;
+}
+
+.ROP1-background {
+  background-color: white;
+  height: 23vh;
+  border-bottom: 0.1vh solid rgb(128, 128, 128, 0.5);
+  padding: 0 1vh 0 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ROP1-content {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 75% 25%;
+}
+
+.ROP1-C-B1 {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 70% 30%;
+}
+
+.ROP1-C-B1B1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ROP1-svg {
+  fill: rgb(206, 206, 206);
+  height: 100%;
+  width: fit-content;
+}
+
+.ROP1-C-B1B2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7vw;
+  font-weight: 400;
+  color: rgb(128, 128, 128);
+  text-align: center;
+}
+
+.ROP1-C-B2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.CheckoutPayment-C-B3B2B1B2 {
+  background-color: white;
+  height: 6vh;
+  border-bottom: 0.1vh solid rgb(128, 128, 128, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0 1vh 0 1vh;
+}
+
+.ROP2-background {
+  background-color: white;
+  height: 23vh;
+  border-bottom: 0.1vh solid rgb(128, 128, 128, 0.5);
+  padding: 0 1vh 0 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ROP2-content {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 75% 25%;
+}
+
+.ROP2-C-B1 {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 100%;
+  padding: 1vh 0 1vh 0;
+}
+
+.ROP2-C-B1B1 {
+  border-right: 0.1vh solid rgb(128, 128, 128, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ROP2-img {
+  height: 100%;
+  width: fit-content;
+}
+
+.ROP2-C-B1B2 {
+  padding: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ROP2-C-B1B2B1 {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(4, 1fr);
+  grid-row-gap: 0.5vh;
+}
+
+.ROP2-C-txt-1 {
+  margin: 0;
+  font-size: 0.9vw;
+  font-weight: 400;
+  color: rgb(64, 64, 64);
+}
+
+.ROP2-C-B2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ROP2-button {
+  height: 80%;
+  width: fit-content;
+  padding: 0 2vh 0 2vh;
+  background-color: rgb(64, 64, 64);
+  font-size: 0.7vw;
+  font-weight: 500;
+  color: whitesmoke;
+  border: none;
+  transition: 0.3s;
+  cursor: pointer;
+  border-radius: 0.5vh;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ROP2-button:hover {
+  background-color: rgb(94, 94, 94);
+  color: white;
+}
+
+/*RenderOfCoveredMethod*/
+
+.ROCM-background {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.ROCM-txt-1 {
+  margin: 0;
+  font-size: 0.8vw;
+  font-weight: 400;
+  color: black;
+  text-decoration: line-through;
+}
+
+.ROCM-txt-2 {
+  margin: 0;
+  font-size: 0.8vw;
+  font-weight: 500;
+  color: black;
+  color: rgb(0, 158, 0);
+}
+
+/*RenderOfNotCoveredMethod*/
+
+.RONCM-background {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}

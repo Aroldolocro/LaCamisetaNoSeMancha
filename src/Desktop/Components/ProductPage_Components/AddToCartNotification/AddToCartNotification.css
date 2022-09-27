@@ -1,0 +1,127 @@
+@keyframes abrirnotificationanimation {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes cerrarnotificationanimation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.Notification-background {
+  background-color: whitesmoke;
+  height: 10%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  animation-name: abrirnotificationanimation, cerrarnotificationanimation;
+  animation-delay: 0s, 4s;
+  animation-duration: 1s, 1s;
+}
+
+.Notification-content {
+  background-color: none;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 25% 75%;
+}
+
+.Notification-C-B1 {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Notification-txt-1 {
+  margin: 0;
+  font-size: 0.7vw;
+  font-weight: 400;
+  color: black;
+}
+
+.Notification-C-B2 {
+  background-color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: none;
+}
+
+.Notification-C-B2B1 {
+  height: 100%;
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100%;
+}
+
+.Notification-C-B2B1B1 {
+  background-color: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.Notification-C-B2B1B1B1 {
+  background-color: none;
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.Notification-svg-1 {
+  background-color: none;
+  height: 25%;
+  width: fit-content;
+  fill: black;
+}
+
+.Notification-C-B2B1B2 {
+  background-color: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Notification-C-B2B1B2B1 {
+  background-color: none;
+  height: 100%;
+  width: fit-content;
+}
+
+.Notification-img {
+  height: 100%;
+  width: fit-content;
+  border-radius: 100%;
+}
+
+.Notification-C-B2B1B3 {
+  background-color: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.Notification-C-B2B1B3B1 {
+  background-color: none;
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}

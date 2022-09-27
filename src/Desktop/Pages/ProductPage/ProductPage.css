@@ -1,0 +1,9 @@
+.productpage-background {
+  background-color: none;
+  height: 150%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr 0.5fr;
+  grid-template-columns: 100%;
+  justify-content: center;
+}

@@ -1,0 +1,70 @@
+@media (max-width: 1199.98px) {
+  .mySwiper-HP {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mySwiper-background {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation: 0.7s ease-in mySwiper-background-animation;
+  }
+
+  @keyframes mySwiper-background-animation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .mySwiper-background-notdisplayed {
+    display: none;
+  }
+
+  .mySwiper-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .mySwiper-B1 {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1vh 2vh 1vh 2vh;
+    color: rgb(28, 28, 28);
+    font-size: 3vw;
+    text-decoration: none;
+    backdrop-filter: blur(5px);
+  }
+
+  /*Loaders*/
+
+  .SectionThreeSliderImageLoader-background {
+    height: 100%;
+    width: 100%;
+    animation: skeleton-loading 1s linear infinite alternate;
+  }
+
+  .SectionThreeSliderImageLoader-background-notdisplayed {
+    display: none;
+  }
+
+  @keyframes skeleton-loading {
+    0% {
+      background-color: hsl(0, 0%, 75%);
+    }
+
+    100% {
+      background-color: hsl(0, 0%, 95%);
+    }
+  }
+}
