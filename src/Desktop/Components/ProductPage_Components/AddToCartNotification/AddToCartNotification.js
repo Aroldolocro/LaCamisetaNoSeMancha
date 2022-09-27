@@ -1,5 +1,4 @@
 import "./AddToCartNotification.css";
-
 import { AppContext } from "../../../../Context/Appcontext";
 import { useContext } from "react";
 

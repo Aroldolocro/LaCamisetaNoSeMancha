@@ -41,3 +41,11 @@
   width: fit-content;
   fill: rgb(128, 128, 128, 1);
 }
+
+/*Disable on mobile*/
+
+@media (max-width: 1199.98px) {
+  .Notification1-background {
+    display: none;
+  }
+}

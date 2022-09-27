@@ -401,3 +401,11 @@
   font-weight: 500;
   color: black;
 }
+
+/*Disable on mobile*/
+
+@media (max-width: 1199.98px) {
+  .SG-background {
+    display: none;
+  }
+}

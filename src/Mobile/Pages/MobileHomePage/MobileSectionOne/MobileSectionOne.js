@@ -1,17 +1,17 @@
-import "./SectionOne.css";
+import "./MobileSectionOne.css";
 import { AppContext } from "../../../../Context/Appcontext";
 import { useContext } from "react";
 
-const SectionOne = () => {
+const MobileSectionOne = () => {
   const { scollToRef } = useContext(AppContext);
   return (
-    <div className="S1-background">
-      <div className="S1-content">
-        <div className="S1-C-B1"></div>
-        <div className="S1-C-B2"></div>
-        <div className="S1-C-B3">
+    <div className="MobileSectionOne-background">
+      <div className="MobileSectionOne-content">
+        <div className="MobileSectionOne-C-B1"></div>
+        <div className="MobileSectionOne-C-B2"></div>
+        <div className="MobileSectionOne-C-B3">
           <div
-            className="S1-C-B3B1"
+            className="MobileSectionOne-C-B3B1"
             onClick={() => scollToRef.current.scrollIntoView()}
           >
             <svg
@@ -19,7 +19,7 @@ const SectionOne = () => {
               width="16"
               height="16"
               fill="currentColor"
-              className="S1-svg"
+              className="MobileSectionOne-svg"
               viewBox="0 0 16 16"
             >
               <path
@@ -34,4 +34,4 @@ const SectionOne = () => {
   );
 };
 
-export default SectionOne;
+export default MobileSectionOne;

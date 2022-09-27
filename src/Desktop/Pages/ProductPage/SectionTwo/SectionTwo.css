@@ -144,3 +144,11 @@
     display: none;
   }
 }
+
+/*Disable on mobile*/
+
+@media (max-width: 1199.98px) {
+  .PG-S2-background {
+    display: none;
+  }
+}

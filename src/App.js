@@ -15,13 +15,25 @@ import Navbar from "./Desktop/Components/Navbar/Navbar";
 import Footer from "./Desktop/Components/Footer/Footer";
 import PreguntasFrecuentes from "./Desktop/Components/Footer/Components/PreguntasFrecuentes/Preguntas_Frecuentes";
 
+/*Mobile Pages & Components*/
+
+import MobileHomePage from "./Mobile/Pages/MobileHomePage/MobileHomePage";
+
 export default function App() {
   return (
     <ConstAppContext>
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route
+            path="/"
+            element={
+              <>
+                <HomePage />
+                <MobileHomePage />
+              </>
+            }
+          />
           <Route path="*" element={<NotFoundPage />} />
           <Route path="/producto/:productId" element={<ProdcutPage />} />
           <Route path="/temporadas/:Temporade" element={<TemporadasPage />} />

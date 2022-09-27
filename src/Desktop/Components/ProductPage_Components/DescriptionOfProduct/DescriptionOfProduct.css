@@ -33,3 +33,15 @@
   width: 100%;
   animation: skeleton-loading 1s linear infinite alternate;
 }
+
+/*Disable on mobile*/
+
+@media (max-width: 1199.98px) {
+  .Notification-background {
+    display: none;
+  }
+
+  .DD4-background{
+    display: none;
+  }
+}

@@ -7,3 +7,11 @@
   grid-template-columns: 100%;
   justify-content: center;
 }
+
+/*Disable on mobile*/
+
+@media (max-width: 1199.98px) {
+  .productpage-background {
+    display: none;
+  }
+}

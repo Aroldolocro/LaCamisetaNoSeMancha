@@ -144,3 +144,11 @@
   background-color: rgb(110, 110, 110);
   display: block;
 }
+
+/*Disable on mobile*/
+
+@media (max-width: 1199.98px) {
+  .CEC-background-v1 {
+    display: none;
+  }
+}

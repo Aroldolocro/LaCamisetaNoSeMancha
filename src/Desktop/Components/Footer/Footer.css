@@ -91,3 +91,11 @@
   background-color: white;
   cursor: pointer;
 }
+
+/*Disable on mobile*/
+
+@media (max-width: 1199.98px) {
+  .F-background {
+    display: none;
+  }
+}

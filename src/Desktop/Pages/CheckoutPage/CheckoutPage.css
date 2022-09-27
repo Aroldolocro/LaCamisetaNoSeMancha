@@ -540,3 +540,11 @@
   color: rgb(64, 64, 64);
   width: max-content;
 }
+
+/*Disable on mobile*/
+
+@media (max-width: 1199.98px) {
+  .CP-background {
+    display: none;
+  }
+}

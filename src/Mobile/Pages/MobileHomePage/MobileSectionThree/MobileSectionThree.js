@@ -1,9 +1,10 @@
-import "./SectionThree.css";
+import "./MobileSectionThree.css";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
+import SwiperJsSlider from "../../../Components/HomePage_Components/SwiperJsSlider/SwiperJsSlider";
 
-const SectionThree = () => {
+const MobileSectionThree = () => {
   const [data, setData] = useState([]);
   const [Loaded, setLoaded] = useState(false);
 
@@ -85,10 +86,11 @@ const SectionThree = () => {
         <div className="S3-C-B2">
           {S3dbProductsLoader}
           {S3dbProducts}
+          <SwiperJsSlider />
         </div>
       </div>
     </section>
   );
 };
 
-export default SectionThree;
+export default MobileSectionThree;

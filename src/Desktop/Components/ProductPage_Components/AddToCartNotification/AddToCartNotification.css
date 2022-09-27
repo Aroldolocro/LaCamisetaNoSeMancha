@@ -125,3 +125,11 @@
   align-items: center;
   cursor: pointer;
 }
+
+/*Disable on mobile*/
+
+@media (max-width: 1199.98px) {
+  .Notification-background {
+    display: none;
+  }
+}

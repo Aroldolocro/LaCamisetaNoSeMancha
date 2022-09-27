@@ -1,5 +1,4 @@
 import "./SectionTwo.css";
-import "./SectionTwoQuery.css";
 import { useEffect, useState, useContext } from "react";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
 import { Link } from "react-router-dom";

@@ -1,26 +1,32 @@
-.DD-background2{
-    background-color: none;
-    height: 100%;
-    width: fit-content;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(8, 1fr);
-    grid-row-gap: 1vh ;
-    justify-content: center;
-    padding: 2vh 2vh 2vh 2vh;
+.DD-background2 {
+  background-color: none;
+  height: 100%;
+  width: fit-content;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(8, 1fr);
+  grid-row-gap: 1vh;
+  justify-content: center;
+  padding: 2vh 2vh 2vh 2vh;
 }
 
-.DD-txt-1{
-    margin: 0;
-    padding: 0;
-    color: rgb(94, 94, 94);
-    font-size: 0.65vw;
-    font-weight: 400;
-    text-decoration: none;
+.DD-txt-1 {
+  margin: 0;
+  padding: 0;
+  color: rgb(94, 94, 94);
+  font-size: 0.65vw;
+  font-weight: 400;
+  text-decoration: none;
 }
 
 .animate__animated.animate__fadeIn {
-    --animate-duration: 0.2s;
+  --animate-duration: 0.2s;
+}
+
+/*Disable on mobile*/
+
+@media (max-width: 1199.98px) {
+  .DD-background2 {
+    display: none;
   }
-
-
+}

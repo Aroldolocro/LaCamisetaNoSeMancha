@@ -487,3 +487,11 @@
   align-items: center;
   justify-content: flex-start;
 }
+
+/*Disable on mobile*/
+
+@media (max-width: 1199.98px) {
+  .CheckoutPayment-background {
+    display: none;
+  }
+}

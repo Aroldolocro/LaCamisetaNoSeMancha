@@ -53,3 +53,11 @@
     transform: rotate(360deg);
   }
 }
+
+/*Disable on mobile*/
+
+@media (max-width: 1199.98px) {
+  .PP-background {
+    display: none;
+  }
+}

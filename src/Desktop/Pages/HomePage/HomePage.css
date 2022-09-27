@@ -5,3 +5,11 @@
   grid-template-rows: 1fr 1.5fr 1fr 1fr;
   grid-template-columns: 100%;
 }
+
+/*Disable on mobile*/
+
+@media (max-width: 1199.98px) {
+  .homepage-background {
+    display: none;
+  }
+}

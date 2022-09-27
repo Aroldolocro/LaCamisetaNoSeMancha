@@ -289,3 +289,11 @@
 .CP-txt-6:hover {
   color: white;
 }
+
+/*Disable on mobile*/
+
+@media (max-width: 1199.98px) {
+  .CheckoutForm-background {
+    display: none;
+  }
+}

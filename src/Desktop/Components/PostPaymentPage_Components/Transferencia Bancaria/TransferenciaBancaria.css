@@ -203,3 +203,19 @@
   color: rgb(94, 94, 94);
   text-align: center;
 }
+
+/*Disable on mobile*/
+
+@media (max-width: 1199.98px) {
+  .TB-background {
+    display: none;
+  }
+
+  .ROFO-background {
+    display: none;
+  }
+
+  .ROPO-background {
+    display: none;
+  }
+}

@@ -500,3 +500,11 @@
     display: none;
   }
 }
+
+/*Disable on mobile*/
+
+@media (max-width: 1199.98px) {
+  .PG-background {
+    display: none;
+  }
+}

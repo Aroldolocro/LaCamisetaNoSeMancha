@@ -139,3 +139,11 @@
     background-color: hsl(0, 0%, 95%);
   }
 }
+
+/*Disable on mobile*/
+
+@media (max-width: 1199.98px) {
+  .S4-background {
+    display: none;
+  }
+}

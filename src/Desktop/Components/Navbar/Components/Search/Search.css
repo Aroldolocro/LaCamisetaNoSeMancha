@@ -187,3 +187,11 @@
   letter-spacing: 0.03vw;
   color: rgb(64, 64, 64);
 }
+
+/*Disable on mobile*/
+
+@media (max-width: 1199.98px) {
+  .S-background {
+    display: none;
+  }
+}

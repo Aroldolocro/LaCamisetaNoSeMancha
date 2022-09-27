@@ -1,9 +1,9 @@
-import "./SectionFour.css";
+import "./MobileSectionFour.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
 
-const SectionFour = () => {
+const MobileSectionFour = () => {
   const [data, setData] = useState([]);
   const [Loaded, setLoaded] = useState(false);
 
@@ -105,4 +105,4 @@ const SectionFour = () => {
   );
 };
 
-export default SectionFour;
+export default MobileSectionFour;

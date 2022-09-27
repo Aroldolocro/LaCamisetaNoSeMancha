@@ -61,3 +61,11 @@
   width: fit-content;
   fill: white;
 }
+
+/*Disable on mobile*/
+
+@media (max-width: 1199.98px) {
+  .S1-background {
+    display: none;
+  }
+}

@@ -127,3 +127,11 @@
 .SOSdbImageLoader-background-notdisplayed {
   display: none;
 }
+
+/*Disable on mobile*/
+
+@media (max-width: 1199.98px) {
+  .SG-background {
+    display: none;
+  }
+}

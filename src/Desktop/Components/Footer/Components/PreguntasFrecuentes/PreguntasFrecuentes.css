@@ -141,3 +141,11 @@
   justify-content: center;
   border: 2px solid black;
 }
+
+/*Disable on mobile*/
+
+@media (max-width: 1199.98px) {
+  .PreguntasFrecuentes-background {
+    display: none;
+  }
+}

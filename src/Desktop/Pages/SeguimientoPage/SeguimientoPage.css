@@ -640,3 +640,11 @@
   align-items: center;
   justify-content: center;
 }
+
+/*Disable on mobile*/
+
+@media (max-width: 1199.98px) {
+  .SP-background {
+    display: none;
+  }
+}

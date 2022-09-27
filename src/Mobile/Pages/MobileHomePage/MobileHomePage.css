@@ -1,0 +1,15 @@
+/*Disable on desktop*/
+
+.MobileHomePage-background {
+  display: none;
+}
+
+@media (max-width: 1199.98px) {
+  .MobileHomePage-background {
+    height: 450%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1.5fr 1fr 1fr;
+    grid-template-columns: 100%;
+  }
+}

@@ -428,3 +428,11 @@
   color: white;
   text-decoration: none;
 }
+
+/*Disable on mobile*/
+
+@media (max-width: 1199.98px) {
+  .C-background {
+    display: none;
+  }
+}

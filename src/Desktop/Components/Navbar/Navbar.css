@@ -293,3 +293,11 @@
     transform: translateY(0);
   }
 }
+
+/*Disable on mobile*/
+
+@media (max-width: 1199.98px) {
+  .N-background {
+    display: none;
+  }
+}
