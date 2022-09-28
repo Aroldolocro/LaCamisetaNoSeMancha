@@ -1,0 +1,26 @@
+@media (max-width: 1199.98px) {
+  .SectionOne-background {
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .SectionOne-content {
+    height: 100%;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 12vh auto;
+  }
+
+  .SectionOne-C-B1 {
+    border: none;
+  }
+
+  .SectionOne-C-B2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

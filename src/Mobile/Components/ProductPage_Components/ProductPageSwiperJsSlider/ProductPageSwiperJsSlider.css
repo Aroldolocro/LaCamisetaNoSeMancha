@@ -1,0 +1,84 @@
+@media (max-width: 1199.98px) {
+  .ProductPageSwiperJsSlider-background {
+    height: 95%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ProductPageSwiperJsSlider-Swiper {
+    height: 100%;
+    width: 100%;
+  }
+
+  .ProductPageSwiperJsSlider-Swiper-notdisplayed {
+    display: none;
+  }
+
+  .swiper-pagination-bullet {
+    background-color: #555 !important;
+    height: 0.2vh !important;
+    width: 3vh !important;
+    border-radius: 2vh !important;
+    transition: 0.3s;
+  }
+
+  .swiper-pagination-bullet-active {
+    height: 0.2vh !important;
+    width: 6vh !important;
+    border-radius: 2vh !important;
+  }
+
+  .ProductPageSwiperJsSlider-B1 {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: 0.7s ease-in ProductPageSwiperJsSlider-B1-animation;
+  }
+
+  @keyframes ProductPageSwiperJsSlider-B1-animation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .ProductPageSwiperJsSlider-img-1 {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .ProductPageSwiperJsSlider-img-2 {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  /*ProductPageSwiperJsSlider_Loader*/
+
+  .ProductPageSwiperJsSlider_Loader-background {
+    height: 100%;
+    width: 100%;
+    animation: skeleton-loading 1s linear infinite alternate;
+  }
+
+  @keyframes skeleton-loading {
+    0% {
+      background-color: hsl(0, 0%, 75%);
+    }
+
+    100% {
+      background-color: hsl(0, 0%, 95%);
+    }
+  }
+
+  .ProductPageSwiperJsSlider_Loader-background-notdisplayed {
+    display: none;
+  }
+}

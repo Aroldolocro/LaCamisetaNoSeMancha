@@ -19,6 +19,7 @@ import PreguntasFrecuentes from "./Desktop/Components/Footer/Components/Pregunta
 
 import MobileHomePage from "./Mobile/Pages/MobileHomePage/MobileHomePage";
 import MobileNavbar from "./Mobile/Components/MobileNavbar/MobileNavbar";
+import MobileProductPage from "./Mobile/Pages/MobileProductPage/MobileProductPage";
 
 export default function App() {
   return (
@@ -37,7 +38,15 @@ export default function App() {
             }
           />
           <Route path="*" element={<NotFoundPage />} />
-          <Route path="/producto/:productId" element={<ProdcutPage />} />
+          <Route
+            path="/producto/:productId"
+            element={
+              <>
+                <ProdcutPage />
+                <MobileProductPage />
+              </>
+            }
+          />
           <Route path="/temporadas/:Temporade" element={<TemporadasPage />} />
           <Route path="/equipos/:Equipo" element={<EquiposPage />} />
           <Route path="/destacados" element={<DestacadosPage />} />

@@ -1,0 +1,17 @@
+/*Disable on desktop*/
+
+.MobileProductPage-background {
+  display: none;
+}
+
+@media (max-width: 1199.98px) {
+  .MobileProductPage-background {
+    background-color: none;
+    height: 200%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 0.9fr 1.1fr;
+    grid-template-columns: 100%;
+    justify-content: center;
+  }
+}
