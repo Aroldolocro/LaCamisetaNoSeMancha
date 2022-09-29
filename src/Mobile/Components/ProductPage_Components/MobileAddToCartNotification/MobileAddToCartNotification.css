@@ -1,0 +1,100 @@
+.MobileAddToCartNotification-background {
+  background-color: whitesmoke;
+  height: 16vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  animation-name: abrirnotificationanimation, cerrarnotificationanimation;
+  animation-delay: 0s, 4s;
+  animation-duration: 1s, 1s;
+}
+
+@keyframes abrirnotificationanimation {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes cerrarnotificationanimation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.MobileAddToCartNotification-content {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 3vh 13vh;
+}
+
+.MobileAddToCartNotification-C-B1 {
+  background-color: white;
+  padding: 0 3vh 0 3vh;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.MobileAddToCartNotification-txt-1 {
+  margin: 0;
+  font-size: 3.5vw;
+  font-weight: 400;
+  color: rgb(94, 94, 94);
+}
+
+.MobileAddToCartNotification-C-B2 {
+  background-color: whitesmoke;
+  padding: 0 3vh 0 3vh;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 100%;
+  justify-content: space-between;
+}
+
+.MobileAddToCartNotification-C-B2B1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.MobileAddToCartNotification-svg {
+  height: 3vh;
+  width: auto;
+  fill: rgb(94, 94, 94);
+}
+
+.MobileAddToCartNotification-C-B2B2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.MobileAddToCartNotification-img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.MobileAddToCartNotification-C-B2B3 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.MobileAddToCartNotification-txt-2 {
+  margin: 0;
+  font-size: 3.5vw;
+  font-weight: 500;
+  color: rgb(94, 94, 94);
+}
