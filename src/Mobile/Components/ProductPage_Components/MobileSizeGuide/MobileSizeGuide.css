@@ -1,0 +1,393 @@
+@media (max-width: 1199.98px) {
+  @keyframes MobileSizeGuide-background-animation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .MobileSizeGuide-background {
+    top: 0;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 0, 0, 0.5);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: 0.5s ease MobileSizeGuide-background-animation;
+  }
+
+  .MobileSizeGuide-content {
+    height: 85%;
+    width: 90%;
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-rows: 6% auto;
+    grid-template-columns: 100%;
+    border-radius: 2px;
+    -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+  }
+
+  .MobileSizeGuide-C-B1 {
+    border-bottom: 1px solid rgb(128, 128, 128, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 2vh 0 2vh;
+  }
+
+  .MobileSizeGuide-svg-1 {
+    height: 3vh;
+    width: auto;
+    fill: rgb(110, 110, 110);
+  }
+
+  .MobileSizeGuide-C-B2 {
+    padding: 0 2vh 0 2vh;
+    border: 1px solid none;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 50% 50% 50%;
+    overflow: auto;
+    grid-row-gap: 2vh;
+  }
+
+  .MobileSizeGuide-C-B2B1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .MobileSizeGuide-txt-1 {
+    margin: 0;
+    font-size: 3vw;
+    font-weight: 600;
+    color: black;
+  }
+
+  .MobileSizeGuide-C-B2B2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /*RenderOfCamisetaGrid*/
+
+  .ROCG-background {
+    border: 1px solid rgb(128, 128, 128, 0.3);
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+
+  .ROCG-B1 {
+    grid-row: 1/2;
+    background: rgb(236, 236, 236);
+    background: linear-gradient(
+      0deg,
+      rgba(236, 236, 236, 1) 0%,
+      rgba(242, 242, 242, 1) 100%
+    );
+    border-bottom: 1px solid rgb(128, 128, 128, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vw;
+    font-weight: 600;
+    color: black;
+  }
+
+  .ROCG-B2 {
+    background-color: #ececec;
+    border-bottom: 1px solid rgb(128, 128, 128, 0.3);
+    border-right: 1px solid rgb(128, 128, 128, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vw;
+    font-weight: 400;
+    color: black;
+  }
+
+  .ROCG-B2-v2 {
+    background-color: #ececec;
+    border-bottom: 1px solid rgb(128, 128, 128, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vw;
+    font-weight: 400;
+    color: black;
+  }
+
+  .ROCG-B3 {
+    background-color: whitesmoke;
+    border-bottom: 1px solid rgb(128, 128, 128, 0.3);
+    border-right: 1px solid rgb(128, 128, 128, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vw;
+    font-weight: 400;
+    color: black;
+  }
+
+  .ROCG-B3-v2 {
+    background-color: whitesmoke;
+    border-bottom: 1px solid rgb(128, 128, 128, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vw;
+    font-weight: 400;
+    color: black;
+  }
+
+  .ROCG-B4 {
+    background-color: #ececec;
+    border-right: 1px solid rgb(128, 128, 128, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vw;
+    font-weight: 400;
+    color: black;
+  }
+
+  .ROCG-B4-v2 {
+    background-color: #ececec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vw;
+    font-weight: 400;
+    color: black;
+  }
+
+  /*RenderOfShortGrid*/
+
+  .ROSG-background {
+    border: 1px solid rgb(128, 128, 128, 0.3);
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+
+  .ROSG-B1 {
+    grid-row: 1/2;
+    background: rgb(236, 236, 236);
+    background: linear-gradient(
+      0deg,
+      rgba(236, 236, 236, 1) 0%,
+      rgba(242, 242, 242, 1) 100%
+    );
+    border-bottom: 1px solid rgb(128, 128, 128, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vw;
+    font-weight: 600;
+    color: black;
+  }
+
+  .ROSG-B2 {
+    background-color: #ececec;
+    border-bottom: 1px solid rgb(128, 128, 128, 0.3);
+    border-right: 1px solid rgb(128, 128, 128, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vw;
+    font-weight: 400;
+    color: black;
+  }
+
+  .ROSG-B2-v2 {
+    background-color: #ececec;
+    border-bottom: 1px solid rgb(128, 128, 128, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vw;
+    font-weight: 400;
+    color: black;
+  }
+
+  .ROSG-B3 {
+    background-color: whitesmoke;
+    border-bottom: 1px solid rgb(128, 128, 128, 0.3);
+    border-right: 1px solid rgb(128, 128, 128, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vw;
+    font-weight: 400;
+    color: black;
+  }
+
+  .ROSG-B3-v2 {
+    background-color: whitesmoke;
+    border-bottom: 1px solid rgb(128, 128, 128, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vw;
+    font-weight: 400;
+    color: black;
+  }
+
+  .ROSG-B4 {
+    background-color: #ececec;
+    border-right: 1px solid rgb(128, 128, 128, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vw;
+    font-weight: 400;
+    color: black;
+  }
+
+  .ROSG-B4-v2 {
+    background-color: #ececec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vw;
+    font-weight: 400;
+    color: black;
+  }
+
+  .MobileSizeGuide-C-B2B3 {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 20% 60%;
+  }
+
+  .MobileSizeGuide-C-B2B3B1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .MobileSizeGuide-txt-2 {
+    margin: 0;
+    font-size: 2.5vw;
+    font-weight: 500;
+    color: black;
+  }
+
+  .MobileSizeGuide-C-B2B3B2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .MobileSizeGuide-C-B2B3B3 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  /*RenderOfCamisetaEquivalence & RenderOfShortEquivalence*/
+
+  .ROCE-background {
+    height: 100%;
+    width: 20%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(5, 1fr);
+  }
+
+  .ROCE-B1 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 3vw;
+    font-weight: 500;
+    color: black;
+  }
+
+  .MobileSizeGuide-C-B2B4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /*RenderOfCamisetaGridExplain*/
+
+  .ROCGE-background {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(5, 1fr);
+  }
+
+  .ROCGE-B1 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 2.5vw;
+    font-weight: 500;
+    color: black;
+    text-decoration: underline;
+  }
+
+  .ROCGE-B2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 0 0 1vw;
+    font-size: 2.5vw;
+    font-weight: 500;
+    color: black;
+  }
+
+  /*RenderOfShortGridExplain*/
+
+  .ROSGE-background {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  .ROSGE-B1 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 3vw;
+    font-weight: 500;
+    color: black;
+    text-decoration: underline;
+  }
+
+  .ROSGE-B2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 0 0 1vw;
+    font-size: 3vw;
+    font-weight: 500;
+    color: black;
+  }
+
+  /*Disable on mobile*/
+
+  @media (max-width: 1199.98px) {
+    .SG-background {
+      display: none;
+    }
+  }
+}

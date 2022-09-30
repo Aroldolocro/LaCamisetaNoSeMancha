@@ -1,4 +1,13 @@
 @media (max-width: 1199.98px) {
+  .NoScroll {
+    /* when modal active */
+    -webkit-overflow-scrolling: none;
+    overflow: hidden;
+    /* Other browsers */
+    overscroll-behavior: none;
+    scroll-behavior: none;
+  }
+
   .SectionTwo-background {
     background-color: white;
     display: flex;
@@ -173,10 +182,13 @@
     margin: 0;
     background-color: rgb(94, 94, 94);
     border: none;
-    color: whitesmoke;
+    color: white;
     font-size: 3vw;
     font-weight: 400;
     transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .SectionTwo-btn1:hover {

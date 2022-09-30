@@ -1,7 +1,7 @@
-import "./AddToCartAnimation.css";
+import "./MobileAddToCartAnimation.css";
 import { useState, useEffect } from "react";
 
-const AddToCartAnimation = () => {
+const MobileAddToCartAnimation = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -12,8 +12,8 @@ const AddToCartAnimation = () => {
   }, []);
 
   const loader = (
-    <div className="L-background">
-      <div className="loader"></div>
+    <div className="MobileAddToCartAnimation-Loader-background">
+      <div className="MobileAddToCartAnimation-Loader-content"></div>
     </div>
   );
 
@@ -23,16 +23,17 @@ const AddToCartAnimation = () => {
       width="16"
       height="16"
       fill="currentColor"
-      className="Notification1-svg"
+      className="MobileAddToCartAnimation-svg"
       viewBox="0 0 16 16"
     >
       <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
     </svg>
   );
-
   return (
-    <div className="Notification1-background">{loading ? loader : succes}</div>
+    <div className="MobileAddToCartAnimation-background">
+      {loading ? loader : succes}
+    </div>
   );
 };
 
-export default AddToCartAnimation;
+export default MobileAddToCartAnimation;

@@ -29,14 +29,14 @@ const MobileNavbar = () => {
   window.addEventListener("scroll", changeColor);
 
   useEffect(() => {
-    if (OpenMenu) {
+    if (OpenMenu || OpenCart) {
       document.getElementById("root").className = "NoScroll";
       document.body.className = "NoScroll";
     } else {
       document.getElementById("root").className = undefined;
       document.body.className = undefined;
     }
-  }, [OpenMenu]);
+  }, [OpenMenu, OpenCart]);
 
   useEffect(() => {
     if (!OpenMenu) {

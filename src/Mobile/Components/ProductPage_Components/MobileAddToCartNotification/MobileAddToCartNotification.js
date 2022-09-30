@@ -3,7 +3,8 @@ import { AppContext } from "../../../../Context/Appcontext";
 import { useContext } from "react";
 
 const MobileAddToCartNotification = () => {
-  const { notificationproduct, setAbrir3, setAbrir } = useContext(AppContext);
+  const { notificationproduct, setAbrir3, setOpenCart } =
+    useContext(AppContext);
   return (
     <div className="MobileAddToCartNotification-background">
       <div className="MobileAddToCartNotification-content">
@@ -37,7 +38,7 @@ const MobileAddToCartNotification = () => {
           <div className="MobileAddToCartNotification-C-B2B3">
             <p
               className="MobileAddToCartNotification-txt-2"
-              onClick={() => setAbrir(true)}
+              onClick={() => setOpenCart(true)}
             >
               VER CARRITO
             </p>

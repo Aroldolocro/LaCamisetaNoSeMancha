@@ -1,9 +1,11 @@
 import "./SectionTwo.css";
 import { useState, useEffect, useContext } from "react";
 import { getFirestore, doc, getDoc } from "firebase/firestore";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { AppContext } from "../../../../Context/Appcontext";
 import MobileAddToCartNotification from "../MobileAddToCartNotification/MobileAddToCartNotification";
+import MobileAddToCartAnimation from "../MobileAddToCartAnimation/MobileAddToCartAnimation";
+import MobileSizeGuide from "../MobileSizeGuide/MobileSizeGuide";
 
 const SectionTwo = () => {
   const {
@@ -16,7 +18,7 @@ const SectionTwo = () => {
     notificate1,
   } = useContext(AppContext);
   const { productId } = useParams();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [data, setData] = useState({});
   const [data3, setData3] = useState({});
   const [selected, setSelected] = useState();
@@ -24,6 +26,16 @@ const SectionTwo = () => {
   const [SinStock, setSinStock] = useState();
   // const [Loaded, setLoaded] = useState(false);
   const [OpenDescription, setOpenDescription] = useState(true);
+
+  useEffect(() => {
+    if (abrir5) {
+      document.getElementById("root").className = "NoScroll";
+      document.body.className = "NoScroll";
+    } else {
+      document.getElementById("root").className = undefined;
+      document.body.className = undefined;
+    }
+  }, [abrir5]);
 
   useEffect(() => {
     const db = getFirestore();
@@ -104,27 +116,27 @@ const SectionTwo = () => {
     }
   };
 
-  const VerificationOfSize2 = () => {
-    if (selected === undefined || selected === "SELECCIONA UN TALLE") {
-      setSizeError(true);
-    } else {
-      setSizeError(false);
-      AgregarProducto(
-        imagen,
-        nombre,
-        categoria,
-        talle,
-        precio,
-        StockS,
-        StockM,
-        StockL,
-        StockXL,
-        StockXXL,
-        id
-      );
-      navigate("/checkout");
-    }
-  };
+  // const VerificationOfSize2 = () => {
+  //   if (selected === undefined || selected === "SELECCIONA UN TALLE") {
+  //     setSizeError(true);
+  //   } else {
+  //     setSizeError(false);
+  //     AgregarProducto(
+  //       imagen,
+  //       nombre,
+  //       categoria,
+  //       talle,
+  //       precio,
+  //       StockS,
+  //       StockM,
+  //       StockL,
+  //       StockXL,
+  //       StockXXL,
+  //       id
+  //     );
+  //     navigate("/checkout");
+  //   }
+  // };
 
   /*DB SIZES VERIFICATION*/
 
@@ -185,6 +197,7 @@ const SectionTwo = () => {
   return (
     <div className="SectionTwo-background">
       {abrir3 && <MobileAddToCartNotification />}
+      {abrir5 && <MobileSizeGuide />}
       <div className="SectionTwo-content">
         <div className="SectionTwo-C-B1">
           <p className="SectionTwo-txt-1">Home</p>
@@ -222,7 +235,7 @@ const SectionTwo = () => {
               Seleccione un talle
             </p>
           </div>
-          <div className="SectionTwo-C-B3B2">
+          <div className="SectionTwo-C-B3B2" onClick={() => setAbrir5(true)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -243,7 +256,13 @@ const SectionTwo = () => {
             }
             onClick={() => VerificationOfSize()}
           >
-            {SinStock ? "Sin Stock" : "Agregar al Carrito"} • {precioOnCurrency}
+            {abrir4 ? (
+              <MobileAddToCartAnimation />
+            ) : SinStock ? (
+              ["Sin Stock • ", precioOnCurrency]
+            ) : (
+              ["Agregar al Carrito • ", precioOnCurrency]
+            )}
           </button>
           {SinStock ? null : (
             <button className="SectionTwo-btn2">Comprar ahora</button>
