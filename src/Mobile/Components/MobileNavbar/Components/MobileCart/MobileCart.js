@@ -3,11 +3,92 @@ import { AppContext } from "../../../../../Context/Appcontext";
 import { useContext } from "react";
 
 const MobileCart = () => {
-  const { setOpenCart, productlist } = useContext(AppContext);
+  const {
+    setOpenCart,
+    productlist,
+    SubtotalPriceOnCurrencyFormat,
+    EliminarProducto,
+    incrementCountOfProduct,
+    decrementCountOfProduct,
+  } = useContext(AppContext);
 
-  // const RenderOfCard = () => productlist.map((Producto, index) => <p></p>);
+  const MobileRenderOfCard = () =>
+    productlist.map((Producto, index) => (
+      <div className="MobileRenderOfCard-background" key={index}>
+        <div className="MobileRenderOfCard-content">
+          <img
+            src={Producto.imagen}
+            className="MobileRenderOfCard-img"
+            alt=""
+          />
+          <div className="MobileRenderOfCard-B1">
+            <div className="MobileRenderOfCard-B1B1">
+              <p className="MobileRenderOfCard-txt-1">{Producto.nombre}</p>
+              <p className="MobileRenderOfCard-txt-2">{Producto.talle}</p>
+            </div>
+            <p className="MobileRenderOfCard-txt-3">
+              {new Intl.NumberFormat("es-AR", {
+                style: "currency",
+                currency: "ARS",
+              }).format(Producto.precio)}
+            </p>
+            <div className="MobileRenderOfCard-B1B2">
+              <button
+                className="MobileRenderOfCard-btn"
+                disabled={Producto.count === 1}
+                onClick={() => decrementCountOfProduct(index)}
+              >
+                -
+              </button>
+              <p className="MobileRenderOfCard-txt-4">{Producto.count}</p>
+              <button
+                className="MobileRenderOfCard-btn"
+                onClick={() => incrementCountOfProduct(index)}
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div className="MobileRenderOfCard-B2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="MobileRenderOfCard-svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+              onClick={() => EliminarProducto(Producto.id)}
+            >
+              <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+              <path
+                fillRule="evenodd"
+                d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    ));
 
-  const MobileFulledCart = <div>MobileFulledCart</div>;
+  const MobileFulledCart = (
+    <div className="MobileFulledCart-background">
+      <div className="MobileFulledCart-content">
+        <div className="MobileFulledCart-C-B1">{MobileRenderOfCard()}</div>
+        <div className="MobileFulledCart-C-B2">
+          <div className="MobileFulledCart-C-B2B1">
+            <p className="MobileFulledCart-txt-1">
+              Detalles del pago y envio en el Checkout
+            </p>
+          </div>
+          <div className="MobileFulledCart-C-B2B2">
+            <p className="MobileFulledCart-txt-2">
+              CHECKOUT • {SubtotalPriceOnCurrencyFormat}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 
   const MobileEmptyCart = (
     <div className="MobileEmptyCart-background">
