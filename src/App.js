@@ -20,6 +20,7 @@ import PreguntasFrecuentes from "./Desktop/Components/Footer/Components/Pregunta
 import MobileHomePage from "./Mobile/Pages/MobileHomePage/MobileHomePage";
 import MobileNavbar from "./Mobile/Components/MobileNavbar/MobileNavbar";
 import MobileProductPage from "./Mobile/Pages/MobileProductPage/MobileProductPage";
+import MobileTemporadasPage from "./Mobile/Pages/MobileTemporadasPage/MobileTemporadasPage";
 
 export default function App() {
   return (
@@ -47,7 +48,15 @@ export default function App() {
               </>
             }
           />
-          <Route path="/temporadas/:Temporade" element={<TemporadasPage />} />
+          <Route
+            path="/temporadas/:Temporade"
+            element={
+              <>
+                <TemporadasPage />
+                <MobileTemporadasPage />
+              </>
+            }
+          />
           <Route path="/equipos/:Equipo" element={<EquiposPage />} />
           <Route path="/destacados" element={<DestacadosPage />} />
           <Route path="/seguimiento" element={<SeguimientoPage />} />
