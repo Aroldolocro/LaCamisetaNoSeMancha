@@ -21,6 +21,7 @@ import MobileHomePage from "./Mobile/Pages/MobileHomePage/MobileHomePage";
 import MobileNavbar from "./Mobile/Components/MobileNavbar/MobileNavbar";
 import MobileProductPage from "./Mobile/Pages/MobileProductPage/MobileProductPage";
 import MobileTemporadasPage from "./Mobile/Pages/MobileTemporadasPage/MobileTemporadasPage";
+import MobileEquiposPage from "./Mobile/Pages/MobileEquiposPage/MobileEquiposPage";
 
 export default function App() {
   return (
@@ -57,7 +58,15 @@ export default function App() {
               </>
             }
           />
-          <Route path="/equipos/:Equipo" element={<EquiposPage />} />
+          <Route
+            path="/equipos/:Equipo"
+            element={
+              <>
+                <EquiposPage />
+                <MobileEquiposPage />
+              </>
+            }
+          />
           <Route path="/destacados" element={<DestacadosPage />} />
           <Route path="/seguimiento" element={<SeguimientoPage />} />
           <Route path="/checkout" element={<CheckoutPage />} />

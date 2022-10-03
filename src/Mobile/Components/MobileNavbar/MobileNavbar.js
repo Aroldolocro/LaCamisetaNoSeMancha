@@ -15,8 +15,18 @@ const MobileNavbar = () => {
     setOpenMenu1,
     setOpenMenu2,
     setOpenMenu3,
+    productlist,
   } = useContext(AppContext);
   const [Color, SetColor] = useState(false);
+  const [FulledCart, setFulledCart] = useState(false);
+
+  useEffect(() => {
+    if (productlist.length > 0) {
+      setFulledCart(true);
+    } else {
+      setFulledCart(false);
+    }
+  }, [productlist.length]);
 
   const changeColor = () => {
     if (window.scrollY >= 1) {
@@ -45,6 +55,19 @@ const MobileNavbar = () => {
       setOpenMenu3(false);
     }
   }, [OpenMenu, setOpenMenu1, setOpenMenu2, setOpenMenu3]);
+
+  const RenderOfMobileFulledCartAnimation = (
+    <div
+      className={
+        location.pathname === "/"
+          ? Color
+            ? "RenderOfMobileFulledCartAnimation-background RenderOfMobileFulledCartAnimation-background-scroll"
+            : "RenderOfMobileFulledCartAnimation-background"
+          : "RenderOfMobileFulledCartAnimation-background RenderOfMobileFulledCartAnimation-background-scroll"
+      }
+    ></div>
+  );
+
   return (
     <div className="MobileNavbar">
       {OpenMenu && <MobileMenu />}
@@ -109,6 +132,7 @@ const MobileNavbar = () => {
             >
               <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
             </svg>
+            {FulledCart && RenderOfMobileFulledCartAnimation}
           </div>
         </div>
       </div>

@@ -92,5 +92,32 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+  }
+
+  /*RenderOfMobileFulledCartAnimation*/
+
+  .RenderOfMobileFulledCartAnimation-background {
+    background-color: white;
+    height: 1vh;
+    width: 1vh;
+    border-radius: 50%;
+    top: 3.7vh;
+    position: absolute;
+    animation: RenderOfMobileFulledCartAnimation-animation 0.6s ease-in-out
+      infinite alternate;
+  }
+
+  .RenderOfMobileFulledCartAnimation-background-scroll {
+    background-color: rgb(94, 94, 94);
+  }
+
+  @keyframes RenderOfMobileFulledCartAnimation-animation {
+    0% {
+      transform: translateY(-25%);
+    }
+    100% {
+      transform: translateY(0);
+    }
   }
 }

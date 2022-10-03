@@ -1,0 +1,282 @@
+.MobileEquiposPage-background {
+  display: none;
+}
+
+@media (max-width: 1199.98px) {
+  .MobileEquiposPage-background {
+    height: 200%;
+    width: 100%;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .MobileEquiposPage-content {
+    height: 100%;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 12vh auto;
+  }
+
+  .MobileEquiposPage-C-B1 {
+    border: none;
+  }
+
+  .MobileEquiposPage-C-B2 {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 40% 18% 10% 18%;
+    align-content: space-around;
+  }
+
+  .MobileEquiposPage-C-B2B1 {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    align-content: space-around;
+  }
+
+  .MobileEquiposPage-txt-1 {
+    margin: 0;
+    font-size: 3vw;
+    font-weight: 500;
+    color: rgb(60, 60, 60);
+    text-align: center;
+  }
+
+  .MobileEquiposPage-txt-2 {
+    margin: 0;
+    font-size: 3vw;
+    font-weight: 400;
+    letter-spacing: 0.03vw;
+    color: rgb(60, 60, 60);
+    text-align: center;
+  }
+
+  .MobileEquiposPage-C-B2B2 {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 90%;
+    justify-content: center;
+    align-content: space-between;
+  }
+
+  .MobileEquiposPage-txt-3 {
+    margin: 0;
+    font-size: 3vw;
+    font-weight: 500;
+    letter-spacing: 0.03vw;
+    color: rgb(44, 44, 44);
+    text-align: left;
+  }
+
+  .MobileEquiposPage-C-B2B2B1 {
+    display: grid;
+    grid-template-columns: repeat(2, 40%);
+    grid-template-rows: repeat(2, 45%);
+    justify-content: space-around;
+    align-content: space-around;
+  }
+
+  .MobileEquiposPage-C-B2B3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .MobileEquiposPage-txt-4 {
+    margin: 0;
+    font-size: 3vw;
+    font-weight: 400;
+    color: rgb(94, 94, 94);
+    text-align: left;
+  }
+
+  .MobileEquiposPage-C-B2B4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .MobileEquiposPage-C-B2B4B1 {
+    height: 60%;
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(5, 18%);
+    grid-template-rows: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .MobileEquiposPage-C-B2B5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /*MobileEquiposPage_DB_Products*/
+
+  .MobileEquiposPage_DB_Products-background {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 70% auto;
+    align-content: space-around;
+    text-decoration: none;
+    animation: 0.7s ease-in MobileEquiposPage_DB_Products-background-animation;
+  }
+
+  @keyframes MobileEquiposPage_DB_Products-background-animation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .MobileEquiposPage_DB_Products-background-notdisplayed {
+    display: none;
+  }
+
+  .MobileEquiposPage_DB_Products-B1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .MobileEquiposPage_DB_Products-img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .MobileEquiposPage_DB_Products-B2 {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    align-content: space-between;
+  }
+
+  .MobileEquiposPage_DB_Products-txt-1 {
+    margin: 0;
+    text-align: center;
+    font-size: 3vw;
+    font-weight: 600;
+    color: rgb(94, 94, 94);
+  }
+
+  .MobileEquiposPage_DB_Products-txt-2 {
+    margin: 0;
+    text-align: center;
+    font-size: 3vw;
+    font-weight: 400;
+    color: rgb(94, 94, 94);
+  }
+
+  /*MobileEquiposPage_DB_EquiposImages*/
+
+  .MobileEquiposPage_DB_EquiposImages-B1 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .MobileEquiposPage_DB_EquiposImages-B1-notdisplayed {
+    display: none;
+  }
+
+  .MobileEquiposPage_DB_EquiposImages-B1:hover {
+    animation: MobileEquiposPage_DB_EquiposImages-B1-animation 0.6s ease-in-out
+      infinite alternate;
+  }
+
+  @keyframes MobileEquiposPage_DB_EquiposImages-B1-animation {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-7%);
+    }
+  }
+
+  .MobileEquiposPage_DB_EquiposImages-img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  /*Loaders*/
+
+  .MobileEquiposPage_EquipoNombre_Loader-background {
+    height: 3vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .MobileEquiposPage_EquipoNombre_Loader-content {
+    height: 100%;
+    width: 15vh;
+    animation: skeleton-loading 1s linear infinite alternate;
+  }
+
+  @keyframes skeleton-loading {
+    0% {
+      background-color: hsl(0, 0%, 75%);
+    }
+
+    100% {
+      background-color: hsl(0, 0%, 95%);
+    }
+  }
+
+  .MobileEquiposPage_EquipoNombre_Loader2-background {
+    height: 7vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .MobileEquiposPage_EquipoNombre_Loader2-content {
+    height: 100%;
+    width: 97%;
+    animation: skeleton-loading 1s linear infinite alternate;
+  }
+
+  .MobileEquiposPage_DB_Products_Loader-background {
+    animation: skeleton-loading 1s linear infinite alternate;
+  }
+
+  .MobileEquiposPage_DB_Products_Loader-background-notdisplayed {
+    display: none;
+  }
+
+  .MobileEquiposPage_EquipoHistoria_Loader-background {
+    height: 100%;
+    width: 100%;
+    animation: skeleton-loading 1s linear infinite alternate;
+  }
+
+  .MobileEquiposPage_EquipoHistoria2_Loader-background {
+    height: 100%;
+    width: 100%;
+    animation: skeleton-loading 1s linear infinite alternate;
+  }
+
+  .MobileEquiposPage_DB_EquiposImages_Loader-background {
+    height: 100%;
+    width: 100%;
+    animation: skeleton-loading 1s linear infinite alternate;
+  }
+
+  .MobileEquiposPage_DB_EquiposImages_Loader-background-notdisplayed {
+    display: none;
+  }
+}
