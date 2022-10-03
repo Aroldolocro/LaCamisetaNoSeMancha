@@ -1,0 +1,115 @@
+@media (min-width: 1199.98px) {
+  .MobileDestacadosPage-background {
+    display: none;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .MobileDestacadosPage-background {
+    background-color: whitesmoke;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .MobileDestacadosPage-content {
+    height: 100%;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 12vh auto;
+  }
+
+  .MobileDestacadosPage-C-B1 {
+    border: none;
+  }
+
+  .MobileDestacadosPage-C-B2 {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-rows: 75vh;
+    grid-row-gap: 5vh;
+  }
+
+  /*MobileDestacadosPage_DB_Products*/
+
+  .MobileDestacadosPage_DB_Products-background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+
+  .MobileDestacadosPage_DB_Products-background-notdisplayed {
+    display: none;
+  }
+
+  .MobileDestacadosPage_DB_Products-content {
+    height: 75%;
+    width: 95%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    align-content: space-between;
+  }
+
+  .MobileDestacadosPage_DB_Products-img {
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .MobileDestacadosPage_DB_Products-B1 {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    justify-content: center;
+  }
+
+  .MobileDestacadosPage_DB_Products-txt-1 {
+    margin: 0;
+    text-align: center;
+    font-size: 3vw;
+    font-weight: 500;
+    color: rgb(64, 64, 64);
+  }
+
+  .MobileDestacadosPage_DB_Products-txt-2 {
+    margin: 0;
+    text-align: center;
+    font-size: 3vw;
+    font-weight: 400;
+    color: rgb(64, 64, 64);
+  }
+
+  .MobileDestacadosPage_DB_Products-txt-3 {
+    margin: 0;
+    text-align: center;
+    font-size: 3vw;
+    font-weight: 400;
+    color: rgb(64, 64, 64);
+  }
+
+  /*MobileDestacadosPage_DB_Products_Loaders*/
+
+  .MobileDestacadosPage_DB_Products_Loaders-background {
+    animation: skeleton-loading 1s linear infinite alternate;
+  }
+
+  .MobileDestacadosPage_DB_Products_Loaders-background-notdisplayed {
+    display: none;
+  }
+
+  @keyframes skeleton-loading {
+    0% {
+      background-color: hsl(0, 0%, 75%);
+    }
+
+    100% {
+      background-color: hsl(0, 0%, 95%);
+    }
+  }
+}

@@ -22,6 +22,8 @@ import MobileNavbar from "./Mobile/Components/MobileNavbar/MobileNavbar";
 import MobileProductPage from "./Mobile/Pages/MobileProductPage/MobileProductPage";
 import MobileTemporadasPage from "./Mobile/Pages/MobileTemporadasPage/MobileTemporadasPage";
 import MobileEquiposPage from "./Mobile/Pages/MobileEquiposPage/MobileEquiposPage";
+import MobileDestacadosPage from "./Mobile/Pages/MobileDestacadosPage/MobileDestacadosPage";
+import MobileCheckoutPage from "./Mobile/Pages/MobileCheckoutPage/MobileCheckoutPage";
 
 export default function App() {
   return (
@@ -67,9 +69,25 @@ export default function App() {
               </>
             }
           />
-          <Route path="/destacados" element={<DestacadosPage />} />
+          <Route
+            path="/destacados"
+            element={
+              <>
+                <DestacadosPage />
+                <MobileDestacadosPage />
+              </>
+            }
+          />
           <Route path="/seguimiento" element={<SeguimientoPage />} />
-          <Route path="/checkout" element={<CheckoutPage />} />
+          <Route
+            path="/checkout"
+            element={
+              <>
+                <CheckoutPage />
+                <MobileCheckoutPage />
+              </>
+            }
+          />
           <Route path="/:postpayment" element={<PostPaymentPage />} />
           <Route
             path="/Preguntas_Frecuentes"

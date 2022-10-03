@@ -1,0 +1,66 @@
+@media (min-width: 1199.98px) {
+  .MobileCheckoutPage-background {
+    display: none;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .MobileCheckoutPage-background {
+    background-color: whitesmoke;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .MobileCheckoutPage-content {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10vh min-content 8vh auto;
+  }
+
+  .MobileCheckoutPage-C-B1 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 2vh 0 2vh;
+  }
+
+  .MobileCheckoutPage-txt-1 {
+    margin: 0;
+    font-size: 6vw;
+    font-weight: 600;
+    color: rgb(94, 94, 94);
+    text-decoration: none;
+  }
+
+  .MobileCheckoutPage-C-B3 {
+    padding: 0 2vh 0 2vh;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-content: flex-start;
+    grid-column-gap: 1vh;
+  }
+
+  .MobileCheckoutPage-txt-2 {
+    margin: 0;
+    font-size: 3.2vw;
+    font-weight: 400;
+    color: rgb(100, 100, 100);
+  }
+
+  .MobileCheckoutPage-txt-2-black {
+    color: black;
+    font-weight: 500;
+  }
+
+  .MobileCheckoutPage-svg-1 {
+    height: 1.7vh;
+    width: auto;
+    fill: rgb(74, 74, 74);
+  }
+}

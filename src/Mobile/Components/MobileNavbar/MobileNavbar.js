@@ -69,7 +69,13 @@ const MobileNavbar = () => {
   );
 
   return (
-    <div className="MobileNavbar">
+    <div
+      className={
+        location.pathname === "/checkout"
+          ? "MobileNavbar-notdisplayed"
+          : "MobileNavbar"
+      }
+    >
       {OpenMenu && <MobileMenu />}
       {OpenCart && <MobileCart />}
       <div

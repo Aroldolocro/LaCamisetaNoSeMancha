@@ -1,6 +1,7 @@
 import "./MobileCart.css";
 import { AppContext } from "../../../../../Context/Appcontext";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 const MobileCart = () => {
   const {
@@ -80,11 +81,15 @@ const MobileCart = () => {
               Detalles del pago y envio en el Checkout
             </p>
           </div>
-          <div className="MobileFulledCart-C-B2B2">
+          <Link
+            to={`/checkout`}
+            className="MobileFulledCart-C-B2B2"
+            onClick={() => setOpenCart(false)}
+          >
             <p className="MobileFulledCart-txt-2">
               CHECKOUT • {SubtotalPriceOnCurrencyFormat}
             </p>
-          </div>
+          </Link>
         </div>
       </div>
     </div>

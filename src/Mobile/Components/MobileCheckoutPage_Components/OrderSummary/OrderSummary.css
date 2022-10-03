@@ -1,0 +1,70 @@
+@media (max-width: 1199.98px) {
+  .OrderSummary-background {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 8vh auto;
+  }
+
+  .OrderSummary-B1 {
+    grid-row: 1/2;
+    background-color: rgb(240, 240, 240);
+    padding: 0 2vh 0 2vh;
+    display: grid;
+    grid-template-columns: min-content auto auto;
+    align-items: center;
+    border-top: 0.1vh solid rgb(128, 128, 128, 0.5);
+    border-bottom: 0.1vh solid rgb(128, 128, 128, 0.5);
+    grid-column-gap: 2vh;
+  }
+
+  .OrderSummary-svg-1 {
+    height: 3vh;
+    width: auto;
+    fill: black;
+  }
+
+  .OrderSummary-B1B1 {
+    width: fit-content;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    grid-column-gap: 1vh;
+  }
+
+  .OrderSummary-txt-1 {
+    margin: 0;
+    font-size: 3.5vw;
+    font-weight: 400;
+    color: black;
+  }
+
+  .OrderSummary-svg-2 {
+    height: 2vh;
+    width: auto;
+    fill: black;
+  }
+
+  .OrderSummary-svg-2-rotated {
+    transform: rotate(180deg);
+  }
+
+  .OrderSummary-txt-2 {
+    margin: 0;
+    font-size: 4vw;
+    font-weight: 500;
+    color: black;
+    text-align: end;
+  }
+
+  .OrderSummary-B2-opened {
+    height: 25vh;
+    grid-row: 2/3;
+    background-color: blueviolet;
+    transition: 0.3s;
+  }
+
+  .OrderSummary-B2-closed {
+    height: 0;
+    opacity: 0;
+  }
+}
