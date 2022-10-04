@@ -3,8 +3,34 @@ import { useContext, useState } from "react";
 import { AppContext } from "../../../../Context/Appcontext";
 
 const OrderSummary = () => {
-  const { SubtotalPriceOnCurrencyFormat } = useContext(AppContext);
+  const { productlist, SubtotalPriceOnCurrencyFormat } = useContext(AppContext);
   const [openOrderSummary, setopenOrderSummary] = useState(false);
+
+  const MobileRenderOfCartSummary = () =>
+    productlist.map((Producto, index) => (
+      <div className="MobileRenderOfCartSummary-background" key={index}>
+        <div className="MobileRenderOfCartSummary-B1">
+          <img
+            src={Producto.imagen}
+            className="MobileRenderOfCartSummary-img"
+            alt=""
+          />
+          <div className="MobileRenderOfCartSummary-count">
+            {Producto.count}
+          </div>
+        </div>
+        <div className="MobileRenderOfCartSummary-B2">
+          <p className="MobileRenderOfCartSummary-txt-1">{Producto.nombre}</p>
+          <p className="MobileRenderOfCartSummary-txt-2">{Producto.talle}</p>
+        </div>
+        <p className="MobileRenderOfCartSummary-txt-3">
+          {new Intl.NumberFormat("es-AR", {
+            style: "currency",
+            currency: "ARS",
+          }).format(Producto.precio)}
+        </p>
+      </div>
+    ));
 
   return (
     <div className="OrderSummary-background">
@@ -54,7 +80,9 @@ const OrderSummary = () => {
             : "OrderSummary-B2-opened OrderSummary-B2-closed"
         }
       >
-        asd
+        <div className="OrderSummary-B2B1">{MobileRenderOfCartSummary()}</div>
+        <div className="OrderSummary-B2B2"></div>
+        <div className="OrderSummary-B2B3"></div>
       </div>
     </div>
   );
