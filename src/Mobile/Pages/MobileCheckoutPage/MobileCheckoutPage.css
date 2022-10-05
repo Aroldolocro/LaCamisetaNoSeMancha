@@ -19,7 +19,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 10vh min-content 8vh auto;
+    grid-template-rows: 10vh min-content 8vh auto 10vh;
   }
 
   .MobileCheckoutPage-C-B1 {
@@ -62,5 +62,23 @@
     height: 1.7vh;
     width: auto;
     fill: rgb(74, 74, 74);
+  }
+
+  .MobileCheckoutPage-C-B4 {
+    border-top: 0.1vh solid rgb(128, 128, 128, 0.5);
+    margin: 0 2vh 0 2vh;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    align-items: center;
+    justify-content: flex-start;
+    grid-gap: 3vh;
+  }
+
+  .MobileCheckoutPage-txt-3 {
+    margin: 0;
+    font-size: 3.5vw;
+    font-weight: 400;
+    color: rgb(94, 94, 94);
   }
 }

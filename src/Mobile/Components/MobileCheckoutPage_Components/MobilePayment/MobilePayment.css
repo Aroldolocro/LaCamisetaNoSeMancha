@@ -1,0 +1,345 @@
+@media (min-width: 1199.98px) {
+  .MobilePayment-background {
+    display: none;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .MobilePayment-background {
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2vh 2vh 2vh;
+  }
+
+  .MobilePayment-content {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: min-content min-content min-content;
+    grid-row-gap: 2vh;
+  }
+
+  .MobilePayment-C-B1 {
+    background-color: white;
+    border: 0.1vh solid rgb(128, 128, 128, 0.5);
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: min-content min-content min-content;
+    padding: 0 2vh 0 2vh;
+    border-radius: 0.5vh;
+  }
+
+  .MobilePayment-C-B1B1 {
+    padding: 2vh 0 2vh 0;
+    border-bottom: 0.1vh solid rgb(128, 128, 128, 0.5);
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .MobilePayment-C-B1B1B1 {
+    height: 100%;
+    width: auto;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    align-content: space-between;
+  }
+
+  .MobilePayment-txt-1 {
+    margin: 0;
+    font-size: 3.5vw;
+    font-weight: 400;
+    color: rgb(44, 44, 44);
+  }
+
+  .MobilePayment-txt-2 {
+    margin: 0;
+    font-size: 3.5vw;
+    font-weight: 400;
+    color: black;
+  }
+
+  .MobilePayment-txt-3 {
+    margin: 0;
+    font-size: 3vw;
+    font-weight: 400;
+    color: rgb(44, 44, 44);
+  }
+
+  .MobilePayment-C-B1B2 {
+    padding: 2vh 0 2vh 0;
+    border-bottom: 0.1vh solid rgb(128, 128, 128, 0.5);
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .MobilePayment-C-B1B3 {
+    padding: 2vh 0 2vh 0;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    align-content: space-between;
+  }
+
+  /*RenderOfMobileCoveredMethod*/
+
+  .RenderOfMobileCoveredMethod-background {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 100%;
+    justify-content: flex-start;
+    grid-column-gap: 1vh;
+  }
+
+  .RenderOfMobileCoveredMethod-txt-1 {
+    margin: 0;
+    font-size: 3.5vw;
+    font-weight: 400;
+    color: black;
+  }
+
+  .RenderOfMobileCoveredMethod-txt-2 {
+    margin: 0;
+    font-size: 3.5vw;
+    font-weight: 500;
+    color: black;
+    text-decoration: line-through;
+  }
+
+  .RenderOfMobileCoveredMethod-txt-3 {
+    margin: 0;
+    font-size: 3.5vw;
+    font-weight: 500;
+    color: rgb(0, 158, 0);
+  }
+
+  /*RenderOfMobileNotCoveredMethod*/
+
+  .RenderOfMobileNotCoveredMethod-background {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 100%;
+    justify-content: flex-start;
+    grid-column-gap: 1vh;
+  }
+
+  .RenderOfMobileNotCoveredMethod-txt-1 {
+    margin: 0;
+    font-size: 3.5vw;
+    font-weight: 400;
+    color: black;
+  }
+
+  .RenderOfMobileNotCoveredMethod-txt-2 {
+    margin: 0;
+    font-size: 3.5vw;
+    font-weight: 500;
+    color: black;
+  }
+
+  .MobilePayment-C-B2 {
+    padding: 2vh 0 2vh 0;
+    border-top: 0.1vh solid rgb(128, 128, 128, 0.5);
+    border-bottom: 0.1vh solid rgb(128, 128, 128, 0.5);
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    align-items: center;
+    justify-content: flex-start;
+    grid-column-gap: 2vh;
+  }
+
+  .MobilePayment-svg-1 {
+    height: 3vh;
+    width: auto;
+    fill: rgb(94, 94, 94);
+  }
+
+  .MobilePayment-txt-4 {
+    margin: 0;
+    font-size: 3.5vw;
+    font-weight: 400;
+    color: black;
+    text-decoration: underline;
+  }
+
+  .MobilePayment-C-B3 {
+    height: fit-content;
+    border: 0.1vh solid rgb(128, 128, 128, 0.5);
+    border-radius: 0.5vh;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto;
+  }
+
+  .MobilePayment-C-B3B1 {
+    height: 8vh;
+    padding: 2vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    justify-content: flex-start;
+    align-content: space-between;
+    border-bottom: 0.1vh solid rgb(128, 128, 128, 0.5);
+  }
+
+  .MobilePayment-C-B3B1B1 {
+    height: auto;
+    width: auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    justify-content: flex-start;
+    align-items: center;
+    grid-column-gap: 2vh;
+  }
+
+  .MobilePayment-check {
+    height: 2.5vh;
+    width: 2.5vh;
+    border: 0.1vh solid rgb(128, 128, 128, 0.5);
+    border-radius: 50%;
+  }
+
+  .MobilePayment-check-checked {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+  }
+
+  .MobilePayment-check-checked::after {
+    padding: 0;
+    margin: 0;
+    content: "";
+    background-color: white;
+    height: 0.7vh;
+    width: 0.7vh;
+    border-radius: 50%;
+  }
+
+  .MobilePayment-txt-5 {
+    margin: 0;
+    font-size: 3.5vw;
+    font-weight: 400;
+    color: black;
+  }
+
+  .MobilePayment-C-B3B1B2 {
+    height: auto;
+    width: auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    align-items: center;
+    justify-content: space-between;
+    grid-column-gap: 1vh;
+  }
+
+  .MobilePayment-img {
+    height: auto;
+    width: 4vh;
+    object-fit: contain;
+    border: 0.1vh solid rgb(128, 128, 128, 0.5);
+    border-radius: 0.5vh;
+    padding: 0.5vh;
+  }
+
+  .MobilePayment-txt-6 {
+    margin: 0;
+    font-size: 3vw;
+    font-weight: 400;
+    color: rgb(94, 94, 94);
+  }
+
+  .MobilePayment-C-B3B2 {
+    background-color: rgb(240, 240, 240);
+    height: auto;
+    padding: 2vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    align-content: space-between;
+    justify-items: center;
+    grid-row-gap: 1vh;
+    border-bottom: 0.1vh solid rgb(128, 128, 128, 0.5);
+  }
+
+  .MobilePayment-svg-2 {
+    height: 10vh;
+    width: auto;
+    fill: rgb(128, 128, 128, 0.5);
+  }
+
+  .MobilePayment-txt-7 {
+    margin: 0;
+    font-size: 3vw;
+    font-weight: 400;
+    color: rgb(94, 94, 94);
+    text-align: center;
+  }
+
+  .MobilePayment-C-B3B2-notdisplayed {
+    display: none;
+  }
+
+  .MobilePayment-C-B3B3 {
+    height: 4vh;
+    padding: 2vh;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.1vh solid rgb(128, 128, 128, 0.5);
+  }
+
+  .MobilePayment-C-B3B3B1 {
+    height: auto;
+    width: auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    justify-content: flex-start;
+    align-items: center;
+    grid-column-gap: 2vh;
+  }
+
+  .MobilePayment-C-B3B3B2 {
+    height: auto;
+    width: auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    align-items: center;
+    justify-content: space-between;
+    grid-column-gap: 1vh;
+  }
+
+  .MobilePayment-C-B3B3-NoBorder {
+    border: none;
+  }
+
+  .MobilePayment-C-B3B4 {
+    background-color: rgb(240, 240, 240);
+    height: 16vh;
+    padding: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .MobilePayment-C-B3B4-notdisplayed {
+    display: none;
+  }
+}

@@ -54,13 +54,15 @@ const ConstAppContext = ({ children }) => {
 
   /*USESTATES DE CHECKOUTPAGE*/
 
-  const [abrir6, setAbrir6] = useState(true);
-  const [abrir7, setAbrir7] = useState(false);
+  const [abrir6, setAbrir6] = useState(false);
+  const [abrir7, setAbrir7] = useState(true); /*CAMBIAR*/
 
   /*USESTATES DE PAYMENT METHODS*/
 
   const [Payment1, setPayment1] = useState(true);
   const [Payment2, setPayment2] = useState(false);
+  const [MobilePayment1, setMobilePayment1] = useState(true);
+  const [MobilePayment2, setMobilePayment2] = useState(false);
 
   /*SCROLL HP-S1*/
 
@@ -463,7 +465,11 @@ const ConstAppContext = ({ children }) => {
         OpenCart,
         setOpenCart,
         openShippingPriceFAQ,
-        setopenShippingPriceFAQ
+        setopenShippingPriceFAQ,
+        MobilePayment1,
+        setMobilePayment1,
+        MobilePayment2,
+        setMobilePayment2,
       }}
     >
       {children}

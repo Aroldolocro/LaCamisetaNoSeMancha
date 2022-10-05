@@ -19,7 +19,7 @@ const MobileCheckoutPage = () => {
       document.body.className = undefined;
     }
   }, [openShippingPriceFAQ]);
-  
+
   return (
     <div className="MobileCheckoutPage-background">
       {openShippingPriceFAQ && <ShippingPriceFAQ />}
@@ -65,6 +65,10 @@ const MobileCheckoutPage = () => {
         </div>
         {abrir6 && <MobileForm />}
         {abrir7 && <MobilePayment />}
+        <div className="MobileCheckoutPage-C-B4">
+          <p className="MobileCheckoutPage-txt-3">Politicas de reembolso</p>
+          <p className="MobileCheckoutPage-txt-3">Politicas de envío</p>
+        </div>
       </div>
     </div>
   );

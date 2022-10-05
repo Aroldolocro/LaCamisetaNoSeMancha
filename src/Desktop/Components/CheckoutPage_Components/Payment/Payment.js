@@ -3,12 +3,12 @@ import { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { AppContext } from "../../../../Context/Appcontext";
 import { getFirestore, doc, getDoc } from "firebase/firestore";
-import image1 from "../../../../Images/imagesPaymentMethods/image1.png"
-import image2 from "../../../../Images/imagesPaymentMethods/image2.png"
-import image3 from "../../../../Images/imagesPaymentMethods/image3.png"
-import image4 from "../../../../Images/imagesPaymentMethods/image4.png"
-import image5 from "../../../../Images/imagesPaymentMethods/image5.png"
-import image7 from "../../../../Images/imagesPaymentMethods/image7.png"
+import image1 from "../../../../Images/imagesPaymentMethods/image1.png";
+import image2 from "../../../../Images/imagesPaymentMethods/image2.png";
+import image3 from "../../../../Images/imagesPaymentMethods/image3.png";
+import image4 from "../../../../Images/imagesPaymentMethods/image4.png";
+import image5 from "../../../../Images/imagesPaymentMethods/image5.png";
+import image7 from "../../../../Images/imagesPaymentMethods/image7.png";
 
 const Payment = () => {
   const {
@@ -33,7 +33,7 @@ const Payment = () => {
 
   useEffect(() => {
     const montoo = OrderPriceAfterShippingCalculationOnNumberFormat;
-    fetch("http://192.168.1.2:5000/api", {
+    fetch("http://192.168.1.8:5000/api", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

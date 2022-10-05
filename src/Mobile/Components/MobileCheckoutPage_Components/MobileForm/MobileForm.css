@@ -1,5 +1,5 @@
 .MobileForm-background {
-  height: 120vh;
+  height: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
