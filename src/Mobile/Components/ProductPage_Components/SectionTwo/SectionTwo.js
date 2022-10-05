@@ -1,7 +1,7 @@
 import "./SectionTwo.css";
 import { useState, useEffect, useContext } from "react";
 import { getFirestore, doc, getDoc } from "firebase/firestore";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { AppContext } from "../../../../Context/Appcontext";
 import MobileAddToCartNotification from "../MobileAddToCartNotification/MobileAddToCartNotification";
 import MobileAddToCartAnimation from "../MobileAddToCartAnimation/MobileAddToCartAnimation";
@@ -18,7 +18,7 @@ const SectionTwo = () => {
     notificate1,
   } = useContext(AppContext);
   const { productId } = useParams();
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const [data, setData] = useState({});
   const [data3, setData3] = useState({});
   const [selected, setSelected] = useState();
@@ -116,27 +116,27 @@ const SectionTwo = () => {
     }
   };
 
-  // const VerificationOfSize2 = () => {
-  //   if (selected === undefined || selected === "SELECCIONA UN TALLE") {
-  //     setSizeError(true);
-  //   } else {
-  //     setSizeError(false);
-  //     AgregarProducto(
-  //       imagen,
-  //       nombre,
-  //       categoria,
-  //       talle,
-  //       precio,
-  //       StockS,
-  //       StockM,
-  //       StockL,
-  //       StockXL,
-  //       StockXXL,
-  //       id
-  //     );
-  //     navigate("/checkout");
-  //   }
-  // };
+  const VerificationOfSize2 = () => {
+    if (selected === undefined || selected === "SELECCIONA UN TALLE") {
+      setSizeError(true);
+    } else {
+      setSizeError(false);
+      AgregarProducto(
+        imagen,
+        nombre,
+        categoria,
+        talle,
+        precio,
+        StockS,
+        StockM,
+        StockL,
+        StockXL,
+        StockXXL,
+        id
+      );
+      navigate("/checkout");
+    }
+  };
 
   /*DB SIZES VERIFICATION*/
 
@@ -265,7 +265,12 @@ const SectionTwo = () => {
             )}
           </button>
           {SinStock ? null : (
-            <button className="SectionTwo-btn2">Comprar ahora</button>
+            <button
+              className="SectionTwo-btn2"
+              onClick={() => VerificationOfSize2()}
+            >
+              Comprar ahora
+            </button>
           )}
         </div>
         <div className="SectionTwo-C-B4">

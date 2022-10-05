@@ -1,4 +1,219 @@
 .MobileForm-background {
-  background-color: red;
   height: 120vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2vh 2vh 2vh;
+}
+
+.MobileForm-content {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 8vh 10vh 8vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh auto 10vh;
+}
+
+.MobileForm-C-B1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.MobileForm-txt-1 {
+  margin: 0;
+  font-size: 4.5vw;
+  font-weight: 400;
+  color: rgb(64, 64, 64);
+}
+
+.MobileForm-C-B2 {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto;
+  align-content: flex-start;
+}
+
+/*Input Start*/
+
+.MobileForm-INP-DIV {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.MobileForm-inp {
+  height: 3.5vh;
+  width: 100%;
+  font-size: 3.5vw;
+  font-weight: 400;
+  color: black;
+  background-color: white;
+  border-radius: 0.5vh;
+  border: 0.1vh solid rgb(128, 128, 128, 0.5);
+  padding-left: 1.5vh;
+  padding-top: 2vh;
+}
+
+.MobileForm-inp-error {
+  border: 0.1vh solid rgba(234, 47, 0, 0.823);
+}
+
+.MobileForm-label {
+  left: 0;
+  position: absolute;
+  transition: 0.2s ease-in-out;
+  transform-origin: 1vh 0;
+  padding-left: 1.5vh;
+  font-size: 3.5vw;
+  font-weight: 400;
+  color: rgb(124, 124, 124);
+  pointer-events: none;
+}
+
+.MobileForm-inp:focus + .MobileForm-label,
+.MobileForm-inp:not(:placeholder-shown) + .MobileForm-label {
+  transform: translateY(-1vh) scale(0.8);
+}
+
+.MobileForm-txt-error {
+  margin: 0;
+  font-size: 3.5vw;
+  font-weight: 400;
+  color: rgba(234, 47, 0, 0.823);
+}
+
+/*Input Ends*/
+
+.MobileForm-C-B3 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.MobileForm-C-B4 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/*Input Dropdown*/
+
+.MobileForm-dropdown {
+  height: 6.3vh;
+  width: 100%;
+  border-radius: 0.5vh;
+  border: 0.1vh solid rgb(128, 128, 128, 0.5);
+  padding-left: 1.5vh;
+  font-size: 3.5vw;
+  font-weight: 400;
+  color: rgb(124, 124, 124);
+  background-color: white;
+}
+
+.MobileForm-C-B5 {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto;
+  align-content: flex-start;
+}
+
+.MobileForm-C-B6 {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto;
+  align-content: flex-start;
+}
+
+.MobileForm-C-B7 {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto;
+  align-content: flex-start;
+}
+
+.MobileForm-C-B8 {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto;
+  align-content: flex-start;
+}
+
+.MobileForm-C-B9 {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto;
+  align-content: flex-start;
+}
+
+.MobileForm-C-B10 {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto;
+  align-content: flex-start;
+}
+
+.MobileForm-C-B11 {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto;
+  align-content: flex-start;
+}
+
+.MobileForm-C-B12 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.MobileForm-C-B13 {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto;
+  align-content: flex-start;
+}
+
+.MobileForm-C-B14 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1vh 0 0 0;
+}
+
+.MobileForm-btn {
+  margin: 0;
+  padding: 1vh 0 1vh 0;
+  height: 9vh;
+  width: 100%;
+  border: none;
+  background-color: rgb(54, 54, 54);
+  border-radius: 0.5vh;
+  font-size: 3.5vw;
+  font-weight: 500;
+  color: white;
+}
+
+.MobileForm-C-B15 {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 100%;
+  align-items: center;
+  justify-content: center;
+  grid-column-gap: 1vh;
+  text-decoration: none;
+}
+
+.MobileForm-svg {
+  height: 1.5vh;
+  width: auto;
+  fill: rgb(64, 64, 64);
+}
+
+.MobileForm-txt-2 {
+  margin: 0;
+  font-size: 3.5vw;
+  font-weight: 500;
+  color: rgb(64, 64, 64);
 }
