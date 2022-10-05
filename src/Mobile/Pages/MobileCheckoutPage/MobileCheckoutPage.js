@@ -2,14 +2,27 @@ import "./MobileCheckoutPage.css";
 import OrderSummary from "../../Components/MobileCheckoutPage_Components/OrderSummary/OrderSummary";
 import MobileForm from "../../Components/MobileCheckoutPage_Components/MobileForm/MobileForm";
 import MobilePayment from "../../Components/MobileCheckoutPage_Components/MobilePayment/MobilePayment";
+import ShippingPriceFAQ from "../../Components/MobileCheckoutPage_Components/ShippingPriceFAQ/ShippingPriceFAQ";
 import { Link } from "react-router-dom";
 import { AppContext } from "../../../Context/Appcontext";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 
 const MobileCheckoutPage = () => {
-  const { abrir6, abrir7 } = useContext(AppContext);
+  const { abrir6, abrir7, openShippingPriceFAQ } = useContext(AppContext);
+
+  useEffect(() => {
+    if (openShippingPriceFAQ) {
+      document.getElementById("root").className = "NoScroll";
+      document.body.className = "NoScroll";
+    } else {
+      document.getElementById("root").className = undefined;
+      document.body.className = undefined;
+    }
+  }, [openShippingPriceFAQ]);
+  
   return (
     <div className="MobileCheckoutPage-background">
+      {openShippingPriceFAQ && <ShippingPriceFAQ />}
       <div className="MobileCheckoutPage-content">
         <div className="MobileCheckoutPage-C-B1">
           <Link to={"/"} className="MobileCheckoutPage-txt-1">

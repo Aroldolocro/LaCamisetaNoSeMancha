@@ -1,0 +1,70 @@
+.ShippingPriceFAQ-background {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  background-color: rgb(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: 0.3s ease ShippingPriceFAQ-background;
+}
+
+@keyframes ShippingPriceFAQ-background {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.ShippingPriceFAQ-content {
+  height: 30%;
+  width: 90%;
+  background-color: whitesmoke;
+  border: 1px solid rgb(128, 128, 128, 0.3);
+  border-radius: 0.5vh;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 6vh auto;
+}
+
+.ShippingPriceFAQ-C-B1 {
+  border-bottom: 1px solid rgb(128, 128, 128, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 2vh 0 2vh;
+}
+
+.ShippingPriceFAQ-svg {
+  height: 3vh;
+  width: auto;
+  fill: rgb(94, 94, 94);
+}
+
+.ShippingPriceFAQ-C-B2 {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto;
+  padding: 0 2vh 0 2vh;
+  align-content: space-around;
+}
+
+.ShippingPriceFAQ-txt-1 {
+  margin: 0;
+  font-size: 4vw;
+  font-weight: 500;
+  color: rgb(94, 94, 94);
+  text-align: center;
+  text-decoration: underline;
+}
+
+.ShippingPriceFAQ-txt-2 {
+  margin: 0;
+  font-size: 3.5vw;
+  font-weight: 400;
+  color: rgb(94, 94, 94);
+  text-align: center;
+}

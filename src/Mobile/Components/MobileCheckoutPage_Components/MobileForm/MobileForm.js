@@ -1,7 +1,7 @@
 import "./MobileForm.css";
 
 const MobileForm = () => {
-  return <div>MobileForm</div>;
+  return <div className="MobileForm-background">MobileForm</div>;
 };
 
 export default MobileForm;

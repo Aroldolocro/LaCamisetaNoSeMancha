@@ -48,6 +48,10 @@ const ConstAppContext = ({ children }) => {
 
   const [abrir5, setAbrir5] = useState(false);
 
+  /*ABRIR & CERRAR MOBILE-ShippingPriceFAQ*/
+
+  const [openShippingPriceFAQ, setopenShippingPriceFAQ] = useState(false);
+
   /*USESTATES DE CHECKOUTPAGE*/
 
   const [abrir6, setAbrir6] = useState(true);
@@ -458,6 +462,8 @@ const ConstAppContext = ({ children }) => {
         setOpenMenu3,
         OpenCart,
         setOpenCart,
+        openShippingPriceFAQ,
+        setopenShippingPriceFAQ
       }}
     >
       {children}

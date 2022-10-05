@@ -61,10 +61,10 @@
     grid-row: 2/3;
     background-color: whitesmoke;
     transition: 0.3s;
-    padding: 2vh;
+    padding: 2vh 2vh 0 2vh;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 68% 20% 12%;
+    grid-template-rows: 68% 18% 14%;
     border-bottom: 0.1vh solid rgb(128, 128, 128, 0.5);
   }
 
@@ -85,12 +85,81 @@
     grid-row-gap: 1vh;
   }
 
+  .OrderSummary-B2B1::-webkit-scrollbar {
+    display: none;
+  }
+
   .OrderSummary-B2B2 {
     border-bottom: 0.1vh solid rgb(128, 128, 128, 0.5);
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: min-content min-content;
+    align-content: space-around;
+  }
+
+  .OrderSummary-B2B2B1 {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .OrderSummary-txt-3 {
+    margin: 0;
+    font-size: 3.5vw;
+    font-weight: 400;
+    color: rgb(74, 74, 74);
+  }
+
+  .OrderSummary-txt-4 {
+    margin: 0;
+    font-size: 3.5vw;
+    font-weight: 500;
+    color: rgb(74, 74, 74);
+  }
+
+  .OrderSummary-B2B2B2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .OrderSummary-B2B3 {
-    border: none;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .OrderSummary-txt-5 {
+    margin: 0;
+    font-size: 3.5vw;
+    font-weight: 400;
+    color: rgb(74, 74, 74);
+  }
+
+  .OrderSummary-B2B3B1 {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 100%;
+    align-items: center;
+    grid-column-gap: 1vh;
+  }
+
+  .OrderSummary-txt-6 {
+    margin: 0;
+    font-size: 3.5vw;
+    font-weight: 400;
+    color: rgb(74, 74, 74);
+  }
+
+  .OrderSummary-txt-7 {
+    margin: 0;
+    font-size: 5vw;
+    font-weight: 600;
+    color: rgb(74, 74, 74);
   }
 
   /*MobileRenderOfCartSummary*/
@@ -160,6 +229,99 @@
   }
 
   .MobileRenderOfCartSummary-txt-3 {
+    margin: 0;
+    font-size: 3.5vw;
+    font-weight: 500;
+    color: rgb(74, 74, 74);
+  }
+
+  /*RenderOfMobileCoveredShipping*/
+
+  .RenderOfMobileCoveredShipping-background {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 100%;
+    justify-content: space-between;
+  }
+
+  .RenderOfMobileCoveredShipping-B1 {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 100%;
+    align-items: center;
+    grid-column-gap: 1vh;
+  }
+
+  .RenderOfMobileCoveredShipping-txt-1 {
+    margin: 0;
+    font-size: 3.5vw;
+    font-weight: 400;
+    color: rgb(74, 74, 74);
+  }
+
+  .RenderOfMobileCoveredShipping-svg {
+    height: 2vh;
+    width: auto;
+  }
+
+  .RenderOfMobileCoveredShipping-B2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 100%;
+    align-items: center;
+    grid-column-gap: 1vh;
+  }
+
+  .RenderOfMobileCoveredShipping-txt-2 {
+    margin: 0;
+    font-size: 3.5vw;
+    font-weight: 500;
+    color: rgb(0, 158, 0);
+  }
+
+  .RenderOfMobileCoveredShipping-txt-3 {
+    margin: 0;
+    font-size: 3.5vw;
+    font-weight: 500;
+    color: rgb(74, 74, 74);
+    text-decoration: line-through;
+  }
+
+  /*RenderOfMobileNotCoveredShipping*/
+
+  .RenderOfMobileNotCoveredShipping-background {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .RenderOfMobileNotCoveredShipping-B1 {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    align-items: center;
+    grid-column-gap: 1vh;
+  }
+
+  .RenderOfMobileNotCoveredShipping-txt-1 {
+    margin: 0;
+    font-size: 3.5vw;
+    font-weight: 400;
+    color: rgb(74, 74, 74);
+  }
+
+  .RenderOfMobileNotCoveredShipping-svg {
+    height: 2vh;
+    width: auto;
+  }
+
+  .RenderOfMobileNotCoveredShipping-txt-2 {
     margin: 0;
     font-size: 3.5vw;
     font-weight: 500;
