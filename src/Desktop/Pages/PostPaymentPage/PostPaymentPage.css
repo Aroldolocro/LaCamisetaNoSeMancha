@@ -1,60 +1,62 @@
-.PP-background {
-  height: 100%;
-  width: 100%;
-  background-color: whitesmoke;
-  display: flex;
-  justify-content: center;
-}
-
-.PP-content {
-  background-color: none;
-  height: 100%;
-  width: 60%;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 6% 94%;
-}
-
-.PP-C-B1 {
-  background-color: none;
-}
-
-.PP-C-B2 {
-  background-color: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.PostPayment-Loader {
-  border: 0.3vh solid transparent;
-  border-radius: 50%;
-  border-top: 0.3vh solid rgb(128, 128, 128, 1);
-  width: 2vh;
-  height: 2vh;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 1.5s linear infinite;
-}
-
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
+@media (min-width: 1199.98px) {
+  .PP-background {
+    height: 100%;
+    width: 100%;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
   }
-  100% {
-    -webkit-transform: rotate(360deg);
+
+  .PP-content {
+    background-color: none;
+    height: 100%;
+    width: 60%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 6% 94%;
+  }
+
+  .PP-C-B1 {
+    background-color: none;
+  }
+
+  .PP-C-B2 {
+    background-color: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .PostPayment-Loader {
+    border: 0.3vh solid transparent;
+    border-radius: 50%;
+    border-top: 0.3vh solid rgb(128, 128, 128, 1);
+    width: 2vh;
+    height: 2vh;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 1.5s linear infinite;
+  }
+
+  @-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-/*Disable on mobile*/
+/*Mobile*/
 
 @media (max-width: 1199.98px) {
   .PP-background {

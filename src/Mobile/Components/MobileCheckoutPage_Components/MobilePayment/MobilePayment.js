@@ -11,6 +11,7 @@ import image5 from "../../../../Images/imagesPaymentMethods/image5.png";
 import image7 from "../../../../Images/imagesPaymentMethods/image7.png";
 
 const MobilePayment = () => {
+  window.scrollTo(0, 0);
   const {
     setAbrir6,
     setAbrir7,

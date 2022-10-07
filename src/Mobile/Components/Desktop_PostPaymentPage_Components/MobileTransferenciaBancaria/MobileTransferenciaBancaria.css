@@ -2,6 +2,86 @@
   .MobileTransferenciaBancaria-background {
     display: none;
   }
+
+  .MobileTransferenciaBancaria-B1 {
+    display: none;
+  }
+
+  .MobileTransferenciaBancaria-svg {
+    height: 10vh;
+    width: auto;
+    fill: rgb(94, 94, 94);
+  }
+
+  .MobileTransferenciaBancaria-txt-1 {
+    display: none;
+  }
+
+  .MobileTransferenciaBancaria-txt-2 {
+    display: none;
+  }
+
+  .MobileTransferenciaBancaria-B2 {
+    display: none;
+  }
+
+  .MobileTransferenciaBancaria-txt-3 {
+    display: none;
+  }
+
+  .MobileTransferenciaBancaria-B2B1 {
+    display: none;
+  }
+
+  .MobileTransferenciaBancaria-B2B1::-webkit-scrollbar {
+    display: none;
+  }
+
+  .MobileTransferenciaBancaria-B3 {
+    display: none;
+  }
+
+  .MobileTransferenciaBancaria-txt-4 {
+    display: none;
+  }
+
+  .MobileTransferenciaBancaria-btn {
+    display: none;
+  }
+
+  /*RenderOfMobileProductsOredered*/
+
+  .RenderOfMobileProductsOredered-background {
+    display: none;
+  }
+
+  .RenderOfMobileProductsOredered-B1 {
+    display: none;
+  }
+
+  .RenderOfMobileProductsOredered-img {
+    display: none;
+  }
+
+  .RenderOfMobileProductsOredered-count {
+    display: none;
+  }
+
+  .RenderOfMobileProductsOredered-B2 {
+    display: none;
+  }
+
+  .RenderOfMobileProductsOredered-txt-1 {
+    display: none;
+  }
+
+  .RenderOfMobileProductsOredered-txt-2 {
+    display: none;
+  }
+
+  .RenderOfMobileProductsOredered-txt-3 {
+    display: none;
+  }
 }
 
 @media (max-width: 1199.98px) {

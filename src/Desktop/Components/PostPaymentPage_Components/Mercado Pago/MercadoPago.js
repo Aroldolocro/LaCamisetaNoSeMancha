@@ -286,7 +286,7 @@ const MercadoPago = () => {
     <div className="MP-background">
       {PendingOrder && RenderOfPendingOrder}
       {ApprovedOrder && RenderOfApprovedOrder}
-      {CancelledOrder && RenderOfCancelledOrder}{" "}
+      {CancelledOrder && RenderOfCancelledOrder}
     </div>
   );
 };
