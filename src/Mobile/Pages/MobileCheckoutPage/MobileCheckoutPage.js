@@ -8,6 +8,7 @@ import { AppContext } from "../../../Context/Appcontext";
 import { useContext, useEffect } from "react";
 
 const MobileCheckoutPage = () => {
+  window.scrollTo(0, 0);
   const { abrir6, abrir7, openShippingPriceFAQ } = useContext(AppContext);
 
   useEffect(() => {

@@ -99,7 +99,9 @@ const Payment = () => {
           </div>
         </div>
         <div className="ROP1-C-B2">
-          <form id="FORM_ID" onClick={() => GenerarOrdenMercadoPago()} />
+          {Payment1 && (
+            <form id="FORM_ID" onClick={() => GenerarOrdenMercadoPago()} />
+          )}
         </div>
       </div>
     </div>

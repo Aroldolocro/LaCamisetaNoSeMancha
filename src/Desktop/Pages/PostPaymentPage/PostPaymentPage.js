@@ -10,6 +10,8 @@ import {
 import MercadoPago from "../../Components/PostPaymentPage_Components/Mercado Pago/MercadoPago";
 import TransferenciaBancaria from "../../Components/PostPaymentPage_Components/Transferencia Bancaria/TransferenciaBancaria";
 import NullPaymentMethod from "../../Components/PostPaymentPage_Components/NullPaymentMethod/NullPaymentMethod";
+import MobileTransferenciaBancaria from "../../../Mobile/Components/Desktop_PostPaymentPage_Components/MobileTransferenciaBancaria/MobileTransferenciaBancaria";
+import MobileMercadoPago from "../../../Mobile/Components/Desktop_PostPaymentPage_Components/MobileMercadoPago/MobileMercadoPago";
 import { AppContext } from "../../../Context/Appcontext";
 
 const PostPaymentPage = () => {
@@ -79,8 +81,18 @@ const PostPaymentPage = () => {
         <div className="PP-C-B1"></div>
         <div className="PP-C-B2">
           {Loading && RenderOfLoader}
-          {MercadoPagoState && <MercadoPago />}
-          {TransferenciaState && <TransferenciaBancaria />}
+          {MercadoPagoState && (
+            <>
+              <MercadoPago />
+              <MobileMercadoPago />
+            </>
+          )}
+          {TransferenciaState && (
+            <>
+              <TransferenciaBancaria />
+              <MobileTransferenciaBancaria />
+            </>
+          )}
           {NullPaymentMethodState && <NullPaymentMethod />}
         </div>
       </div>

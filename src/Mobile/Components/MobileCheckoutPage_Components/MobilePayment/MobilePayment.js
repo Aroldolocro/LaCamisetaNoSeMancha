@@ -1,6 +1,8 @@
 import "./MobilePayment.css";
 import { AppContext } from "../../../../Context/Appcontext";
 import { useContext, useEffect, useState } from "react";
+import { getFirestore, doc, getDoc } from "firebase/firestore";
+import { Link } from "react-router-dom";
 import image1 from "../../../../Images/imagesPaymentMethods/image1.png";
 import image2 from "../../../../Images/imagesPaymentMethods/image2.png";
 import image3 from "../../../../Images/imagesPaymentMethods/image3.png";
@@ -19,15 +21,18 @@ const MobilePayment = () => {
     SubTotalPriceConstFormat,
     ShippingMinimum,
     ShippingPriceOnCurrencyFormat,
-    MobilePayment1,
-    setMobilePayment1,
-    MobilePayment2,
-    setMobilePayment2,
+    Payment1,
+    setPayment1,
+    Payment2,
+    setPayment2,
     GenerarOrdenMercadoPago,
+    GenerarOrdenTransferencia,
     OrderPriceAfterShippingCalculationOnNumberFormat,
+    setPaymentMethod,
   } = useContext(AppContext);
 
-  const [backendData2, setbackendData2] = useState(null);
+  const [backendData, setbackendData] = useState(null);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     const montoo = OrderPriceAfterShippingCalculationOnNumberFormat;
@@ -40,23 +45,37 @@ const MobilePayment = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        setbackendData2(data.preference_id);
+        setbackendData(data.preference_id);
       });
   }, [OrderPriceAfterShippingCalculationOnNumberFormat]);
 
   useEffect(() => {
-    if (MobilePayment1) {
+    if (Payment1) {
       const form = document.getElementById("MOBILE_FORM_ID");
       const script = document.createElement("script");
       script.type = "text/javascript";
       script.src =
         "https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js";
-      script.setAttribute("data-preference-id", backendData2);
-      if (backendData2) {
+      script.setAttribute("data-preference-id", backendData);
+      if (backendData) {
         form.appendChild(script);
       }
     }
-  }, [MobilePayment1, backendData2]);
+  }, [Payment1, backendData]);
+
+  useEffect(() => {
+    const db = getFirestore();
+    const dbcollection = doc(db, "PaymentData", "Transferencia bancaria");
+    getDoc(dbcollection).then((res) => setData({ id: res.id, ...res.data() }));
+  }, []);
+
+  useEffect(() => {
+    if ((Payment1 === true) & (Payment2 === false)) {
+      setPaymentMethod("Mercado Pago");
+    } else {
+      setPaymentMethod("Transferencia bancaria");
+    }
+  }, [Payment1, Payment2, setPaymentMethod]);
 
   const RenderOfMobileCoveredMethod = (
     <div className="RenderOfMobileCoveredMethod-background">
@@ -135,12 +154,12 @@ const MobilePayment = () => {
         <div className="MobilePayment-C-B3">
           <div
             className="MobilePayment-C-B3B1"
-            onClick={() => setMobilePayment1(true) & setMobilePayment2(false)}
+            onClick={() => setPayment1(true) & setPayment2(false)}
           >
             <div className="MobilePayment-C-B3B1B1">
               <div
                 className={
-                  MobilePayment1
+                  Payment1
                     ? "MobilePayment-check MobilePayment-check-checked"
                     : "MobilePayment-check"
                 }
@@ -157,7 +176,7 @@ const MobilePayment = () => {
           </div>
           <div
             className={
-              MobilePayment1
+              Payment1
                 ? "MobilePayment-C-B3B2"
                 : "MobilePayment-C-B3B2-notdisplayed"
             }
@@ -177,23 +196,25 @@ const MobilePayment = () => {
               Despues de clickear "Pagar", una ventana de Mercado Pago se abrirá
               para que puedas procesar tu pago.
             </p>
-            <form
-              id="MOBILE_FORM_ID"
-              onClick={() => GenerarOrdenMercadoPago()}
-            />
+            {Payment1 && (
+              <form
+                id="MOBILE_FORM_ID"
+                onClick={() => GenerarOrdenMercadoPago()}
+              />
+            )}
           </div>
           <div
             className={
-              MobilePayment1
+              Payment1
                 ? "MobilePayment-C-B3B3 MobilePayment-C-B3B3-NoBorder"
                 : "MobilePayment-C-B3B3"
             }
-            onClick={() => setMobilePayment1(false) & setMobilePayment2(true)}
+            onClick={() => setPayment1(false) & setPayment2(true)}
           >
             <div className="MobilePayment-C-B3B3B1">
               <div
                 className={
-                  MobilePayment2
+                  Payment2
                     ? "MobilePayment-check MobilePayment-check-checked"
                     : "MobilePayment-check"
                 }
@@ -207,12 +228,35 @@ const MobilePayment = () => {
           </div>
           <div
             className={
-              MobilePayment2
+              Payment2
                 ? "MobilePayment-C-B3B4"
                 : "MobilePayment-C-B3B4-notdisplayed"
             }
           >
-            Transferencia details
+            <div className="MobilePayment-C-B3B4B1">
+              <img src={data.imagen1} className="MobilePayment-img-2" alt="" />
+            </div>
+            <div className="MobilePayment-C-B3B4B2">
+              <p className="MobilePayment-txt-8">
+                Propietario: <strong>{data.destinatario}</strong>
+              </p>
+              <p className="MobilePayment-txt-8">
+                Banco: <strong>{data.banco}</strong>
+              </p>
+              <p className="MobilePayment-txt-8">
+                CBU/CVU: <strong>{data.cbu}</strong>
+              </p>
+              <p className="MobilePayment-txt-8">
+                Alias: <strong>{data.alias}</strong>
+              </p>
+            </div>
+            <Link
+              className="MobilePayment-btn-1"
+              to={"/postpayment"}
+              onClick={() => GenerarOrdenTransferencia()}
+            >
+              Ya pagué
+            </Link>
           </div>
         </div>
       </div>

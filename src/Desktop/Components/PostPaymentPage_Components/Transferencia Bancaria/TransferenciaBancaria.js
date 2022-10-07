@@ -203,7 +203,7 @@ const TransferenciaBancaria = () => {
           <p className="ROFO-txt-4">
             Tu pago realizado por transferencia bancaría ha sido rechazado.
             <br />
-            Tu orden ha sido cancelada debido a que no recibidos tu
+            Tu orden ha sido cancelada debido a que no recibimos tu
             transferencia bancaria. Recuerda que dispones de 48 horas para hacer
             el pago una vez emitida la orden de compra. Si no tu orden será
             cancelada y deberás hacer una nueva.
