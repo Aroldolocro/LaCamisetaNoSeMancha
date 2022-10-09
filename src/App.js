@@ -24,6 +24,7 @@ import MobileTemporadasPage from "./Mobile/Pages/MobileTemporadasPage/MobileTemp
 import MobileEquiposPage from "./Mobile/Pages/MobileEquiposPage/MobileEquiposPage";
 import MobileDestacadosPage from "./Mobile/Pages/MobileDestacadosPage/MobileDestacadosPage";
 import MobileCheckoutPage from "./Mobile/Pages/MobileCheckoutPage/MobileCheckoutPage";
+import MobileSeguimientoPage from "./Mobile/Pages/MobileSeguimientoPage/MobileSeguimientoPage";
 
 export default function App() {
   return (
@@ -78,7 +79,15 @@ export default function App() {
               </>
             }
           />
-          <Route path="/seguimiento" element={<SeguimientoPage />} />
+          <Route
+            path="/seguimiento"
+            element={
+              <>
+                <SeguimientoPage />
+                <MobileSeguimientoPage />
+              </>
+            }
+          />
           <Route
             path="/checkout"
             element={

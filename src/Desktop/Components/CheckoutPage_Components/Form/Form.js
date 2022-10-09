@@ -36,6 +36,7 @@ const Form = () => {
   const EmailInputFunction = (event) => {
     const word = event.target.value;
     setEmailInput(word.toLowerCase());
+    window.sessionStorage.setItem("EmailInput", JSON.stringify(word));
   };
   useEffect(() => {
     var regEmail =
@@ -189,12 +190,14 @@ const Form = () => {
     }
   }, [CityInput]);
 
+  useEffect(() => {
+    if (ProvinceInput === "") {
+      setProvinceInput("Buenos Aires");
+    }
+  }, [ProvinceInput, setProvinceInput]);
   const ProvinceInputFunction = (event) => {
     const word = event.target.value;
     setProvinceInput(word);
-    if (ProvinceInput === null) {
-      setProvinceInput("Buenos Aires");
-    }
   };
 
   const [GlobalCheck9, setGlobalCheck9] = useState(false);
@@ -218,12 +221,14 @@ const Form = () => {
     }
   }, [PhoneInput]);
 
+  useEffect(() => {
+    if (CountryInput === "") {
+      setCountryInput("Argentina");
+    }
+  }, [CountryInput, setCountryInput]);
   const CountryInputFunction = (event) => {
     const word = event.target.value;
     setCountryInput(word);
-    if (CountryInput === undefined) {
-      setCountryInput("Argentina");
-    }
   };
 
   const FormValidationFunction = () => {
@@ -238,8 +243,8 @@ const Form = () => {
       GlobalCheck8 === true ||
       GlobalCheck9 === true
     ) {
-      setAbrir6(false);
-      setAbrir7(true);
+      setAbrir6(true);
+      setAbrir7(false);
     } else {
       setAbrir6(false);
       setAbrir7(true);

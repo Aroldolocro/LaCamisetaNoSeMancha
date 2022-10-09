@@ -25,9 +25,9 @@ const Payment = () => {
     ShippingMinimum,
     ShippingPriceOnCurrencyFormat,
     OrderPriceAfterShippingCalculationOnNumberFormat,
-    GenerarOrdenMercadoPago,
     GenerarOrdenTransferencia,
     setPaymentMethod,
+    setMpOrderGenerated,
   } = useContext(AppContext);
   const [backendData, setbackendData] = useState(null);
 
@@ -100,7 +100,7 @@ const Payment = () => {
         </div>
         <div className="ROP1-C-B2">
           {Payment1 && (
-            <form id="FORM_ID" onClick={() => GenerarOrdenMercadoPago()} />
+            <form id="FORM_ID" onClick={() => setMpOrderGenerated(true)} />
           )}
         </div>
       </div>

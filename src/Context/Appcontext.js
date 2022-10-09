@@ -44,6 +44,10 @@ const ConstAppContext = ({ children }) => {
     }, 4000);
   };
 
+  /*MpOrderGenerated*/
+
+  const [MpOrderGenerated, setMpOrderGenerated] = useState(false);
+
   /*ABRIR & CERRAR GUIA DE TALLES*/
 
   const [abrir5, setAbrir5] = useState(false);
@@ -256,7 +260,7 @@ const ConstAppContext = ({ children }) => {
 
   /*PAYMENT FORM VALUES*/
 
-  const [PaymentMethod, setPaymentMethod] = useState();
+  const [PaymentMethod, setPaymentMethod] = useState("");
 
   /*GENERAR ORDER*/
 
@@ -330,7 +334,7 @@ const ConstAppContext = ({ children }) => {
       Imagen_de_producto: product.imagen,
     })),
     Orden: {
-      Metodo_De_Pago: PaymentMethod,
+      Metodo_De_Pago: "Mercado Pago",
       Envio: EnvioIncluido,
       Total_En_Pesos: OrderPriceAfterShippingCalculation,
       Fecha: Date(),
@@ -353,7 +357,7 @@ const ConstAppContext = ({ children }) => {
     addDoc(orderscollection, orderMercadoPago).then(({ id }) => setorderId(id));
   };
 
-  /*GUARDAR DATA EN LOCAL STORAGE*/
+  /*GUARDAR DATA EN LOCAL & SESSION STORAGE*/
 
   useEffect(() => {
     const data = window.localStorage.getItem("SAVE_ON_LOCAL_STORAGE");
@@ -378,6 +382,76 @@ const ConstAppContext = ({ children }) => {
       JSON.stringify(orderId)
     );
   }, [orderId]);
+
+  useEffect(() => {
+    const data = window.sessionStorage.getItem(
+      "SAVE_ON_SESSION_STORAGE_MP_ORDER_GENERATED"
+    );
+    if (data !== null) setMpOrderGenerated(JSON.parse(data));
+  }, []);
+
+  useEffect(() => {
+    window.sessionStorage.setItem(
+      "SAVE_ON_SESSION_STORAGE_MP_ORDER_GENERATED",
+      JSON.stringify(MpOrderGenerated)
+    );
+  }, [MpOrderGenerated]);
+
+  /*Test*/
+
+  useEffect(() => {
+    const data = window.sessionStorage.getItem("EmailInput");
+    if (data !== null) setEmailInput(JSON.parse(data));
+    const data1 = window.sessionStorage.getItem("CountryInput");
+    if (data1 !== null) setCountryInput(JSON.parse(data1));
+    const data2 = window.sessionStorage.getItem("NameInput");
+    if (data2 !== null) setNameInput(JSON.parse(data2));
+    const data3 = window.sessionStorage.getItem("SurNameInput");
+    if (data3 !== null) setSurNameInput(JSON.parse(data3));
+    const data4 = window.sessionStorage.getItem("CompanyInput");
+    if (data4 !== null) setCompanyInput(JSON.parse(data4));
+    const data5 = window.sessionStorage.getItem("AdressInput");
+    if (data5 !== null) setAdressInput(JSON.parse(data5));
+    const data6 = window.sessionStorage.getItem("Adress2Input");
+    if (data6 !== null) setAdress2Input(JSON.parse(data6));
+    const data7 = window.sessionStorage.getItem("ZipInput");
+    if (data7 !== null) setZipInput(JSON.parse(data7));
+    const data8 = window.sessionStorage.getItem("CityInput");
+    if (data8 !== null) setCityInput(JSON.parse(data8));
+    const data9 = window.sessionStorage.getItem("ProvinceInput");
+    if (data9 !== null) setProvinceInput(JSON.parse(data9));
+    const data10 = window.sessionStorage.getItem("PhoneInput");
+    if (data10 !== null) setPhoneInput(JSON.parse(data10));
+  }, []);
+
+  useEffect(() => {
+    window.sessionStorage.setItem("EmailInput", JSON.stringify(EmailInput));
+    window.sessionStorage.setItem("CountryInput", JSON.stringify(CountryInput));
+    window.sessionStorage.setItem("NameInput", JSON.stringify(NameInput));
+    window.sessionStorage.setItem("SurNameInput", JSON.stringify(SurNameInput));
+    window.sessionStorage.setItem("CompanyInput", JSON.stringify(CompanyInput));
+    window.sessionStorage.setItem("AdressInput", JSON.stringify(AdressInput));
+    window.sessionStorage.setItem("Adress2Input", JSON.stringify(Adress2Input));
+    window.sessionStorage.setItem("ZipInput", JSON.stringify(ZipInput));
+    window.sessionStorage.setItem("CityInput", JSON.stringify(CityInput));
+    window.sessionStorage.setItem(
+      "ProvinceInput",
+      JSON.stringify(ProvinceInput)
+    );
+    window.sessionStorage.setItem("PhoneInput", JSON.stringify(PhoneInput));
+  }, [
+    EmailInput,
+    CountryInput,
+    NameInput,
+    SurNameInput,
+    CompanyInput,
+    AdressInput,
+    Adress2Input,
+    ZipInput,
+    CityInput,
+    ProvinceInput,
+    PhoneInput,
+  ]);
 
   //LIMPIAR LOCAL STORAGE
 
@@ -464,6 +538,8 @@ const ConstAppContext = ({ children }) => {
         setOpenCart,
         openShippingPriceFAQ,
         setopenShippingPriceFAQ,
+        MpOrderGenerated,
+        setMpOrderGenerated,
       }}
     >
       {children}

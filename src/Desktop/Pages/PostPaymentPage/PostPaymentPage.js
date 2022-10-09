@@ -15,7 +15,12 @@ import MobileMercadoPago from "../../../Mobile/Components/Desktop_PostPaymentPag
 import { AppContext } from "../../../Context/Appcontext";
 
 const PostPaymentPage = () => {
-  const { orderId } = useContext(AppContext);
+  const {
+    orderId,
+    MpOrderGenerated,
+    GenerarOrdenMercadoPago,
+    setMpOrderGenerated,
+  } = useContext(AppContext);
   const [data, setData] = useState([]);
   const [data2, setData2] = useState({});
   const [OrderExist, setOrderExist] = useState(false);
@@ -23,6 +28,16 @@ const PostPaymentPage = () => {
   const [MercadoPagoState, setMercadoPagoState] = useState(false);
   const [TransferenciaState, setTransferenciaState] = useState(false);
   const [NullPaymentMethodState, setNullPaymentMethodState] = useState(false);
+
+  useEffect(() => {
+    if (MpOrderGenerated) {
+      GenerarOrdenMercadoPago();
+      setMpOrderGenerated(false);
+    }
+    setTimeout(() => {
+      sessionStorage.clear();
+    }, 2000);
+  }, [MpOrderGenerated, GenerarOrdenMercadoPago, setMpOrderGenerated]);
 
   useEffect(() => {
     setTimeout(() => {

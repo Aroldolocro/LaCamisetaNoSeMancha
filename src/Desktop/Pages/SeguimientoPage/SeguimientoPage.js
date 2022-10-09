@@ -279,7 +279,7 @@ const SeguimientoPage = () => {
                 : "RenderOfRoadMap-txt-1"
             }
           >
-            Productos recibidos
+            Productos entregados
           </p>
         </div>
       </div>

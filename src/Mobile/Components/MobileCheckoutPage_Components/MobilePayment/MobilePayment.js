@@ -26,10 +26,10 @@ const MobilePayment = () => {
     setPayment1,
     Payment2,
     setPayment2,
-    GenerarOrdenMercadoPago,
     GenerarOrdenTransferencia,
     OrderPriceAfterShippingCalculationOnNumberFormat,
     setPaymentMethod,
+    setMpOrderGenerated,
   } = useContext(AppContext);
 
   const [backendData, setbackendData] = useState(null);
@@ -129,11 +129,9 @@ const MobilePayment = () => {
           </div>
           <div className="MobilePayment-C-B1B3">
             <p className="MobilePayment-txt-1">Método</p>
-            <p className="MobilePayment-txt-1">
-              {SubTotalPriceConstFormat >= ShippingMinimum
-                ? RenderOfMobileCoveredMethod
-                : RenderOfMobileNotCoveredMethod}
-            </p>
+            {SubTotalPriceConstFormat >= ShippingMinimum
+              ? RenderOfMobileCoveredMethod
+              : RenderOfMobileNotCoveredMethod}
           </div>
         </div>
         <div className="MobilePayment-C-B2">
@@ -200,7 +198,7 @@ const MobilePayment = () => {
             {Payment1 && (
               <form
                 id="MOBILE_FORM_ID"
-                onClick={() => GenerarOrdenMercadoPago()}
+                onClick={() => setMpOrderGenerated(true)}
               />
             )}
           </div>
