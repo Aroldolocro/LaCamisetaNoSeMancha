@@ -27,21 +27,15 @@ const Footer = () => {
             <Link to={"/"} className="F-txt-1">
               Contacto
             </Link>
-            <Link to={"/"} className="F-txt-1">
-              Envios
+            <Link to={"/preguntas_frecuentes"} className="F-txt-1">
+              Preuguntas frecuentes
             </Link>
-            <Link to={"/"} className="F-txt-1">
-              Devoluciones y Reembolsos
-            </Link>
+            <p className="F-txt-1">-</p>
           </div>
 
           <div className="F-C-B1B2">
-            <Link to={"/"} className="F-txt-1">
-              Terminos y condiciones
-            </Link>
-            <Link to={"/Preguntas_Frecuentes"} className="F-txt-1">
-              Preuguntas frecuentes
-            </Link>
+            <p className="F-txt-1">-</p>
+            <p className="F-txt-1">-</p>
             <p className="F-txt-1">-</p>
           </div>
 
@@ -52,12 +46,10 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="F-C-B2">
-          <p className="F-txt-2">© LA CAMISETA NO SE MANCHA 2022</p>
-        </div>
+        <p className="F-txt-2">© LA CAMISETA NO SE MANCHA 2022</p>
 
-        <div className="F-C-B3">
-          <div className="F-C-B3B1">
+        <div className="F-C-B2">
+          <div className="F-C-B2B1">
             <img src={imagen1} alt="" className="F-img" />
             <img src={imagen2} alt="" className="F-img" />
             <img src={imagen3} alt="" className="F-img" />
