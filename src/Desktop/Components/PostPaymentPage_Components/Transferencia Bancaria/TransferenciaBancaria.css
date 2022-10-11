@@ -3,7 +3,170 @@
   width: 100%;
 }
 
-/*RenderOfPendingOrder*/
+/*RenderOfPendingOrder-starts*/
+
+.RenderOfPendingOrder-background {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.RenderOfPendingOrder-background-notdisplayed {
+  display: none;
+}
+
+.RenderOfPendingOrder-content {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 30% 30% 10% 10%;
+  align-content: space-between;
+}
+
+.RenderOfPendingOrder-C-B1 {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 70% 20% 10%;
+}
+
+.RenderOfPendingOrder-C-B1B1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.RenderOfPendingOrder-C-B1B2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.RenderOfPendingOrder-svg {
+  height: 50%;
+  width: fit-content;
+  fill: rgb(94, 94, 94);
+  border-radius: 50%;
+  padding: 1vh;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.RenderOfPendingOrder-C-B1B3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.RenderOfPendingOrder-C-B2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.RenderOfPendingOrder-txt-1 {
+  margin: 0;
+  font-size: 0.8vw;
+  font-weight: 400;
+  color: rgb(94, 94, 94);
+}
+
+.RenderOfPendingOrder-txt-2 {
+  margin: 0;
+  font-size: 0.8vw;
+  color: rgb(102, 102, 102);
+}
+
+.RenderOfPendingOrder-C-B3 {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 20% 70%;
+  align-content: space-between;
+}
+
+.RenderOfPendingOrder-C-B3B1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.RenderOfPendingOrder-txt-3 {
+  margin: 0;
+  font-size: 0.8vw;
+  font-weight: 400;
+  color: rgb(94, 94, 94);
+}
+
+.RenderOfPendingOrder-C-B3B2 {
+  padding: 0 0 2vh 0;
+  display: grid;
+  grid-template-rows: 100%;
+  grid-auto-columns: max-content;
+  grid-auto-flow: column;
+  grid-column-gap: 8vh;
+  overflow-y: hidden;
+}
+
+.RenderOfPendingOrder-C-B3B2::-webkit-scrollbar {
+  height: 1.5vh;
+}
+
+.RenderOfPendingOrder-C-B4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.RenderOfPendingOrder-txt-4 {
+  margin: 0;
+  font-size: 0.8vw;
+  font-weight: 400;
+  color: rgb(64, 64, 64);
+  text-align: center;
+  padding: 2vh;
+  border: 0.1vh solid rgb(128, 128, 128, 0.3);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.RenderOfPendingOrder-txt-4:hover {
+  opacity: 0.8;
+}
+
+.RenderOfPendingOrder-C-B5 {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: auto auto;
+  grid-column-gap: 2vh;
+  grid-template-rows: auto;
+}
+
+.RenderOfPendingOrder-btn {
+  background-color: rgb(64, 64, 64);
+  border-radius: 0.5vh;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  border: none;
+  text-decoration: none;
+  color: whitesmoke;
+  margin: 0;
+  font-size: 0.7vw;
+  font-weight: 500;
+  padding: 2vh;
+}
+
+.RenderOfPendingOrder-btn:hover {
+  background-color: rgb(94, 94, 94);
+  color: white;
+}
+
+/*RenderOfPendingOrder-ends*/
 
 .ROFO-background {
   height: 100%;
@@ -210,6 +373,120 @@
   font-weight: 400;
   color: rgb(94, 94, 94);
   text-align: center;
+}
+
+/*RenderOfComprobanteSender*/
+
+.RenderOfComprobanteSender-background {
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: 0.3s ease RenderOfComprobanteSender-animation;
+}
+
+@keyframes RenderOfComprobanteSender-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.RenderOfComprobanteSender-content {
+  height: 50%;
+  width: 50%;
+  background-color: whitesmoke;
+  -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 0.5vh;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 6vh auto;
+}
+
+.RenderOfComprobanteSender-C-B1 {
+  border-bottom: 0.1vh solid rgb(128, 128, 128, 0.3);
+  padding: 0 2vh 0 2vh;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.RenderOfComprobanteSender-txt-1 {
+  margin: 0;
+  font-size: 0.8vw;
+  font-weight: 500;
+  color: rgb(64, 64, 64);
+}
+
+.RenderOfComprobanteSender-svg-1 {
+  height: 3vh;
+  width: auto;
+  fill: rgb(94, 94, 94);
+  cursor: pointer;
+}
+
+.RenderOfComprobanteSender-C-B2 {
+  padding: 2vh;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  grid-row-gap: 1vh;
+  align-content: flex-start;
+  justify-content: flex-start;
+}
+
+.RenderOfComprobanteSender-txt-2 {
+  margin: 0;
+  font-size: 0.8vw;
+  font-weight: 400;
+  color: rgb(64, 64, 64);
+}
+
+.RenderOfComprobanteSender-C-B2B1 {
+  height: auto;
+  width: auto;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  grid-column-gap: 3vh;
+  justify-content: flex-start;
+}
+
+.RenderOfComprobanteSender-C-B2B1B1 {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  grid-column-gap: 1vh;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.RenderOfComprobanteSender-svg-2 {
+  height: 1.5vh;
+  width: auto;
+  fill: black;
+}
+
+.RenderOfComprobanteSender-txt-3 {
+  margin: 0;
+  font-size: 0.8vw;
+  font-weight: 400;
+  color: rgb(64, 64, 64);
+}
+
+.RenderOfComprobanteSender-txt-4 {
+  font-style: italic;
 }
 
 /*Disable on mobile*/

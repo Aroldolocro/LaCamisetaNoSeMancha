@@ -1,14 +1,21 @@
 import "./PreguntasFrecuentes.css";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Elementos } from "./Components/FAQElements";
 
 const PreguntasFrecuentes = () => {
   window.scrollTo(0, 0);
-  const [PreguntasFrecuentesState, setPreguntasFrecuentesState] =
-    useState(true);
+  const [data, setData] = useState({});
+  const [Controlador, setControlador] = useState();
 
   const SendEmail = () =>
     (window.location = "mailto:soporte@lacamisetanosemancha.com");
+
+  useEffect(() => {
+    Elementos.filter((item) => item.Tema === Controlador).map((ide) =>
+      setData({ ...ide })
+    );
+  }, [Controlador]);
 
   const RenderOfPreguntasFrecuentesHUB = (
     <div className="RenderOfPreguntasFrecuentesHUB-background">
@@ -33,7 +40,12 @@ const PreguntasFrecuentes = () => {
                 >
                   <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
                 </svg>
-                <p className="RenderOfPreguntasFrecuentesHUB-txt-4">
+                <p
+                  className="RenderOfPreguntasFrecuentesHUB-txt-4"
+                  onClick={() =>
+                    setControlador("¿Qué métodos de pagos aceptamos?")
+                  }
+                >
                   ¿Qué métodos de pagos aceptamos?
                 </p>
               </div>
@@ -48,7 +60,14 @@ const PreguntasFrecuentes = () => {
                 >
                   <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
                 </svg>
-                <p className="RenderOfPreguntasFrecuentesHUB-txt-4">
+                <p
+                  className="RenderOfPreguntasFrecuentesHUB-txt-4"
+                  onClick={() =>
+                    setControlador(
+                      "¿Cómo funcionan los pagos con transferencia bancaria?"
+                    )
+                  }
+                >
                   ¿Cómo funcionan los pagos con transferencia bancaria?
                 </p>
               </div>
@@ -63,7 +82,14 @@ const PreguntasFrecuentes = () => {
                 >
                   <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
                 </svg>
-                <p className="RenderOfPreguntasFrecuentesHUB-txt-4">
+                <p
+                  className="RenderOfPreguntasFrecuentesHUB-txt-4"
+                  onClick={() =>
+                    setControlador(
+                      "¿Cómo funcionan los pagos con Mercado Pago?"
+                    )
+                  }
+                >
                   ¿Cómo funcionan los pagos con Mercado Pago?
                 </p>
               </div>
@@ -383,6 +409,25 @@ const PreguntasFrecuentes = () => {
     </div>
   );
 
+  const RenderOfFaqElement = (
+    <div className="RenderOfFaqElement-background">
+      <div className="RenderOfFaqElement-content">
+        <div className="RenderOfFaqElement-C-B1">
+          <p className="RenderOfFaqElement-txt-1">{data.Tema}</p>
+        </div>
+        <p className="RenderOfFaqElement-txt-2">{data.Descripcion}</p>
+        <div className="RenderOfFaqElement-C-B2">
+          <p
+            className="RenderOfFaqElement-txt-3"
+            onClick={() => setControlador()}
+          >
+            Volver
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+
   return (
     <div className="PreguntasFrecuentes-background">
       <div className="PreguntasFrecuentes-content">
@@ -432,7 +477,7 @@ const PreguntasFrecuentes = () => {
                   viewBox="0 0 16 16"
                 >
                   <path
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2Z"
                   />
                 </svg>
@@ -458,7 +503,8 @@ const PreguntasFrecuentes = () => {
             </div>
           </div>
           <div className="PreguntasFrecuentes-C-B2B3">
-            {PreguntasFrecuentesState && RenderOfPreguntasFrecuentesHUB}
+            {Controlador === undefined ? RenderOfPreguntasFrecuentesHUB : null}
+            {Controlador !== undefined ? RenderOfFaqElement : null}
           </div>
         </div>
       </div>

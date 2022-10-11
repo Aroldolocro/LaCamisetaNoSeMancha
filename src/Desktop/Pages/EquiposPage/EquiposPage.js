@@ -115,6 +115,8 @@ const EquiposPage = () => {
 
   const EquipoHistoriadb = <p className="EP-txt-4">{data2.EquipoHistoria}</p>;
 
+  const EquipoHistoria2db = <p className="EP-txt-4">{data2.EquipoHistoria2}</p>;
+
   const EquipoHistoriadbLoader = (
     <div className="EquipoHistoriadbLoader-background"></div>
   );
@@ -269,7 +271,9 @@ const EquiposPage = () => {
           </div>
           <div className="EP-C-B2B5">
             <div className="EP-C-B2B5B1">
-              {data2.EquipoHistoria ? EquipoHistoriadb : EquipoHistoriadbLoader}
+              {data2.EquipoHistoria2
+                ? EquipoHistoria2db
+                : EquipoHistoriadbLoader}
             </div>
           </div>
         </div>

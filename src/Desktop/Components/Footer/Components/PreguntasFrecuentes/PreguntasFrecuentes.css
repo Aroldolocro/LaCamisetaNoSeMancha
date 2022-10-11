@@ -172,6 +172,7 @@
   font-size: 1vw;
   font-weight: 500;
   color: black;
+  width: fit-content;
 }
 
 .RenderOfPreguntasFrecuentesHUB-txt-2:hover {
@@ -218,6 +219,74 @@
   font-size: 0.8vw;
   font-weight: 400;
   color: black;
+}
+
+/*RenderOfFaqElement*/
+
+.RenderOfFaqElement-background {
+  height: auto;
+  width: 100%;
+  background-color: white;
+  border: 0.3vh solid rgb(128, 128, 128, 0.3);
+  border-radius: 0.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2vh;
+}
+
+.RenderOfFaqElement-content {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  align-content: flex-start;
+  grid-row-gap: 2vh;
+}
+
+.RenderOfFaqElement-C-B1 {
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 0.1vh solid rgb(128, 128, 128, 0.5);
+  padding-bottom: 2vh;
+}
+
+.RenderOfFaqElement-txt-1 {
+  margin: 0;
+  font-size: 1.3vw;
+  font-weight: 500;
+  color: black;
+}
+
+.RenderOfFaqElement-txt-2 {
+  margin: 0;
+  font-size: 0.8vw;
+  font-weight: 400;
+  color: black;
+  white-space: pre;
+}
+
+.RenderOfFaqElement-C-B2 {
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-top: 0.1vh solid rgb(128, 128, 128, 0.5);
+  padding-top: 2vh;
+}
+
+.RenderOfFaqElement-txt-3 {
+  margin: 0;
+  font-size: 0.7vw;
+  font-weight: 500;
+  color: black;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 /*Disable on mobile*/
