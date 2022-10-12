@@ -144,24 +144,44 @@
   grid-template-rows: auto;
 }
 
-.RenderOfPendingOrder-btn {
-  background-color: rgb(64, 64, 64);
-  border-radius: 0.5vh;
+.RenderOfPendingOrder-btn-1 {
+  border: none;
+  background-color: black;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: 0.3s;
+  text-decoration: none;
+  color: white;
+  margin: 0;
+  font-size: 0.7vw;
+  font-weight: 400;
+  padding: 2vh;
+}
+
+.RenderOfPendingOrder-btn-1:hover {
+  background-color: rgb(24, 24, 24);
+  color: white;
+}
+
+.RenderOfPendingOrder-btn-2 {
   border: none;
+  background-color: rgb(64, 64, 64);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
   text-decoration: none;
   color: whitesmoke;
   margin: 0;
   font-size: 0.7vw;
-  font-weight: 500;
+  font-weight: 400;
   padding: 2vh;
 }
 
-.RenderOfPendingOrder-btn:hover {
+.RenderOfPendingOrder-btn-2:hover {
   background-color: rgb(94, 94, 94);
   color: white;
 }

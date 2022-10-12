@@ -24,25 +24,32 @@ const Footer = () => {
       <div className="F-content">
         <div className="F-C-B1">
           <div className="F-C-B1B1">
-            <Link to={"/"} className="F-txt-1">
+            <Link to={"/preguntas_frecuentes"} className="F-txt-1">
               Contacto
             </Link>
             <Link to={"/preguntas_frecuentes"} className="F-txt-1">
               Preuguntas frecuentes
             </Link>
-            <p className="F-txt-1">-</p>
+            <p className="F-txt-1">Nuestros productos</p>
           </div>
 
           <div className="F-C-B1B2">
-            <p className="F-txt-1">-</p>
-            <p className="F-txt-1">-</p>
-            <p className="F-txt-1">-</p>
+            <p className="F-txt-1">Envios</p>
+            <p className="F-txt-1">Talles</p>
+            <p className="F-txt-1">Devoluciones</p>
           </div>
 
           <div className="F-C-B1B3">
-            <p className="F-txt-1">-</p>
-            <p className="F-txt-1">-</p>
-            <p className="F-txt-1">-</p>
+            <Link to={"/preguntas_frecuentes/pagos"} className="F-txt-1">
+              Pagos
+            </Link>
+            <Link
+              to={"/preguntas_frecuentes/problemas_con_mi_pedido"}
+              className="F-txt-1"
+            >
+              Problemas con mi pedido
+            </Link>
+            <p className="F-txt-1">Terminos y mi viejo</p>
           </div>
         </div>
 

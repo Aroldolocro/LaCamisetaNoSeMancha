@@ -11,7 +11,7 @@ const TransferenciaBancaria = () => {
   const [CancelledOrder, setCancelledOrder] = useState(false);
   const [data, setData] = useState({});
   const [data2, setData2] = useState([]);
-  const [ComprobanteState, setComprobanteState] = useState(false);
+  const [ComprobanteState, setComprobanteState] = useState(true);
 
   const SendEmail = () =>
     (window.location = "mailto:soporte@lacamisetanosemancha.com");
@@ -187,14 +187,14 @@ const TransferenciaBancaria = () => {
         </div>
         <div className="RenderOfPendingOrder-C-B5">
           <Link
-            className="RenderOfPendingOrder-btn"
+            className="RenderOfPendingOrder-btn-1"
             onClick={() => setComprobanteState(true)}
           >
             ENVÍA EL COMPROBANTE
           </Link>
           <Link
             to={"/seguimiento"}
-            className="RenderOfPendingOrder-btn"
+            className="RenderOfPendingOrder-btn-2"
             onClick={() => CleanLocalStorage()}
           >
             SEGUÍ TU ORDEN

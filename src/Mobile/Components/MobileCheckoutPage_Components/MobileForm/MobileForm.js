@@ -238,8 +238,8 @@ const MobileForm = () => {
       GlobalCheck8 === true ||
       GlobalCheck9 === true
     ) {
-      setAbrir6(true);
-      setAbrir7(false);
+      setAbrir6(false);
+      setAbrir7(true);
     } else {
       setAbrir6(false);
       setAbrir7(true);

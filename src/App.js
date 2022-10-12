@@ -14,6 +14,7 @@ import PostPaymentPage from "./Desktop/Pages/PostPaymentPage/PostPaymentPage";
 import Navbar from "./Desktop/Components/Navbar/Navbar";
 import Footer from "./Desktop/Components/Footer/Footer";
 import PreguntasFrecuentes from "./Desktop/Components/Footer/Components/PreguntasFrecuentes/Preguntas_Frecuentes";
+import FAQSections from "./Desktop/Components/Footer/Components/PreguntasFrecuentes/Components/FAQSections/FAQSections";
 
 /*Mobile Pages & Components*/
 
@@ -101,6 +102,10 @@ export default function App() {
           <Route
             path="/preguntas_frecuentes"
             element={<PreguntasFrecuentes />}
+          />
+          <Route
+            path="preguntas_frecuentes/:faqindice"
+            element={<FAQSections />}
           />
         </Routes>
         <Footer />

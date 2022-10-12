@@ -173,6 +173,7 @@
   font-weight: 500;
   color: black;
   width: fit-content;
+  text-decoration: none;
 }
 
 .RenderOfPreguntasFrecuentesHUB-txt-2:hover {
@@ -267,7 +268,8 @@
   font-size: 0.8vw;
   font-weight: 400;
   color: black;
-  white-space: pre;
+  white-space: pre-wrap;
+  text-align: justify;
 }
 
 .RenderOfFaqElement-C-B2 {

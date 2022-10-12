@@ -16,7 +16,7 @@
   width: 50%;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 50% auto 20%;
+  grid-template-rows: 40% auto 20%;
   align-content: space-between;
 }
 
@@ -30,7 +30,8 @@
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto auto auto;
-  align-content: space-around;
+  align-content: space-between;
+  justify-items: center;
 }
 
 .F-txt-1 {
@@ -39,20 +40,39 @@
   text-align: center;
   font-size: 0.7vw;
   text-decoration: none;
+  position: relative;
+}
+
+.F-txt-1::after {
+  content: "";
+  background-color: rgb(124, 124, 124);
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 0.2vh;
+  display: block;
+  position: absolute;
+  transition: 0.2s;
+}
+
+.F-txt-1:hover::after {
+  width: 100%;
 }
 
 .F-C-B1B2 {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto auto auto;
-  align-content: space-around;
+  align-content: space-between;
+  justify-items: center;
 }
 
 .F-C-B1B3 {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto auto auto;
-  align-content: space-around;
+  align-content: space-between;
+  justify-items: center;
 }
 
 .F-txt-2 {
