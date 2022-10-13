@@ -205,4 +205,60 @@
     text-transform: uppercase;
     line-height: 130%;
   }
+
+  /*RenderOfMobileFaqElement*/
+
+  .RenderOfMobileFaqElement-background {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    border: 0.3vh solid rgb(128, 128, 128, 0.3);
+    border-radius: 0.5vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-row-gap: 4vh;
+    padding: 2vh;
+  }
+
+  .RenderOfMobileFaqElement-B1 {
+    border-bottom: 0.1vh solid rgb(128, 128, 128, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 2vh;
+  }
+
+  .RenderOfMobileFaqElement-txt-1 {
+    margin: 0;
+    font-size: 4.5vw;
+    font-weight: 600;
+    color: black;
+    line-height: 100%;
+  }
+
+  .RenderOfMobileFaqElement-txt-2 {
+    margin: 0;
+    font-size: 4vw;
+    font-weight: 400;
+    color: black;
+    white-space: pre-wrap;
+    text-align: left;
+  }
+
+  .RenderOfMobileFaqElement-B2 {
+    border-top: 0.1vh solid rgb(128, 128, 128, 0.5);
+    padding-top: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .RenderOfMobileFaqElement-txt-3 {
+    margin: 0;
+    font-size: 4vw;
+    font-weight: 400;
+    color: black;
+    text-decoration: underline;
+  }
 }

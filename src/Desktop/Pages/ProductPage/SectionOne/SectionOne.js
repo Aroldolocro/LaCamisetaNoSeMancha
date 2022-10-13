@@ -8,12 +8,18 @@ import SwiperJsSlider from "../../../Components/ProductPage_Components/SwiperJsS
 import AddToCartAnimation from "../../../Components/ProductPage_Components/AddToCartAnimation/AddToCartAnimation";
 import AddToCartNotification from "../../../Components/ProductPage_Components/AddToCartNotification/AddToCartNotification";
 import SizeGuide from "../../../Components/ProductPage_Components/SizeGuide/SizeGuide";
+import { analytics } from "../../../../Firebase/firebase";
+import { logEvent } from "firebase/analytics";
 
 const SectionOne = () => {
   window.scrollTo(0, 0);
   const { productId } = useParams();
   const [data, setData] = useState({});
   const [data3, setData3] = useState({});
+
+  useEffect(() => {
+    logEvent(analytics, `${productId}_Visitado`);
+  }, [productId]);
 
   useEffect(() => {
     const db = getFirestore();

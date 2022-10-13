@@ -8,6 +8,8 @@ import {
   doc,
   getDoc,
 } from "firebase/firestore";
+import { analytics } from "../../../Firebase/firebase";
+import { logEvent } from "firebase/analytics";
 
 const EquiposPage = () => {
   window.scrollTo(0, 0);
@@ -30,6 +32,10 @@ const EquiposPage = () => {
       setData2({ id: res.id, ...res.data() })
     );
   }, [Equipo]);
+
+  useEffect(() => {
+    logEvent(analytics, `${data2.EquipoNombre}_Visitado`);
+  }, [data2.EquipoNombre]);
 
   const EquiposdbProducts = data
     .filter((item) => item.equipo2 === Equipo)

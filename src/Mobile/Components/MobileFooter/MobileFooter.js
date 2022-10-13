@@ -34,7 +34,12 @@ const MobileFooter = () => {
             <p className="MobileFooter-txt-1">Devoluciones</p>
           </div>
           <div className="MobileFooter-C-B1B1">
-            <p className="MobileFooter-txt-1">Pagos</p>
+            <Link
+              to={"/preguntas_frecuentes/pagos"}
+              className="MobileFooter-txt-1"
+            >
+              Pagos
+            </Link>
             <p className="MobileFooter-txt-1">Problemas con mi pedido</p>
             <p className="MobileFooter-txt-1">Terminos y mi viejo</p>
           </div>

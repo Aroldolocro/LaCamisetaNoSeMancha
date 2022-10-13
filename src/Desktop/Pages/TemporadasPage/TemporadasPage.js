@@ -2,6 +2,8 @@ import "./TemporadasPage.css";
 import { Link, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
+import { logEvent } from "firebase/analytics";
+import { analytics } from "../../../Firebase/firebase";
 
 const TemporadasPage = () => {
   const { Temporade } = useParams();
@@ -18,6 +20,10 @@ const TemporadasPage = () => {
       )
     );
   }, []);
+
+  useEffect(() => {
+    logEvent(analytics, `${Temporade}_Visitado`);
+  }, [Temporade]);
 
   const TemporadasdbProducts = data
     .filter((item) => item.temporada === Temporade)

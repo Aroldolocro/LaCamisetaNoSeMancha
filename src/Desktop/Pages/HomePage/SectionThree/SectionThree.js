@@ -31,7 +31,7 @@ const SectionThree = () => {
       >
         <div className="S3dbProducts-B1">
           <img
-            src={Item.HP_section3_image}
+            src={Item.HP_section3_image2}
             className="S3dbProducts-img"
             alt=""
             onLoad={() => setLoaded(true)}

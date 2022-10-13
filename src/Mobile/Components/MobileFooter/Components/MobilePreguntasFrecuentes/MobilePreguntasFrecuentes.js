@@ -1,9 +1,18 @@
 import "./MobilePreguntasFrecuentes.css";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Elementos } from "../../../../../Desktop/Components/Footer/Components/PreguntasFrecuentes/Components/FAQElements";
 
 const MobilePreguntasFrecuentes = () => {
+  window.scrollTo(0, 0);
+  const [data, setData] = useState({});
   const [Controlador, setControlador] = useState();
+
+  useEffect(() => {
+    Elementos.filter((item) => item.Tema === Controlador).map((ide) =>
+      setData({ ...ide })
+    );
+  }, [Controlador]);
 
   const SendEmail = () =>
     (window.location = "mailto:soporte@lacamisetanosemancha.com");
@@ -33,7 +42,12 @@ const MobilePreguntasFrecuentes = () => {
               >
                 <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
               </svg>
-              <p className="RenderOfMobilePreguntasFrecuentesHUB-txt-4">
+              <p
+                className="RenderOfMobilePreguntasFrecuentesHUB-txt-4"
+                onClick={() =>
+                  setControlador("¿Qué métodos de pagos aceptamos?")
+                }
+              >
                 ¿Qué métodos de pagos aceptamos?
               </p>
             </div>
@@ -48,7 +62,14 @@ const MobilePreguntasFrecuentes = () => {
               >
                 <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
               </svg>
-              <p className="RenderOfMobilePreguntasFrecuentesHUB-txt-4">
+              <p
+                className="RenderOfMobilePreguntasFrecuentesHUB-txt-4"
+                onClick={() =>
+                  setControlador(
+                    "¿Cómo funcionan los pagos con transferencia bancaria?"
+                  )
+                }
+              >
                 ¿Cómo funcionan los pagos con transferencia bancaria?
               </p>
             </div>
@@ -101,8 +122,8 @@ const MobilePreguntasFrecuentes = () => {
         </div>
         <div className="RenderOfMobilePreguntasFrecuentesHUB-B2B1">
           <p className="RenderOfMobilePreguntasFrecuentesHUB-txt-2">
-            Pagos{" "}
-            <b className="RenderOfMobilePreguntasFrecuentesHUB-txt-3">(5)</b>
+            Problemas con mi pedido{" "}
+            <b className="RenderOfMobilePreguntasFrecuentesHUB-txt-3">(3)</b>
           </p>
           <div className="RenderOfMobilePreguntasFrecuentesHUB-B2B1B1">
             <div className="RenderOfMobilePreguntasFrecuentesHUB-B2B1B1B1">
@@ -117,7 +138,7 @@ const MobilePreguntasFrecuentes = () => {
                 <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
               </svg>
               <p className="RenderOfMobilePreguntasFrecuentesHUB-txt-4">
-                ¿Qué métodos de pagos aceptamos?
+                Ingrese mal mi dirección al hacer una compra
               </p>
             </div>
             <div className="RenderOfMobilePreguntasFrecuentesHUB-B2B1B1B1">
@@ -132,7 +153,7 @@ const MobilePreguntasFrecuentes = () => {
                 <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
               </svg>
               <p className="RenderOfMobilePreguntasFrecuentesHUB-txt-4">
-                ¿Cómo funcionan los pagos con transferencia bancaria?
+                Ordene el talle equivocado de un producto
               </p>
             </div>
             <div className="RenderOfMobilePreguntasFrecuentesHUB-B2B1B1B1">
@@ -147,45 +168,15 @@ const MobilePreguntasFrecuentes = () => {
                 <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
               </svg>
               <p className="RenderOfMobilePreguntasFrecuentesHUB-txt-4">
-                ¿Cómo funcionan los pagos con Mercado Pago?
-              </p>
-            </div>
-            <div className="RenderOfMobilePreguntasFrecuentesHUB-B2B1B1B1">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fillRule="currentColor"
-                className="RenderOfMobilePreguntasFrecuentesHUB-svg-1"
-                viewBox="0 0 16 16"
-              >
-                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
-              </svg>
-              <p className="RenderOfMobilePreguntasFrecuentesHUB-txt-4">
-                ¿Cuánto tiempo tengo para pagar con Transferencia o Efectivo?
-              </p>
-            </div>
-            <div className="RenderOfMobilePreguntasFrecuentesHUB-B2B1B1B1">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fillRule="currentColor"
-                className="RenderOfMobilePreguntasFrecuentesHUB-svg-1"
-                viewBox="0 0 16 16"
-              >
-                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
-              </svg>
-              <p className="RenderOfMobilePreguntasFrecuentesHUB-txt-4">
-                ¿Por qué mi pedido fue cancelado?
+                Quiero cancelar mi orden
               </p>
             </div>
           </div>
         </div>
         <div className="RenderOfMobilePreguntasFrecuentesHUB-B2B1">
           <p className="RenderOfMobilePreguntasFrecuentesHUB-txt-2">
-            Pagos{" "}
-            <b className="RenderOfMobilePreguntasFrecuentesHUB-txt-3">(5)</b>
+            Envios{" "}
+            <b className="RenderOfMobilePreguntasFrecuentesHUB-txt-3">(4)</b>
           </p>
           <div className="RenderOfMobilePreguntasFrecuentesHUB-B2B1B1">
             <div className="RenderOfMobilePreguntasFrecuentesHUB-B2B1B1B1">
@@ -200,7 +191,7 @@ const MobilePreguntasFrecuentes = () => {
                 <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
               </svg>
               <p className="RenderOfMobilePreguntasFrecuentesHUB-txt-4">
-                ¿Qué métodos de pagos aceptamos?
+                Tiempo de entrega de los productos
               </p>
             </div>
             <div className="RenderOfMobilePreguntasFrecuentesHUB-B2B1B1B1">
@@ -215,7 +206,7 @@ const MobilePreguntasFrecuentes = () => {
                 <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
               </svg>
               <p className="RenderOfMobilePreguntasFrecuentesHUB-txt-4">
-                ¿Cómo funcionan los pagos con transferencia bancaria?
+                ¿Quién envía el pedido?
               </p>
             </div>
             <div className="RenderOfMobilePreguntasFrecuentesHUB-B2B1B1B1">
@@ -230,7 +221,7 @@ const MobilePreguntasFrecuentes = () => {
                 <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
               </svg>
               <p className="RenderOfMobilePreguntasFrecuentesHUB-txt-4">
-                ¿Cómo funcionan los pagos con Mercado Pago?
+                No recibí mi confirmación por email
               </p>
             </div>
             <div className="RenderOfMobilePreguntasFrecuentesHUB-B2B1B1B1">
@@ -245,30 +236,15 @@ const MobilePreguntasFrecuentes = () => {
                 <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
               </svg>
               <p className="RenderOfMobilePreguntasFrecuentesHUB-txt-4">
-                ¿Cuánto tiempo tengo para pagar con Transferencia o Efectivo?
-              </p>
-            </div>
-            <div className="RenderOfMobilePreguntasFrecuentesHUB-B2B1B1B1">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fillRule="currentColor"
-                className="RenderOfMobilePreguntasFrecuentesHUB-svg-1"
-                viewBox="0 0 16 16"
-              >
-                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
-              </svg>
-              <p className="RenderOfMobilePreguntasFrecuentesHUB-txt-4">
-                ¿Por qué mi pedido fue cancelado?
+                ¿El envío es gratis?
               </p>
             </div>
           </div>
         </div>
         <div className="RenderOfMobilePreguntasFrecuentesHUB-B2B1">
           <p className="RenderOfMobilePreguntasFrecuentesHUB-txt-2">
-            Pagos{" "}
-            <b className="RenderOfMobilePreguntasFrecuentesHUB-txt-3">(5)</b>
+            Devoluciones{" "}
+            <b className="RenderOfMobilePreguntasFrecuentesHUB-txt-3">(3)</b>
           </p>
           <div className="RenderOfMobilePreguntasFrecuentesHUB-B2B1B1">
             <div className="RenderOfMobilePreguntasFrecuentesHUB-B2B1B1B1">
@@ -283,7 +259,7 @@ const MobilePreguntasFrecuentes = () => {
                 <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
               </svg>
               <p className="RenderOfMobilePreguntasFrecuentesHUB-txt-4">
-                ¿Qué métodos de pagos aceptamos?
+                Mis productos llegaron dañados
               </p>
             </div>
             <div className="RenderOfMobilePreguntasFrecuentesHUB-B2B1B1B1">
@@ -298,7 +274,7 @@ const MobilePreguntasFrecuentes = () => {
                 <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
               </svg>
               <p className="RenderOfMobilePreguntasFrecuentesHUB-txt-4">
-                ¿Cómo funcionan los pagos con transferencia bancaria?
+                Me llegaron productos equivocados
               </p>
             </div>
             <div className="RenderOfMobilePreguntasFrecuentesHUB-B2B1B1B1">
@@ -313,45 +289,15 @@ const MobilePreguntasFrecuentes = () => {
                 <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
               </svg>
               <p className="RenderOfMobilePreguntasFrecuentesHUB-txt-4">
-                ¿Cómo funcionan los pagos con Mercado Pago?
-              </p>
-            </div>
-            <div className="RenderOfMobilePreguntasFrecuentesHUB-B2B1B1B1">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fillRule="currentColor"
-                className="RenderOfMobilePreguntasFrecuentesHUB-svg-1"
-                viewBox="0 0 16 16"
-              >
-                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
-              </svg>
-              <p className="RenderOfMobilePreguntasFrecuentesHUB-txt-4">
-                ¿Cuánto tiempo tengo para pagar con Transferencia o Efectivo?
-              </p>
-            </div>
-            <div className="RenderOfMobilePreguntasFrecuentesHUB-B2B1B1B1">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fillRule="currentColor"
-                className="RenderOfMobilePreguntasFrecuentesHUB-svg-1"
-                viewBox="0 0 16 16"
-              >
-                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
-              </svg>
-              <p className="RenderOfMobilePreguntasFrecuentesHUB-txt-4">
-                ¿Por qué mi pedido fue cancelado?
+                Quiero un reembolso de mi compra
               </p>
             </div>
           </div>
         </div>
         <div className="RenderOfMobilePreguntasFrecuentesHUB-B2B1">
           <p className="RenderOfMobilePreguntasFrecuentesHUB-txt-2">
-            Pagos{" "}
-            <b className="RenderOfMobilePreguntasFrecuentesHUB-txt-3">(5)</b>
+            Nuestros productos{" "}
+            <b className="RenderOfMobilePreguntasFrecuentesHUB-txt-3">(4)</b>
           </p>
           <div className="RenderOfMobilePreguntasFrecuentesHUB-B2B1B1">
             <div className="RenderOfMobilePreguntasFrecuentesHUB-B2B1B1B1">
@@ -366,7 +312,7 @@ const MobilePreguntasFrecuentes = () => {
                 <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
               </svg>
               <p className="RenderOfMobilePreguntasFrecuentesHUB-txt-4">
-                ¿Qué métodos de pagos aceptamos?
+                ¿Son originales?
               </p>
             </div>
             <div className="RenderOfMobilePreguntasFrecuentesHUB-B2B1B1B1">
@@ -381,7 +327,7 @@ const MobilePreguntasFrecuentes = () => {
                 <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
               </svg>
               <p className="RenderOfMobilePreguntasFrecuentesHUB-txt-4">
-                ¿Cómo funcionan los pagos con transferencia bancaria?
+                ¿Van a reponer stock?
               </p>
             </div>
             <div className="RenderOfMobilePreguntasFrecuentesHUB-B2B1B1B1">
@@ -396,7 +342,8 @@ const MobilePreguntasFrecuentes = () => {
                 <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
               </svg>
               <p className="RenderOfMobilePreguntasFrecuentesHUB-txt-4">
-                ¿Cómo funcionan los pagos con Mercado Pago?
+                ¿Van a disponer de productos de más equipos de los que ya
+                ofrecen?
               </p>
             </div>
             <div className="RenderOfMobilePreguntasFrecuentesHUB-B2B1B1B1">
@@ -411,30 +358,15 @@ const MobilePreguntasFrecuentes = () => {
                 <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
               </svg>
               <p className="RenderOfMobilePreguntasFrecuentesHUB-txt-4">
-                ¿Cuánto tiempo tengo para pagar con Transferencia o Efectivo?
-              </p>
-            </div>
-            <div className="RenderOfMobilePreguntasFrecuentesHUB-B2B1B1B1">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fillRule="currentColor"
-                className="RenderOfMobilePreguntasFrecuentesHUB-svg-1"
-                viewBox="0 0 16 16"
-              >
-                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
-              </svg>
-              <p className="RenderOfMobilePreguntasFrecuentesHUB-txt-4">
-                ¿Por qué mi pedido fue cancelado?
+                ¿Los productos son nuevos o usados?
               </p>
             </div>
           </div>
         </div>
         <div className="RenderOfMobilePreguntasFrecuentesHUB-B2B1">
           <p className="RenderOfMobilePreguntasFrecuentesHUB-txt-2">
-            Pagos{" "}
-            <b className="RenderOfMobilePreguntasFrecuentesHUB-txt-3">(5)</b>
+            Talles{" "}
+            <b className="RenderOfMobilePreguntasFrecuentesHUB-txt-3">(2)</b>
           </p>
           <div className="RenderOfMobilePreguntasFrecuentesHUB-B2B1B1">
             <div className="RenderOfMobilePreguntasFrecuentesHUB-B2B1B1B1">
@@ -449,7 +381,7 @@ const MobilePreguntasFrecuentes = () => {
                 <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
               </svg>
               <p className="RenderOfMobilePreguntasFrecuentesHUB-txt-4">
-                ¿Qué métodos de pagos aceptamos?
+                ¿Se aplican los mismos talles para todos los productos?
               </p>
             </div>
             <div className="RenderOfMobilePreguntasFrecuentesHUB-B2B1B1B1">
@@ -464,52 +396,7 @@ const MobilePreguntasFrecuentes = () => {
                 <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
               </svg>
               <p className="RenderOfMobilePreguntasFrecuentesHUB-txt-4">
-                ¿Cómo funcionan los pagos con transferencia bancaria?
-              </p>
-            </div>
-            <div className="RenderOfMobilePreguntasFrecuentesHUB-B2B1B1B1">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fillRule="currentColor"
-                className="RenderOfMobilePreguntasFrecuentesHUB-svg-1"
-                viewBox="0 0 16 16"
-              >
-                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
-              </svg>
-              <p className="RenderOfMobilePreguntasFrecuentesHUB-txt-4">
-                ¿Cómo funcionan los pagos con Mercado Pago?
-              </p>
-            </div>
-            <div className="RenderOfMobilePreguntasFrecuentesHUB-B2B1B1B1">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fillRule="currentColor"
-                className="RenderOfMobilePreguntasFrecuentesHUB-svg-1"
-                viewBox="0 0 16 16"
-              >
-                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
-              </svg>
-              <p className="RenderOfMobilePreguntasFrecuentesHUB-txt-4">
-                ¿Cuánto tiempo tengo para pagar con Transferencia o Efectivo?
-              </p>
-            </div>
-            <div className="RenderOfMobilePreguntasFrecuentesHUB-B2B1B1B1">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fillRule="currentColor"
-                className="RenderOfMobilePreguntasFrecuentesHUB-svg-1"
-                viewBox="0 0 16 16"
-              >
-                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
-              </svg>
-              <p className="RenderOfMobilePreguntasFrecuentesHUB-txt-4">
-                ¿Por qué mi pedido fue cancelado?
+                ¿Los talles son exactos?
               </p>
             </div>
           </div>
@@ -518,7 +405,23 @@ const MobilePreguntasFrecuentes = () => {
     </div>
   );
 
-  const RenderOfMobileFaqElement = <div></div>;
+  const RenderOfMobileFaqElement = (
+    <div className="RenderOfMobileFaqElement-background">
+      <div className="RenderOfMobileFaqElement-B1">
+        <p className="RenderOfMobileFaqElement-txt-1">{data.Tema}</p>
+      </div>
+      <p className="RenderOfMobileFaqElement-txt-2">{data.Descripcion}</p>
+      <div className="RenderOfMobileFaqElement-B2">
+        <p
+          className="RenderOfMobileFaqElement-txt-3"
+          onClick={() => setControlador()}
+        >
+          Volver
+        </p>
+      </div>
+    </div>
+  );
+
   return (
     <div className="MobilePreguntasFrecuentes-background">
       <div className="MobilePreguntasFrecuentes-content">

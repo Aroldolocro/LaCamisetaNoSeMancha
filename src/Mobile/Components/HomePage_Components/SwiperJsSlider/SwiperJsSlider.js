@@ -50,7 +50,7 @@ const SwiperJsSlider = () => {
             }
           >
             <img
-              src={data.HP_section3_image}
+              src={data.HP_section3_image2}
               className="mySwiper-img"
               alt=""
               onLoad={() => setLoaded(true)}
@@ -73,7 +73,7 @@ const SwiperJsSlider = () => {
             }
           >
             <img
-              src={data2.HP_section3_image}
+              src={data2.HP_section3_image2}
               className="mySwiper-img"
               alt=""
               onLoad={() => setLoaded(true)}
@@ -96,7 +96,7 @@ const SwiperJsSlider = () => {
             }
           >
             <img
-              src={data3.HP_section3_image}
+              src={data3.HP_section3_image2}
               className="mySwiper-img"
               alt=""
               onLoad={() => setLoaded(true)}
