@@ -3,7 +3,7 @@ import { AppContext } from "../../../../Context/Appcontext";
 import { useContext } from "react";
 
 const MobileSectionOne = () => {
-  const { scollToRef } = useContext(AppContext);
+  const { MobilescollToRef } = useContext(AppContext);
   return (
     <div className="MobileSectionOne-background">
       <div className="MobileSectionOne-content">
@@ -12,7 +12,7 @@ const MobileSectionOne = () => {
         <div className="MobileSectionOne-C-B3">
           <div
             className="MobileSectionOne-C-B3B1"
-            onClick={() => scollToRef.current.scrollIntoView()}
+            onClick={() => MobilescollToRef.current.scrollIntoView()}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

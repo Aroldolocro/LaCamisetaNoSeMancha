@@ -37,7 +37,7 @@ const MobilePayment = () => {
 
   useEffect(() => {
     const montoo = OrderPriceAfterShippingCalculationOnNumberFormat;
-    fetch("http://192.168.1.8:5000/api", {
+    fetch("http://localhost:5000/api", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

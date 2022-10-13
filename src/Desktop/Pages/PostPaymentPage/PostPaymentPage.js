@@ -15,6 +15,7 @@ import MobileMercadoPago from "../../../Mobile/Components/Desktop_PostPaymentPag
 import { AppContext } from "../../../Context/Appcontext";
 
 const PostPaymentPage = () => {
+  window.scrollTo(0, 0);
   const {
     orderId,
     MpOrderGenerated,
@@ -33,10 +34,10 @@ const PostPaymentPage = () => {
     if (MpOrderGenerated) {
       GenerarOrdenMercadoPago();
       setMpOrderGenerated(false);
+      setTimeout(() => {
+        window.sessionStorage.clear();
+      }, 3000);
     }
-    setTimeout(() => {
-      sessionStorage.clear();
-    }, 2000);
   }, [MpOrderGenerated, GenerarOrdenMercadoPago, setMpOrderGenerated]);
 
   useEffect(() => {
@@ -91,7 +92,11 @@ const PostPaymentPage = () => {
   const RenderOfLoader = <div className="PostPayment-Loader"></div>;
 
   return (
-    <div className="PP-background">
+    <div
+      className={
+        Loading ? "PP-background PP-background-LoadingVersion" : "PP-background"
+      }
+    >
       <div className="PP-content">
         <div className="PP-C-B1"></div>
         <div className="PP-C-B2">

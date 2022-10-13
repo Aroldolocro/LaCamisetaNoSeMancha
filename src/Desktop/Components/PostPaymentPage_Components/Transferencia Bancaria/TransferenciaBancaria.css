@@ -325,19 +325,18 @@
 }
 
 .ROFO-btn {
+  border: none;
   background-color: rgb(64, 64, 64);
-  border-radius: 0.5vh;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: 0.3s;
-  border: none;
   text-decoration: none;
   color: whitesmoke;
   margin: 0;
   font-size: 0.7vw;
-  font-weight: 500;
+  font-weight: 400;
   padding: 2vh;
 }
 
@@ -402,11 +401,14 @@
   backdrop-filter: blur(10px);
   height: 100%;
   width: 100%;
-  position: absolute;
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
   animation: 0.3s ease RenderOfComprobanteSender-animation;
+  z-index: 1;
+  top: 0;
+  left: 0;
 }
 
 @keyframes RenderOfComprobanteSender-animation {

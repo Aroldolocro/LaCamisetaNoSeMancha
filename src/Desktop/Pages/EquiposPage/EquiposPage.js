@@ -272,7 +272,11 @@ const EquiposPage = () => {
           <div className="EP-C-B2B5">
             <div className="EP-C-B2B5B1">
               {data2.EquipoHistoria2
-                ? EquipoHistoria2db
+                ? data2.EquipoHistoria2
+                  ? EquipoHistoria2db
+                  : EquipoHistoriadbLoader
+                : data2.EquipoHistoria
+                ? EquipoHistoriadb
                 : EquipoHistoriadbLoader}
             </div>
           </div>

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { AppContext } from "../../../../Context/Appcontext";
 
 const MobileSectionTwo = () => {
-  const { scollToRef } = useContext(AppContext);
+  const { MobilescollToRef } = useContext(AppContext);
   const [data, setData] = useState([]);
   const [Loaded, setLoaded] = useState(false);
 
@@ -100,7 +100,7 @@ const MobileSectionTwo = () => {
   );
 
   return (
-    <div className="MobileSectionTwo-background" ref={scollToRef}>
+    <div className="MobileSectionTwo-background" ref={MobilescollToRef}>
       <div className="MobileSectionTwo-content">
         <div className="MobileSectionTwo-C-B1">
           <p className="MobileSectionTwo-txt-1">NUESTRA SELECCIÓN</p>

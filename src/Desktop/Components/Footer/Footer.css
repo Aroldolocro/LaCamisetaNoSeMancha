@@ -1,116 +1,122 @@
-.F-background {
-  height: 35%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: whitesmoke;
-}
+@media (min-width: 1199.98px) {
+  .F-background {
+    height: 35%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+  }
 
-.F-background-notdisplayed {
-  display: none;
-}
+  .F-background-notdisplayed {
+    display: none;
+  }
 
-.F-content {
-  height: 80%;
-  width: 50%;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 40% auto 20%;
-  align-content: space-between;
-}
+  .F-content {
+    height: 80%;
+    width: 50%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 40% auto 20%;
+    align-content: space-between;
+  }
 
-.F-C-B1 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto;
-}
+  .F-C-B1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+  }
 
-.F-C-B1B1 {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto auto auto;
-  align-content: space-between;
-  justify-items: center;
-}
+  .F-C-B1B1 {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    align-content: space-between;
+    justify-items: center;
+  }
 
-.F-txt-1 {
-  margin: 0;
-  color: rgb(94, 94, 94);
-  text-align: center;
-  font-size: 0.7vw;
-  text-decoration: none;
-  position: relative;
-}
+  .F-txt-1 {
+    margin: 0;
+    color: rgb(94, 94, 94);
+    text-align: center;
+    font-size: 0.7vw;
+    text-decoration: none;
+    position: relative;
+  }
 
-.F-txt-1::after {
-  content: "";
-  background-color: rgb(124, 124, 124);
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  height: 0.2vh;
-  display: block;
-  position: absolute;
-  transition: 0.2s;
-}
+  .F-txt-1::after {
+    content: "";
+    background-color: rgb(124, 124, 124);
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 0.2vh;
+    display: block;
+    position: absolute;
+    transition: 0.2s;
+  }
 
-.F-txt-1:hover::after {
-  width: 100%;
-}
+  .F-txt-1:hover::after {
+    width: 100%;
+  }
 
-.F-C-B1B2 {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto auto auto;
-  align-content: space-between;
-  justify-items: center;
-}
+  .F-C-B1B2 {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    align-content: space-between;
+    justify-items: center;
+  }
 
-.F-C-B1B3 {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto auto auto;
-  align-content: space-between;
-  justify-items: center;
-}
+  .F-C-B1B3 {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    align-content: space-between;
+    justify-items: center;
+  }
 
-.F-txt-2 {
-  margin: 0;
-  color: rgb(94, 94, 94);
-  text-align: center;
-  font-size: 0.7vw;
-  text-decoration: none;
-}
+  .F-txt-2 {
+    margin: 0;
+    color: rgb(94, 94, 94);
+    text-align: center;
+    font-size: 0.7vw;
+    text-decoration: none;
+  }
 
-.F-C-B2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .F-C-B2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-.F-C-B2B1 {
-  height: auto;
-  width: auto;
-  display: grid;
-  grid-template-columns: repeat(8, auto);
-  grid-template-rows: auto;
-  justify-content: space-between;
-  grid-column-gap: 2vh;
-}
+  .F-C-B2B1 {
+    height: auto;
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    grid-template-rows: auto;
+    justify-content: space-between;
+    grid-column-gap: 2vh;
+  }
 
-.F-img {
-  height: 2.5vh;
-  width: auto;
-  border-radius: 0.3vh;
-  background-color: white;
-  cursor: pointer;
+  .F-img {
+    height: 2.5vh;
+    width: auto;
+    border-radius: 0.3vh;
+    background-color: white;
+    cursor: pointer;
+  }
 }
 
 /*Disable on mobile*/
 
 @media (max-width: 1199.98px) {
   .F-background {
+    display: none;
+  }
+
+  .F-background-notdisplayed {
     display: none;
   }
 }

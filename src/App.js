@@ -26,6 +26,7 @@ import MobileEquiposPage from "./Mobile/Pages/MobileEquiposPage/MobileEquiposPag
 import MobileDestacadosPage from "./Mobile/Pages/MobileDestacadosPage/MobileDestacadosPage";
 import MobileCheckoutPage from "./Mobile/Pages/MobileCheckoutPage/MobileCheckoutPage";
 import MobileSeguimientoPage from "./Mobile/Pages/MobileSeguimientoPage/MobileSeguimientoPage";
+import MobileFooter from "./Mobile/Components/MobileFooter/MobileFooter";
 
 export default function App() {
   return (
@@ -109,6 +110,7 @@ export default function App() {
           />
         </Routes>
         <Footer />
+        <MobileFooter />
       </BrowserRouter>
     </ConstAppContext>
   );

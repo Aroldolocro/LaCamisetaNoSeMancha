@@ -69,6 +69,7 @@ const ConstAppContext = ({ children }) => {
   /*SCROLL HP-S1*/
 
   const scollToRef = useRef();
+  const MobilescollToRef = useRef();
 
   /*CARRITO*/
 
@@ -488,6 +489,7 @@ const ConstAppContext = ({ children }) => {
         notificate,
         notificate1,
         scollToRef,
+        MobilescollToRef,
         EliminarProducto,
         incrementCountOfProduct,
         decrementCountOfProduct,
