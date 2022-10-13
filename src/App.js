@@ -27,6 +27,7 @@ import MobileDestacadosPage from "./Mobile/Pages/MobileDestacadosPage/MobileDest
 import MobileCheckoutPage from "./Mobile/Pages/MobileCheckoutPage/MobileCheckoutPage";
 import MobileSeguimientoPage from "./Mobile/Pages/MobileSeguimientoPage/MobileSeguimientoPage";
 import MobileFooter from "./Mobile/Components/MobileFooter/MobileFooter";
+import MobilePreguntasFrecuentes from "./Mobile/Components/MobileFooter/Components/MobilePreguntasFrecuentes/MobilePreguntasFrecuentes";
 
 export default function App() {
   return (
@@ -102,7 +103,12 @@ export default function App() {
           <Route path="/:postpayment" element={<PostPaymentPage />} />
           <Route
             path="/preguntas_frecuentes"
-            element={<PreguntasFrecuentes />}
+            element={
+              <>
+                <PreguntasFrecuentes />
+                <MobilePreguntasFrecuentes />
+              </>
+            }
           />
           <Route
             path="preguntas_frecuentes/:faqindice"

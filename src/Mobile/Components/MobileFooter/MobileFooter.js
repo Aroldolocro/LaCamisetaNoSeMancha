@@ -1,5 +1,5 @@
 import "./MobileFooter.css";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import imagen1 from "../../../Images/imagesPaymentMethods/image1.png";
 import imagen2 from "../../../Images/imagesPaymentMethods/image2.png";
 import imagen3 from "../../../Images/imagesPaymentMethods/image3.png";
@@ -23,7 +23,9 @@ const MobileFooter = () => {
         <div className="MobileFooter-C-B1">
           <div className="MobileFooter-C-B1B1">
             <p className="MobileFooter-txt-1">Contacto</p>
-            <p className="MobileFooter-txt-1">Preuguntas frecuentes</p>
+            <Link to={"/preguntas_frecuentes"} className="MobileFooter-txt-1">
+              Preuguntas frecuentes
+            </Link>
             <p className="MobileFooter-txt-1">Nuestros productos</p>
           </div>
           <div className="MobileFooter-C-B1B1">

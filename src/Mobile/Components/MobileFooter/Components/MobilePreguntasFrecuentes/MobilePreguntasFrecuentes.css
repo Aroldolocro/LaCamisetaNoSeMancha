@@ -1,0 +1,208 @@
+/*Desktop*/
+
+@media (min-width: 1199.98px) {
+  .MobilePreguntasFrecuentes-background {
+    display: none;
+  }
+}
+
+/*Mobile*/
+
+@media (max-width: 1199.98px) {
+  .MobilePreguntasFrecuentes-background {
+    height: fit-content;
+    width: 100%;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .MobilePreguntasFrecuentes-content {
+    height: 100%;
+    width: 85%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 12vh auto;
+  }
+
+  .MobilePreguntasFrecuentes-C-B1 {
+    background-color: none;
+  }
+
+  .MobilePreguntasFrecuentes-C-B2 {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    align-content: flex-start;
+    grid-row-gap: 3vh;
+  }
+
+  .MobilePreguntasFrecuentes-C-B2B1 {
+    height: 20vh;
+    border-bottom: 0.1vh solid rgb(128, 128, 128, 0.5);
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    align-content: space-between;
+    justify-content: flex-start;
+    padding: 1vh 0 1vh 0;
+  }
+
+  .MobilePreguntasFrecuentes-txt-1 {
+    margin: 0;
+    font-size: 6vw;
+    font-weight: 600;
+    color: rgb(94, 94, 94);
+  }
+
+  .MobilePreguntasFrecuentes-txt-2 {
+    margin: 0;
+    font-size: 9vw;
+    font-weight: 800;
+    color: black;
+    line-height: 100%;
+  }
+
+  .MobilePreguntasFrecuentes-txt-3 {
+    margin: 0;
+    font-size: 5vw;
+    font-weight: 500;
+    color: rgb(128, 128, 128);
+  }
+
+  .MobilePreguntasFrecuentes-C-B2B2 {
+    height: 20vh;
+    border-bottom: 0.1vh solid rgb(128, 128, 128, 0.5);
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    align-content: space-around;
+    padding: 1vh 0 1vh 0;
+  }
+
+  .MobilePreguntasFrecuentes-C-B2B2B1 {
+    height: fit-content;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    justify-content: flex-start;
+    align-items: center;
+    grid-column-gap: 2vh;
+    text-decoration: none;
+  }
+
+  .MobilePreguntasFrecuentes-svg-1 {
+    height: 1.7vh;
+    width: auto;
+    background-color: rgb(128, 128, 128);
+    padding: 0.5vh;
+    fill: whitesmoke;
+    border-radius: 0.3vh;
+  }
+
+  .MobilePreguntasFrecuentes-txt-4 {
+    margin: 0;
+    font-size: 4vw;
+    font-weight: 400;
+    color: black;
+    text-decoration: underline;
+  }
+
+  .MobilePreguntasFrecuentes-C-B2B3 {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /*RenderOfMobilePreguntasFrecuentesHUB*/
+
+  .RenderOfMobilePreguntasFrecuentesHUB-background {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    border: 0.3vh solid rgb(128, 128, 128, 0.3);
+    border-radius: 0.5vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 6vh auto;
+    grid-row-gap: 4vh;
+    padding: 2vh;
+  }
+
+  .RenderOfMobilePreguntasFrecuentesHUB-B1 {
+    border-bottom: 0.1vh solid rgb(128, 128, 128, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .RenderOfMobilePreguntasFrecuentesHUB-txt-1 {
+    margin: 0;
+    font-size: 4.5vw;
+    font-weight: 600;
+    color: black;
+  }
+
+  .RenderOfMobilePreguntasFrecuentesHUB-B2 {
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-flow: row;
+    grid-auto-rows: auto;
+    grid-row-gap: 6vh;
+  }
+
+  .RenderOfMobilePreguntasFrecuentesHUB-B2B1 {
+    height: fit-content;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-row-gap: 2vh;
+  }
+
+  .RenderOfMobilePreguntasFrecuentesHUB-txt-2 {
+    margin: 0;
+    font-size: 4vw;
+    font-weight: 600;
+    color: black;
+  }
+
+  .RenderOfMobilePreguntasFrecuentesHUB-txt-3 {
+    font-weight: 400;
+    color: rgb(128, 128, 128);
+  }
+
+  .RenderOfMobilePreguntasFrecuentesHUB-B2B1B1 {
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-flow: row;
+    grid-auto-rows: auto;
+    grid-row-gap: 2vh;
+  }
+
+  .RenderOfMobilePreguntasFrecuentesHUB-B2B1B1B1 {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    align-items: flex-start;
+    justify-content: flex-start;
+    grid-column-gap: 2vh;
+  }
+
+  .RenderOfMobilePreguntasFrecuentesHUB-svg-1 {
+    height: 2vh;
+    width: auto;
+    fill: black;
+  }
+
+  .RenderOfMobilePreguntasFrecuentesHUB-txt-4 {
+    margin: 0;
+    font-size: 3.7vw;
+    font-weight: 400;
+    color: black;
+    text-transform: uppercase;
+    line-height: 130%;
+  }
+}

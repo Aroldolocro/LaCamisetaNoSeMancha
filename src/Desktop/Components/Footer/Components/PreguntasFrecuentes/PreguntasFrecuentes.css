@@ -1,297 +1,301 @@
-.PreguntasFrecuentes-background {
-  background-color: whitesmoke;
-  height: fit-content;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/*Desktop*/
+
+@media (min-width: 1199.98px) {
+  .PreguntasFrecuentes-background {
+    background-color: whitesmoke;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .PreguntasFrecuentes-content {
+    height: 100%;
+    width: 60%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 6vh auto;
+  }
+
+  .PreguntasFrecuentes-C-B1 {
+    background-color: none;
+  }
+
+  .PreguntasFrecuentes-C-B2 {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20vh 20vh auto;
+    align-content: center;
+    grid-row-gap: 2vh;
+    padding: 2vh 0 2vh 0;
+  }
+
+  .PreguntasFrecuentes-C-B2B1 {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    align-content: space-around;
+    justify-content: flex-start;
+    border-bottom: 0.1vh solid rgb(128, 128, 128, 0.5);
+  }
+
+  .PreguntasFrecuentes-txt-1 {
+    margin: 0;
+    font-size: 1.5vw;
+    font-weight: 600;
+    color: rgb(94, 94, 94);
+  }
+
+  .PreguntasFrecuentes-txt-2 {
+    margin: 0;
+    width: max-content;
+    font-size: 2.5vw;
+    font-weight: 800;
+    color: black;
+  }
+
+  .PreguntasFrecuentes-txt-3 {
+    margin: 0;
+    width: max-content;
+    font-size: 1.2vw;
+    font-weight: 400;
+    color: rgb(128, 128, 128);
+  }
+
+  .PreguntasFrecuentes-C-B2B2 {
+    border-bottom: 0.1vh solid rgb(128, 128, 128, 0.5);
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    align-content: space-around;
+  }
+
+  .PreguntasFrecuentes-txt-4 {
+    margin: 0;
+    font-size: 1.2vw;
+    font-weight: 400;
+    color: black;
+  }
+
+  .PreguntasFrecuentes-C-B2B2B1 {
+    width: fit-content;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    grid-column-gap: 2vh;
+    justify-content: flex-start;
+  }
+
+  .PreguntasFrecuentes-C-B2B2B1B1 {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    justify-content: flex-start;
+    align-items: center;
+    grid-column-gap: 1vh;
+    text-decoration: none;
+  }
+
+  .PreguntasFrecuentes-svg-1 {
+    height: 1.8vh;
+    width: auto;
+    fill: black;
+  }
+
+  .PreguntasFrecuentes-txt-5 {
+    margin: 0;
+    font-size: 0.7vw;
+    font-weight: 400;
+    color: black;
+    cursor: pointer;
+  }
+
+  .PreguntasFrecuentes-txt-5:hover {
+    text-decoration: underline;
+  }
+
+  .PreguntasFrecuentes-C-B2B3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /*RenderOfPreguntasFrecuentesHUB*/
+
+  .RenderOfPreguntasFrecuentesHUB-background {
+    height: auto;
+    width: 100%;
+    background-color: white;
+    border: 0.3vh solid rgb(128, 128, 128, 0.3);
+    border-radius: 0.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2vh;
+  }
+
+  .RenderOfPreguntasFrecuentesHUB-content {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    align-content: flex-start;
+    grid-row-gap: 4vh;
+  }
+
+  .RenderOfPreguntasFrecuentesHUB-txt-1 {
+    margin: 0;
+    font-size: 1.3vw;
+    font-weight: 500;
+    color: black;
+  }
+
+  .RenderOfPreguntasFrecuentesHUB-C-B1 {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    justify-content: space-between;
+    align-content: space-between;
+    grid-row-gap: 6vh;
+  }
+
+  .RenderOfPreguntasFrecuentesHUB-C-B1B1 {
+    width: fit-content;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    align-content: flex-start;
+    grid-row-gap: 1vh;
+  }
+
+  .RenderOfPreguntasFrecuentesHUB-txt-2 {
+    margin: 0;
+    font-size: 1vw;
+    font-weight: 500;
+    color: black;
+    width: fit-content;
+    text-decoration: none;
+  }
+
+  .RenderOfPreguntasFrecuentesHUB-txt-2:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .RenderOfPreguntasFrecuentesHUB-txt-3 {
+    margin: 0;
+    font-size: 1vw;
+    font-weight: 400;
+    color: rgb(128, 128, 128);
+  }
+
+  .RenderOfPreguntasFrecuentesHUB-txt-4:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .RenderOfPreguntasFrecuentesHUB-C-B1B1B1 {
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-flow: row;
+    grid-auto-rows: auto;
+    grid-row-gap: 1.5vh;
+  }
+
+  .RenderOfPreguntasFrecuentesHUB-C-B1B1B1B1 {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    grid-column-gap: 2vh;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .RenderOfPreguntasFrecuentesHUB-svg-1 {
+    height: 2vh;
+    width: auto;
+    fill: black;
+  }
+  .RenderOfPreguntasFrecuentesHUB-txt-4 {
+    margin: 0;
+    font-size: 0.8vw;
+    font-weight: 400;
+    color: black;
+  }
+
+  /*RenderOfFaqElement*/
+
+  .RenderOfFaqElement-background {
+    height: auto;
+    width: 100%;
+    background-color: white;
+    border: 0.3vh solid rgb(128, 128, 128, 0.3);
+    border-radius: 0.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2vh;
+  }
+
+  .RenderOfFaqElement-content {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    align-content: flex-start;
+    grid-row-gap: 2vh;
+  }
+
+  .RenderOfFaqElement-C-B1 {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 0.1vh solid rgb(128, 128, 128, 0.5);
+    padding-bottom: 2vh;
+  }
+
+  .RenderOfFaqElement-txt-1 {
+    margin: 0;
+    font-size: 1.3vw;
+    font-weight: 500;
+    color: black;
+  }
+
+  .RenderOfFaqElement-txt-2 {
+    margin: 0;
+    font-size: 0.8vw;
+    font-weight: 400;
+    color: black;
+    white-space: pre-wrap;
+    text-align: justify;
+  }
+
+  .RenderOfFaqElement-C-B2 {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-top: 0.1vh solid rgb(128, 128, 128, 0.5);
+    padding-top: 2vh;
+  }
+
+  .RenderOfFaqElement-txt-3 {
+    margin: 0;
+    font-size: 0.7vw;
+    font-weight: 500;
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+  }
 }
 
-.PreguntasFrecuentes-content {
-  height: 100%;
-  width: 60%;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 6vh auto;
-}
-
-.PreguntasFrecuentes-C-B1 {
-  background-color: none;
-}
-
-.PreguntasFrecuentes-C-B2 {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 20vh 20vh auto;
-  align-content: center;
-  grid-row-gap: 2vh;
-  padding: 2vh 0 2vh 0;
-}
-
-.PreguntasFrecuentes-C-B2B1 {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: auto auto;
-  align-content: space-around;
-  justify-content: flex-start;
-  border-bottom: 0.1vh solid rgb(128, 128, 128, 0.5);
-}
-
-.PreguntasFrecuentes-txt-1 {
-  margin: 0;
-  font-size: 1.5vw;
-  font-weight: 600;
-  color: rgb(94, 94, 94);
-}
-
-.PreguntasFrecuentes-txt-2 {
-  margin: 0;
-  width: max-content;
-  font-size: 2.5vw;
-  font-weight: 800;
-  color: black;
-}
-
-.PreguntasFrecuentes-txt-3 {
-  margin: 0;
-  width: max-content;
-  font-size: 1.2vw;
-  font-weight: 400;
-  color: rgb(128, 128, 128);
-}
-
-.PreguntasFrecuentes-C-B2B2 {
-  border-bottom: 0.1vh solid rgb(128, 128, 128, 0.5);
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto auto;
-  align-content: space-around;
-}
-
-.PreguntasFrecuentes-txt-4 {
-  margin: 0;
-  font-size: 1.2vw;
-  font-weight: 400;
-  color: black;
-}
-
-.PreguntasFrecuentes-C-B2B2B1 {
-  width: fit-content;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto;
-  grid-column-gap: 2vh;
-  justify-content: flex-start;
-}
-
-.PreguntasFrecuentes-C-B2B2B1B1 {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto;
-  justify-content: flex-start;
-  align-items: center;
-  grid-column-gap: 1vh;
-  text-decoration: none;
-}
-
-.PreguntasFrecuentes-svg-1 {
-  height: 1.8vh;
-  width: auto;
-  fill: black;
-}
-
-.PreguntasFrecuentes-txt-5 {
-  margin: 0;
-  font-size: 0.7vw;
-  font-weight: 400;
-  color: black;
-  cursor: pointer;
-}
-
-.PreguntasFrecuentes-txt-5:hover {
-  text-decoration: underline;
-}
-
-.PreguntasFrecuentes-C-B2B3 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/*RenderOfPreguntasFrecuentesHUB*/
-
-.RenderOfPreguntasFrecuentesHUB-background {
-  height: auto;
-  width: 100%;
-  background-color: white;
-  border: 0.3vh solid rgb(128, 128, 128, 0.3);
-  border-radius: 0.5vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2vh;
-}
-
-.RenderOfPreguntasFrecuentesHUB-content {
-  height: 100%;
-  width: 100%;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto auto;
-  align-content: flex-start;
-  grid-row-gap: 4vh;
-}
-
-.RenderOfPreguntasFrecuentesHUB-txt-1 {
-  margin: 0;
-  font-size: 1.3vw;
-  font-weight: 500;
-  color: black;
-}
-
-.RenderOfPreguntasFrecuentesHUB-C-B1 {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto auto;
-  justify-content: space-between;
-  align-content: space-between;
-  grid-row-gap: 6vh;
-}
-
-.RenderOfPreguntasFrecuentesHUB-C-B1B1 {
-  width: fit-content;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto auto;
-  align-content: flex-start;
-  grid-row-gap: 1vh;
-}
-
-.RenderOfPreguntasFrecuentesHUB-txt-2 {
-  margin: 0;
-  font-size: 1vw;
-  font-weight: 500;
-  color: black;
-  width: fit-content;
-  text-decoration: none;
-}
-
-.RenderOfPreguntasFrecuentesHUB-txt-2:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.RenderOfPreguntasFrecuentesHUB-txt-3 {
-  margin: 0;
-  font-size: 1vw;
-  font-weight: 400;
-  color: rgb(128, 128, 128);
-}
-
-.RenderOfPreguntasFrecuentesHUB-txt-4:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.RenderOfPreguntasFrecuentesHUB-C-B1B1B1 {
-  display: grid;
-  grid-template-columns: auto;
-  grid-auto-flow: row;
-  grid-auto-rows: auto;
-  grid-row-gap: 1.5vh;
-}
-
-.RenderOfPreguntasFrecuentesHUB-C-B1B1B1B1 {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto;
-  grid-column-gap: 2vh;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.RenderOfPreguntasFrecuentesHUB-svg-1 {
-  height: 2vh;
-  width: auto;
-  fill: black;
-}
-.RenderOfPreguntasFrecuentesHUB-txt-4 {
-  margin: 0;
-  font-size: 0.8vw;
-  font-weight: 400;
-  color: black;
-}
-
-/*RenderOfFaqElement*/
-
-.RenderOfFaqElement-background {
-  height: auto;
-  width: 100%;
-  background-color: white;
-  border: 0.3vh solid rgb(128, 128, 128, 0.3);
-  border-radius: 0.5vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2vh;
-}
-
-.RenderOfFaqElement-content {
-  height: 100%;
-  width: 100%;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto auto auto;
-  align-content: flex-start;
-  grid-row-gap: 2vh;
-}
-
-.RenderOfFaqElement-C-B1 {
-  height: auto;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  border-bottom: 0.1vh solid rgb(128, 128, 128, 0.5);
-  padding-bottom: 2vh;
-}
-
-.RenderOfFaqElement-txt-1 {
-  margin: 0;
-  font-size: 1.3vw;
-  font-weight: 500;
-  color: black;
-}
-
-.RenderOfFaqElement-txt-2 {
-  margin: 0;
-  font-size: 0.8vw;
-  font-weight: 400;
-  color: black;
-  white-space: pre-wrap;
-  text-align: justify;
-}
-
-.RenderOfFaqElement-C-B2 {
-  height: auto;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  border-top: 0.1vh solid rgb(128, 128, 128, 0.5);
-  padding-top: 2vh;
-}
-
-.RenderOfFaqElement-txt-3 {
-  margin: 0;
-  font-size: 0.7vw;
-  font-weight: 500;
-  color: black;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-/*Disable on mobile*/
+/*Mobile*/
 
 @media (max-width: 1199.98px) {
   .PreguntasFrecuentes-background {
