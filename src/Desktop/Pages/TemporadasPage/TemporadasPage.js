@@ -22,7 +22,7 @@ const TemporadasPage = () => {
   }, []);
 
   useEffect(() => {
-    logEvent(analytics, `${Temporade}_Visitado`);
+    logEvent(analytics, `Temporada: ${Temporade} visitado`);
   }, [Temporade]);
 
   const TemporadasdbProducts = data

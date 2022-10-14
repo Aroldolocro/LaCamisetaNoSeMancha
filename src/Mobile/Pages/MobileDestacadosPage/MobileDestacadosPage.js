@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
 
 const MobileDestacadosPage = () => {
+  window.scrollTo(0, 0);
   const [Loaded, setLoaded] = useState(false);
   const [data, setData] = useState([]);
 

@@ -57,31 +57,31 @@ export const Elementos = [
   },
   {
     Indice: "envios",
-    Indice2: "envios",
+    Indice2: "envíos",
     Tema: "Tiempo de entrega de los productos",
     Descripcion:
       "El tiempo aproximado de entrega de una compra de nuestra tienda es de 3 a 6 días hábiles dependiendo la localidad desde que se ha pedido el mismo.",
   },
   {
     Indice: "envios",
-    Indice2: "envios",
+    Indice2: "envíos",
     Tema: "¿Quién envía el pedido?",
     Descripcion:
       "El envio y entrega de los productos de nuestra tienda son administrados por Correo Oficial de la República Argentina S. A. (Correo Argentino).",
   },
   {
     Indice: "envios",
-    Indice2: "envios",
+    Indice2: "envíos",
     Tema: "No recibí mi confirmación por email",
     Descripcion:
       "En caso de no haber recibido la confirmación de tu orden de compra por email, siempre podrás contactarnos mediante Email o WhatsApp desde la sección ‘’CONTACTO’’.\n\nDebes tener en cuenta que el mail de confirmación de tu orden puede llegar a tardar hasta 24 horas en ser recibido. Esto debido a que las ordenes son procesadas manualmente.",
   },
   {
     Indice: "envios",
-    Indice2: "envios",
+    Indice2: "envíos",
     Tema: "¿El envío es gratis?",
     Descripcion:
-      "El costo de envio puede varíar en dos casos, si el monto total de tu compra es mayor o igual a ARS $ 25.000, cubriremos el costo de envio. De lo contrario, el costo de envio se le cobrará al cliente.\nEl costo de envio es actualizado constantemente por lo que podrás visualizarlo en el resumen de tu orden de compra (carrito) que se muestra en el paso previo al pago de una orden. ",
+      "El costo de envio puede varíar en dos casos, si el monto subtotal de tu compra es mayor o igual a ARS $ 25.000, cubriremos el costo de envio. De lo contrario, el costo de envio se le cobrará al cliente.\nEl costo de envio es actualizado constantemente por lo que podrás visualizarlo en el resumen de tu orden de compra (carrito) que se muestra en el paso previo al pago de una orden. ",
   },
   {
     Indice: "devoluciones",
@@ -131,6 +131,13 @@ export const Elementos = [
     Tema: "¿Los productos son nuevos o usados?",
     Descripcion:
       "Nuestros productos son nuevos directos de fábrica. Por el momento no contamos con el servicio de compra-venta de artículos usados.",
+  },
+  {
+    Indice: "talles",
+    Indice2: "talles",
+    Tema: "¿Se aplican los mismos talles para todos los productos?",
+    Descripcion:
+      "Los talles de nuestros productos son relativos en cada prenda, por eso recomendamos fuertemente chequear la tabla de talles que ofrecemos para cada producto a la hora de seleccionar el talle a comprar. Esto se debe en gran parte a la manera de confeccionar la indumentaria de la época.",
   },
   {
     Indice: "talles",

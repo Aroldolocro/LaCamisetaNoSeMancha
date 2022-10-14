@@ -22,16 +22,38 @@ const MobileFooter = () => {
       <div className="MobileFooter-content">
         <div className="MobileFooter-C-B1">
           <div className="MobileFooter-C-B1B1">
-            <p className="MobileFooter-txt-1">Contacto</p>
+            <Link to={"/preguntas_frecuentes"} className="MobileFooter-txt-1">
+              Contacto
+            </Link>
             <Link to={"/preguntas_frecuentes"} className="MobileFooter-txt-1">
               Preuguntas frecuentes
             </Link>
-            <p className="MobileFooter-txt-1">Nuestros productos</p>
+            <Link
+              to={"/preguntas_frecuentes/nuestros_productos"}
+              className="MobileFooter-txt-1"
+            >
+              Nuestros productos
+            </Link>
           </div>
           <div className="MobileFooter-C-B1B1">
-            <p className="MobileFooter-txt-1">Envios</p>
-            <p className="MobileFooter-txt-1">Talles</p>
-            <p className="MobileFooter-txt-1">Devoluciones</p>
+            <Link
+              to={"/preguntas_frecuentes/envios"}
+              className="MobileFooter-txt-1"
+            >
+              Envíos
+            </Link>
+            <Link
+              to={"/preguntas_frecuentes/talles"}
+              className="MobileFooter-txt-1"
+            >
+              Talles
+            </Link>
+            <Link
+              to={"/preguntas_frecuentes/devoluciones"}
+              className="MobileFooter-txt-1"
+            >
+              Devoluciones
+            </Link>
           </div>
           <div className="MobileFooter-C-B1B1">
             <Link
@@ -40,8 +62,15 @@ const MobileFooter = () => {
             >
               Pagos
             </Link>
-            <p className="MobileFooter-txt-1">Problemas con mi pedido</p>
-            <p className="MobileFooter-txt-1">Terminos y mi viejo</p>
+            <Link
+              to={"/preguntas_frecuentes/problemas_con_mi_pedido"}
+              className="MobileFooter-txt-1"
+            >
+              Problemas con mi pedido
+            </Link>
+            <Link to={`/destacados`} className="MobileFooter-txt-1">
+              Todos nuestros productos
+            </Link>
           </div>
         </div>
         <p className="MobileFooter-txt-2">© LA CAMISETA NO SE MANCHA 2022</p>

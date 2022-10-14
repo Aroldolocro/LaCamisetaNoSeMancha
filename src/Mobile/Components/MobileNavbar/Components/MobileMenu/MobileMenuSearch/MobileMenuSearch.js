@@ -1,6 +1,8 @@
 import "./MobileMenuSearch.css";
 import { useState, useEffect } from "react";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
+import { analytics } from "../../../../../../Firebase/firebase";
+import { logEvent } from "firebase/analytics";
 
 const MobileMenuSearch = () => {
   const [data, setData] = useState([]);
@@ -18,6 +20,7 @@ const MobileMenuSearch = () => {
 
   const handefiltrado = (event) => {
     const word = event.target.value;
+    setBuscado(word);
     const nuevofiltrado = data.filter((valor) =>
       valor.nombre.toLowerCase().includes(word.toLowerCase())
     );
@@ -29,17 +32,27 @@ const MobileMenuSearch = () => {
     }
   };
 
+  const [Buscado, setBuscado] = useState();
+  const SendBuscadoToAnalitycs = () => {
+    logEvent(analytics, `Palabra ${Buscado} buscada`);
+  };
+
   const MobileMenuSearch_DB_Products = filtrado
     .slice(0, 4)
     .map((valor, index) => {
       return (
         <a
+          onClick={() => SendBuscadoToAnalitycs()}
           href={`/producto/${valor.id}`}
           className="MobileMenuSearch_DB_Products-background"
           key={index}
         >
           <div className="MobileMenuSearch_DB_Products-B1">
-            <img src={valor.imagen1} className="MobileMenuSearch_DB_Products-img" alt="" />
+            <img
+              src={valor.imagen1}
+              className="MobileMenuSearch_DB_Products-img"
+              alt=""
+            />
           </div>
           <div className="MobileMenuSearch_DB_Products-B2">
             <p className="MobileMenuSearch_DB_Products-txt-1">{valor.nombre}</p>

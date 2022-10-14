@@ -192,12 +192,30 @@ const CheckoutPage = () => {
             </div>
             <div className="CP-C-B1B1B3">
               <div className="CP-C-B1B1B3B1">
-                <div className="CP-C-B1B1B3B1B1">
-                  <p className="CP-txt-3">Politicas de reembolso</p>
-                </div>
-                <div className="CP-C-B1B1B3B1B2">
-                  <p className="CP-txt-3">Politicas de envío</p>
-                </div>
+                <a
+                  href={"/preguntas_frecuentes/devoluciones"}
+                  rel="noreferrer"
+                  target={"_blank"}
+                  className="CP-txt-3"
+                >
+                  Políticas de devoluciones
+                </a>
+                <a
+                  href={"/preguntas_frecuentes/envios"}
+                  rel="noreferrer"
+                  target={"_blank"}
+                  className="CP-txt-3"
+                >
+                  Políticas de envíos
+                </a>
+                <a
+                  href={"/preguntas_frecuentes/pagos"}
+                  rel="noreferrer"
+                  target={"_blank"}
+                  className="CP-txt-3"
+                >
+                  Políticas de pagos
+                </a>
               </div>
             </div>
           </div>

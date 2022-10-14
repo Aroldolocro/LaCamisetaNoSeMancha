@@ -6,6 +6,8 @@ import { AppContext } from "../../../../Context/Appcontext";
 import MobileAddToCartNotification from "../MobileAddToCartNotification/MobileAddToCartNotification";
 import MobileAddToCartAnimation from "../MobileAddToCartAnimation/MobileAddToCartAnimation";
 import MobileSizeGuide from "../MobileSizeGuide/MobileSizeGuide";
+import { analytics } from "../../../../Firebase/firebase";
+import { logEvent } from "firebase/analytics";
 
 const SectionTwo = () => {
   const {
@@ -97,6 +99,10 @@ const SectionTwo = () => {
     if (selected === undefined || selected === "SELECCIONA UN TALLE") {
       setSizeError(true);
     } else {
+      logEvent(
+        analytics,
+        `Mobile_Producto ID: ${productId} Agregado al carrito (Boton agregar al carrito)`
+      );
       setSizeError(false);
       notificate();
       notificate1();
@@ -120,6 +126,10 @@ const SectionTwo = () => {
     if (selected === undefined || selected === "SELECCIONA UN TALLE") {
       setSizeError(true);
     } else {
+      logEvent(
+        analytics,
+        `Mobile_Producto ID: ${productId} Agregado al carrito (Boton comprar ahora)`
+      );
       setSizeError(false);
       AgregarProducto(
         imagen,

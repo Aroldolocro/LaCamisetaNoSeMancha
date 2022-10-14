@@ -137,15 +137,10 @@
   width: 100%;
   background-color: none;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
   justify-content: flex-start;
-  grid-column-gap: 2vh;
-}
-
-.CP-C-B1B1B3B1B1 {
-  width: fit-content;
-  display: flex;
   align-items: center;
+  grid-column-gap: 2vh;
 }
 
 .CP-txt-3 {
@@ -155,12 +150,7 @@
   width: max-content;
   color: rgb(64, 64, 64);
   cursor: pointer;
-}
-
-.CP-C-B1B1B3B1B2 {
-  width: fit-content;
-  display: flex;
-  align-items: center;
+  text-decoration: none;
 }
 
 /*BOX DERECHA*/

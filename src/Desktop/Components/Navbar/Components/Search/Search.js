@@ -2,6 +2,8 @@ import "./Search.css";
 import { useContext, useState, useEffect } from "react";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
 import { AppContext } from "../../../../../Context/Appcontext";
+import { logEvent } from "firebase/analytics";
+import { analytics } from "../../../../../Firebase/firebase";
 
 const Search = () => {
   const { setAbrir2 } = useContext(AppContext);
@@ -21,6 +23,7 @@ const Search = () => {
 
   const handefiltrado = (event) => {
     const word = event.target.value;
+    setBuscado(word);
     const nuevofiltrado = data.filter((valor) =>
       valor.nombre.toLowerCase().includes(word.toLowerCase())
     );
@@ -32,9 +35,15 @@ const Search = () => {
     }
   };
 
+  const [Buscado, setBuscado] = useState();
+  const SendBuscadoToAnalitycs = () => {
+    logEvent(analytics, `Palabra ${Buscado} buscada`);
+  };
+
   const resultado = filtrado.slice(0, 10).map((valor) => {
     return (
       <a
+        onClick={() => SendBuscadoToAnalitycs()}
         href={`/producto/${valor.id}`}
         className="S-I-background"
         key={valor.id}
@@ -48,7 +57,13 @@ const Search = () => {
               <p className="S-I-txt-1">{valor.nombre}</p>
             </div>
             <div className="S-I-C-B2B2">
-              <p className="S-I-txt-2">${valor.precio}</p>
+              <p className="S-I-txt-2">
+                {" "}
+                {new Intl.NumberFormat("es-AR", {
+                  style: "currency",
+                  currency: "ARS",
+                }).format(valor.precio)}
+              </p>
             </div>
           </div>
         </div>

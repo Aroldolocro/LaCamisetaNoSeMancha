@@ -208,8 +208,13 @@ const Payment = () => {
             </div>
           </div>
         </div>
+
         <div className="CheckoutPayment-C-B2">
-          <div className="CheckoutPayment-C-B2B1">
+          <a
+            href="/preguntas_frecuentes/pagos"
+            target={"_blank"}
+            className="CheckoutPayment-C-B2B1"
+          >
             <div className="CheckoutPayment-C-B2B1B1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -226,7 +231,7 @@ const Payment = () => {
             <div className="CheckoutPayment-C-B2B1B2">
               ¿Como procesamos los pagos en nuestra tienda?
             </div>
-          </div>
+          </a>
         </div>
         <div className="CheckoutPayment-C-B3">
           <div className="CheckoutPayment-C-B3B1">

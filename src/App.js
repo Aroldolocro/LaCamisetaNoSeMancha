@@ -100,7 +100,7 @@ export default function App() {
               </>
             }
           />
-          <Route path="/:postpayment" element={<PostPaymentPage />} />
+          <Route path="/postpayment" element={<PostPaymentPage />} />
           <Route
             path="/preguntas_frecuentes"
             element={

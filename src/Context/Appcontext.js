@@ -542,6 +542,7 @@ const ConstAppContext = ({ children }) => {
         setopenShippingPriceFAQ,
         MpOrderGenerated,
         setMpOrderGenerated,
+        ShippingPrice,
       }}
     >
       {children}

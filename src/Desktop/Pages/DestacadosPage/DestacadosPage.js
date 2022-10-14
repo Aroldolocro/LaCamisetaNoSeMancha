@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 const DestacadosPage = () => {
+  window.scrollTo(0, 0);
   const [data, setData] = useState([]);
   const [Loaded, setLoaded] = useState(false);
 

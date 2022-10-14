@@ -16,7 +16,6 @@ const MercadoPago = () => {
   const [data2, setData2] = useState([]);
 
   useEffect(() => {
-    setProductlist([]);
     setEstadoDePago(searchParams.get("status"));
     setPaymentId(searchParams.get("payment_id"));
   }, [searchParams, setProductlist, setPaymentId]);

@@ -8,6 +8,8 @@ import {
   getDoc,
 } from "firebase/firestore";
 import { Link } from "react-router-dom";
+import { analytics } from "../../../Firebase/firebase";
+import { logEvent } from "firebase/analytics";
 
 const MobileSeguimientoPage = () => {
   const [data2, setData2] = useState([]);
@@ -67,6 +69,7 @@ const MobileSeguimientoPage = () => {
         setLoading(false);
         setSearcher(false);
         setNotFoundOrder(true);
+        logEvent(analytics, `Error al hacer seguimiento de orden`);
       }
     }, 1000);
   };

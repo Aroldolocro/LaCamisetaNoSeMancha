@@ -31,9 +31,9 @@ const MobileMenuExplorar = () => {
         <a href={`/seguimiento`} className="MobileMenuExplorar-C-B2">
           <p className="MobileMenuExplorar-txt-1">SEGUÍ TU ORDEN</p>
         </a>
-        <div className="MobileMenuExplorar-C-B3">
+        <a href="/preguntas_frecuentes" className="MobileMenuExplorar-C-B3">
           <p className="MobileMenuExplorar-txt-1">CONTACTANOS</p>
-        </div>
+        </a>
       </div>
     </div>
   );

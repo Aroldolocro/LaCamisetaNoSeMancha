@@ -8,7 +8,7 @@ const Explorar = () => {
       <Link to={`/seguimiento`} className="DD-txt-1">
         SEGUÍ TU ORDEN
       </Link>
-      <Link to={""} className="DD-txt-1">
+      <Link to={"/preguntas_frecuentes"} className="DD-txt-1">
         CONTACTANOS
       </Link>
     </div>

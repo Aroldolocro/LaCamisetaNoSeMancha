@@ -18,7 +18,7 @@ const SectionOne = () => {
   const [data3, setData3] = useState({});
 
   useEffect(() => {
-    logEvent(analytics, `${productId}_Visitado`);
+    logEvent(analytics, `Producto ID: ${productId} Visitado`);
   }, [productId]);
 
   useEffect(() => {
@@ -86,6 +86,10 @@ const SectionOne = () => {
     if (selected === undefined || selected === "SELECCIONA UN TALLE") {
       setSizeError(true);
     } else {
+      logEvent(
+        analytics,
+        `Producto ID: ${productId} Agregado al carrito (Boton agregar al carrito)`
+      );
       setSizeError(false);
       notificate();
       notificate1();
@@ -111,6 +115,10 @@ const SectionOne = () => {
     if (selected === undefined || selected === "SELECCIONA UN TALLE") {
       setSizeError(true);
     } else {
+      logEvent(
+        analytics,
+        `Producto ID: ${productId} Agregado al carrito (Boton comprar ahora)`
+      );
       setSizeError(false);
       AgregarProducto(
         imagen,

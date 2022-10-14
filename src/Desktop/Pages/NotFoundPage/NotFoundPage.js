@@ -1,6 +1,16 @@
+import "./NotFoundPage.css";
+
 const NotFoundPage = () => {
-  window.scrollTo(0, 0);
-  return <div>Not found page</div>;
+  return (
+    <div className="NotFoundPage-background">
+      <div className="NotFoundPage-content">
+        <p className="NotFoundPage-txt-1">404</p>
+        <p className="NotFoundPage-txt-2">
+          No encontramos la página que estás buscando
+        </p>
+      </div>
+    </div>
+  );
 };
 
 export default NotFoundPage;

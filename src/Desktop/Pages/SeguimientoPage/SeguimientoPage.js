@@ -8,6 +8,8 @@ import {
   getDoc,
 } from "firebase/firestore";
 import { Link } from "react-router-dom";
+import { analytics } from "../../../Firebase/firebase";
+import { logEvent } from "firebase/analytics";
 
 const SeguimientoPage = () => {
   window.scrollTo(0, 0);
@@ -68,6 +70,7 @@ const SeguimientoPage = () => {
         setLoading(false);
         setSearcher(false);
         setNotFoundOrder(true);
+        logEvent(analytics, `Error al hacer seguimiento de orden`);
       }
     }, 1000);
   };

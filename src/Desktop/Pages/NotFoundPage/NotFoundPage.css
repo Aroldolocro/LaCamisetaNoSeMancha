@@ -1,0 +1,33 @@
+.NotFoundPage-background {
+  height: 100%;
+  width: 100%;
+  background-color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.NotFoundPage-content {
+  height: auto;
+  width: auto;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  align-content: flex-start;
+  justify-items: center;
+}
+
+.NotFoundPage-txt-1 {
+  margin: 0;
+  font-size: 7vw;
+  font-weight: 500;
+  color: rgb(94, 94, 94);
+}
+
+.NotFoundPage-txt-2 {
+  margin: 0;
+  font-size: 2vw;
+  font-weight: 500;
+  color: rgb(94, 94, 94);
+  text-align: center;
+}

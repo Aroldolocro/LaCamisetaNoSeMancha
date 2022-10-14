@@ -21,6 +21,9 @@ const PostPaymentPage = () => {
     MpOrderGenerated,
     GenerarOrdenMercadoPago,
     setMpOrderGenerated,
+    OrderPriceAfterShippingCalculation,
+    ShippingPriceOnCurrencyFormat,
+    setProductlist,
   } = useContext(AppContext);
   const [data, setData] = useState([]);
   const [data2, setData2] = useState({});
@@ -31,14 +34,25 @@ const PostPaymentPage = () => {
   const [NullPaymentMethodState, setNullPaymentMethodState] = useState(false);
 
   useEffect(() => {
-    if (MpOrderGenerated) {
+    if (
+      MpOrderGenerated &&
+      OrderPriceAfterShippingCalculation !== ShippingPriceOnCurrencyFormat
+    ) {
       GenerarOrdenMercadoPago();
       setMpOrderGenerated(false);
+      setProductlist([]);
       setTimeout(() => {
         window.sessionStorage.clear();
       }, 3000);
     }
-  }, [MpOrderGenerated, GenerarOrdenMercadoPago, setMpOrderGenerated]);
+  }, [
+    MpOrderGenerated,
+    GenerarOrdenMercadoPago,
+    setMpOrderGenerated,
+    OrderPriceAfterShippingCalculation,
+    ShippingPriceOnCurrencyFormat,
+    setProductlist,
+  ]);
 
   useEffect(() => {
     setTimeout(() => {

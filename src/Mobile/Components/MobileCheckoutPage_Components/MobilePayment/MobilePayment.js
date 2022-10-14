@@ -134,7 +134,11 @@ const MobilePayment = () => {
               : RenderOfMobileNotCoveredMethod}
           </div>
         </div>
-        <div className="MobilePayment-C-B2">
+        <a
+          href="/preguntas_frecuentes/pagos"
+          target={"_blank"}
+          className="MobilePayment-C-B2"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -149,7 +153,7 @@ const MobilePayment = () => {
           <p className="MobilePayment-txt-4">
             ¿Como procesamos los pagos en nuestra tienda?
           </p>
-        </div>
+        </a>
         <div className="MobilePayment-C-B3">
           <div
             className="MobilePayment-C-B3B1"

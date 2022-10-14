@@ -34,7 +34,7 @@ const EquiposPage = () => {
   }, [Equipo]);
 
   useEffect(() => {
-    logEvent(analytics, `${data2.EquipoNombre}_Visitado`);
+    logEvent(analytics, `Equipo: ${data2.EquipoNombre} visitado`);
   }, [data2.EquipoNombre]);
 
   const EquiposdbProducts = data
