@@ -1,6 +1,7 @@
 import "./MobileMenuExplorar.css";
 import { AppContext } from "../../../../../../Context/Appcontext";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 const MobileMenuExplorar = () => {
   const { setOpenMenu3 } = useContext(AppContext);
@@ -28,12 +29,12 @@ const MobileMenuExplorar = () => {
           </div>
           <p className="MobileMenuExplorar-txt-1">EXPLORAR</p>
         </div>
-        <a href={`/seguimiento`} className="MobileMenuExplorar-C-B2">
+        <Link to={`/seguimiento`} className="MobileMenuExplorar-C-B2">
           <p className="MobileMenuExplorar-txt-1">SEGUÍ TU ORDEN</p>
-        </a>
-        <a href="/preguntas_frecuentes" className="MobileMenuExplorar-C-B3">
-          <p className="MobileMenuExplorar-txt-1">CONTACTANOS</p>
-        </a>
+        </Link>
+        <Link to="/preguntas_frecuentes" className="MobileMenuExplorar-C-B3">
+          <p className="MobileMenuExplorar-txt-1">CONTÁCTANOS</p>
+        </Link>
       </div>
     </div>
   );

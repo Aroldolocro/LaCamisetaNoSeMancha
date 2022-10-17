@@ -116,6 +116,7 @@ const TransferenciaBancaria = () => {
   const RenderOfProductsOrdered = data2.map((product, index) => (
     <Link
       to={`/producto/${product.Id}`}
+      target={"_blank"}
       className="ROPO-background"
       key={index}
     >

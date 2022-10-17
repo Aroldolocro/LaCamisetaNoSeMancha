@@ -96,9 +96,9 @@ const MobileSectionFour = () => {
           {MobileSectionFour_DB_Products_Loader}
         </div>
         <div className="MobileSectionFour-C-B4">
-          <a href={`/destacados`} className="MobileSectionFour-btn">
+          <Link to={`/destacados`} className="MobileSectionFour-btn">
             VER TODOS
-          </a>
+          </Link>
         </div>
       </div>
     </div>

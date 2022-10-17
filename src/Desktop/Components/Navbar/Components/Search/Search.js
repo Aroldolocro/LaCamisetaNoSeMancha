@@ -4,6 +4,7 @@ import { getFirestore, collection, getDocs } from "firebase/firestore";
 import { AppContext } from "../../../../../Context/Appcontext";
 import { logEvent } from "firebase/analytics";
 import { analytics } from "../../../../../Firebase/firebase";
+import { Link } from "react-router-dom";
 
 const Search = () => {
   const { setAbrir2 } = useContext(AppContext);
@@ -42,9 +43,9 @@ const Search = () => {
 
   const resultado = filtrado.slice(0, 10).map((valor) => {
     return (
-      <a
-        onClick={() => SendBuscadoToAnalitycs()}
-        href={`/producto/${valor.id}`}
+      <Link
+        onClick={() => SendBuscadoToAnalitycs() & setAbrir2(false)}
+        to={`/producto/${valor.id}`}
         className="S-I-background"
         key={valor.id}
       >
@@ -67,7 +68,7 @@ const Search = () => {
             </div>
           </div>
         </div>
-      </a>
+      </Link>
     );
   });
 

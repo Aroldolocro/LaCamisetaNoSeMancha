@@ -255,7 +255,7 @@ const Form = () => {
     <div className="CheckoutForm-background">
       <div className="CheckoutForm-content">
         <div className="CheckoutForm-C-B1">
-          <p className="CF-txt-1">Informacion de contacto</p>
+          <p className="CF-txt-1">Información de contacto</p>
           <div className="CF-INPUT-background">
             <div className="CF-INPUT-B1">
               <input
@@ -410,7 +410,7 @@ const Form = () => {
                   placeholder=" "
                   value={ZipInput}
                 />
-                <label className="CF-INPUT-label">Codigo postal</label>
+                <label className="CF-INPUT-label">Código postal</label>
               </div>
               <div className="CF-INPUT-B2">
                 {ZipError && (
@@ -484,12 +484,12 @@ const Form = () => {
                   placeholder=" "
                   value={PhoneInput}
                 />
-                <label className="CF-INPUT-label">Telefono</label>
+                <label className="CF-INPUT-label">Teléfono</label>
               </div>
               <div className="CF-INPUT-B2">
                 {PhoneError && (
                   <p className="CF-INPUT-txt-1">
-                    Debes ingresar tu número de telefono (Ej. "
+                    Debes ingresar tu número de teléfono (Ej. "
                     <strong>+549</strong>1162621717")
                   </p>
                 )}

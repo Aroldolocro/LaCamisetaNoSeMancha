@@ -28,7 +28,7 @@ const Footer = () => {
               Contacto
             </Link>
             <Link to={"/preguntas_frecuentes"} className="F-txt-1">
-              Preuguntas frecuentes
+              Preguntas frecuentes
             </Link>
             <Link
               to={"/preguntas_frecuentes/nuestros_productos"}

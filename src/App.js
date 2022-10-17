@@ -1,6 +1,6 @@
 import "./App.css";
 import "./Firebase/firebase";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import ConstAppContext from "./Context/Appcontext";
 import HomePage from "./Desktop/Pages/HomePage/HomePage";
 import NotFoundPage from "./Desktop/Pages/NotFoundPage/NotFoundPage";
@@ -32,7 +32,7 @@ import MobilePreguntasFrecuentes from "./Mobile/Components/MobileFooter/Componen
 export default function App() {
   return (
     <ConstAppContext>
-      <BrowserRouter>
+      <HashRouter hashType="slash">
         <Navbar />
         <MobileNavbar />
         <Routes>
@@ -117,7 +117,7 @@ export default function App() {
         </Routes>
         <Footer />
         <MobileFooter />
-      </BrowserRouter>
+      </HashRouter>
     </ConstAppContext>
   );
 }

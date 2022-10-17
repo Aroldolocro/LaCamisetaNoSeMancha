@@ -240,7 +240,7 @@ const MobileSeguimientoPage = () => {
             • Contacto: {data3.Email}
           </p>
           <p className="RenderOfMobilePendingOrApprovedOrder-txt-2">
-            • Direccion de entrega: {data3.Direccion} {data3.Direccion2}{" "}
+            • Dirección de entrega: {data3.Direccion} {data3.Direccion2}{" "}
             {data3.Compañia}
           </p>
         </div>

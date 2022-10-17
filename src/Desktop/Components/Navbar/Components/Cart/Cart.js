@@ -90,7 +90,7 @@ const Cart = () => {
     <div className="EC-background">
       <div className="EC-content">
         <div className="EC-C-B1">
-          <p className="EC-txt-1">Tu carrito está vacio.</p>
+          <p className="EC-txt-1">Tu carrito está vacío.</p>
         </div>
 
         <div className="EC-C-B2">
@@ -129,7 +129,7 @@ const Cart = () => {
 
         <div className="FC-C-B2">
           <div className="FC-C-B2B1">
-            <p className="FC-txt-1">Detalles del pago y envio en el Checkout</p>
+            <p className="FC-txt-1">Detalles del pago y envío en el Checkout</p>
           </div>
 
           <Link

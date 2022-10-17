@@ -26,7 +26,7 @@ const MobileFooter = () => {
               Contacto
             </Link>
             <Link to={"/preguntas_frecuentes"} className="MobileFooter-txt-1">
-              Preuguntas frecuentes
+              Preguntas frecuentes
             </Link>
             <Link
               to={"/preguntas_frecuentes/nuestros_productos"}

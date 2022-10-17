@@ -9,7 +9,7 @@ const Explorar = () => {
         SEGUÍ TU ORDEN
       </Link>
       <Link to={"/preguntas_frecuentes"} className="DD-txt-1">
-        CONTACTANOS
+        CONTÁCTANOS
       </Link>
     </div>
   );

@@ -250,7 +250,7 @@ const MobileForm = () => {
     <div className="MobileForm-background">
       <div className="MobileForm-content">
         <div className="MobileForm-C-B1">
-          <p className="MobileForm-txt-1">Informacion de contacto</p>
+          <p className="MobileForm-txt-1">Información de contacto</p>
         </div>
         <div className="MobileForm-C-B2">
           <div className="MobileForm-INP-DIV">
@@ -275,7 +275,7 @@ const MobileForm = () => {
           ) : null}
         </div>
         <div className="MobileForm-C-B3">
-          <p className="MobileForm-txt-1">Informacion de contacto</p>
+          <p className="MobileForm-txt-1">Información de contacto</p>
         </div>
         <div className="MobileForm-C-B4">
           <select
@@ -410,7 +410,7 @@ const MobileForm = () => {
               value={ZipInput}
               type={"number"}
             />
-            <label className="MobileForm-label">Codigo postal</label>
+            <label className="MobileForm-label">Código postal</label>
           </div>
           {ZipError ? (
             <p className="MobileForm-txt-error">Debes ingresar tu ZIP</p>
@@ -480,7 +480,7 @@ const MobileForm = () => {
               value={PhoneInput}
               type={"tel"}
             />
-            <label className="MobileForm-label">Telefono</label>
+            <label className="MobileForm-label">Teléfono</label>
           </div>
           {PhoneError ? (
             <p className="MobileForm-txt-error">

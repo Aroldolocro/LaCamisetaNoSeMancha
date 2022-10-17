@@ -364,7 +364,7 @@ const SectionOne = () => {
                   onClick={() => setOpen4((prev) => !prev)}
                 >
                   <div className="PG-C-B3B2B3B1B1B1">
-                    <p className="PG-txt-9">DESCRIPCION</p>
+                    <p className="PG-txt-9">DESCRIPCIÓN</p>
                   </div>
                   <div className="PG-C-B3B2B3B1B1B2">
                     <svg

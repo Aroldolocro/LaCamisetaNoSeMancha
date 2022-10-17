@@ -26,7 +26,6 @@ const SectionTwo = () => {
   const [selected, setSelected] = useState();
   const [sizeError, setSizeError] = useState(false);
   const [SinStock, setSinStock] = useState();
-  // const [Loaded, setLoaded] = useState(false);
   const [OpenDescription, setOpenDescription] = useState(true);
 
   useEffect(() => {
@@ -288,7 +287,7 @@ const SectionTwo = () => {
             className="SectionTwo-C-B4B1"
             onClick={() => setOpenDescription((prev) => !prev)}
           >
-            <p className="SectionTwo-txt-7">Descripcion</p>
+            <p className="SectionTwo-txt-7">Descripción</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"

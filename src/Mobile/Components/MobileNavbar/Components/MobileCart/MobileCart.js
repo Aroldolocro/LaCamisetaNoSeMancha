@@ -78,7 +78,7 @@ const MobileCart = () => {
         <div className="MobileFulledCart-C-B2">
           <div className="MobileFulledCart-C-B2B1">
             <p className="MobileFulledCart-txt-1">
-              Detalles del pago y envio en el Checkout
+              Detalles del pago y envío en el Checkout
             </p>
           </div>
           <Link
@@ -99,7 +99,7 @@ const MobileCart = () => {
     <div className="MobileEmptyCart-background">
       <div className="MobileEmptyCart-content">
         <div className="MobileEmptyCart-C-B1">
-          <p className="MobileEmptyCart-txt-1">Tu carrito está vacio.</p>
+          <p className="MobileEmptyCart-txt-1">Tu carrito está vacío.</p>
         </div>
         <div className="MobileEmptyCart-C-B2">
           <div

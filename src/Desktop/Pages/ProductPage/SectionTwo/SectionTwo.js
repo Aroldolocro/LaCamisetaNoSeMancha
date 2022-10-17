@@ -1,4 +1,5 @@
 import "./SectionTwo.css";
+import { Link } from "react-router-dom";
 
 import { useParams } from "react-router-dom";
 
@@ -42,8 +43,8 @@ const SectionTwo = () => {
     .filter((item) => (item.equipo === NombreEquipo) & (item.id !== IdProducto))
     .slice(0, 4)
     .map((item2) => (
-      <a
-        href={`/producto/${item2.id}`}
+      <Link
+        to={`/producto/${item2.id}`}
         className={Loaded ? "RA-background" : "RA-background-notdisplayed"}
         key={item2.id}
       >
@@ -68,7 +69,7 @@ const SectionTwo = () => {
             </p>
           </div>
         </div>
-      </a>
+      </Link>
     ));
 
   const RelatedArray2 = data2
@@ -76,8 +77,8 @@ const SectionTwo = () => {
     .filter((item) => item.equipo !== NombreEquipo)
     .slice(0, 4 - RelatedArray1.length)
     .map((item2) => (
-      <a
-        href={`/producto/${item2.id}`}
+      <Link
+        to={`/producto/${item2.id}`}
         className={Loaded ? "RA-background" : "RA-background-notdisplayed"}
         key={item2.id}
       >
@@ -102,7 +103,7 @@ const SectionTwo = () => {
             </p>
           </div>
         </div>
-      </a>
+      </Link>
     ));
 
   const PGSTdbProductsLoader = (

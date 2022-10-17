@@ -33,7 +33,7 @@ const Payment = () => {
 
   useEffect(() => {
     const montoo = OrderPriceAfterShippingCalculationOnNumberFormat;
-    fetch("http://localhost:5000/api", {
+    fetch("https://www.gifted-galileo.191-101-234-167.plesk.page/api", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -76,6 +76,8 @@ const Payment = () => {
     }
   }, [Payment1, Payment2, setPaymentMethod]);
 
+  const RenderOfPaymentLoader = <div className="RenderOfPaymentLoader"></div>;
+
   const RenderOfPayment1 = (
     <div className="ROP1-background">
       <div className="ROP1-content">
@@ -94,13 +96,15 @@ const Payment = () => {
             </svg>
           </div>
           <div className="ROP1-C-B1B2">
-            Despues de clickear "Pagar", una ventana de Mercado Pago se abrirá
+            Después de cliquear "Pagar", una ventana de Mercado Pago se abrirá
             para que puedas procesar tu pago.
           </div>
         </div>
         <div className="ROP1-C-B2">
-          {Payment1 && (
+          {backendData ? (
             <form id="FORM_ID" onClick={() => setMpOrderGenerated(true)} />
+          ) : (
+            RenderOfPaymentLoader
           )}
         </div>
       </div>
@@ -146,7 +150,7 @@ const Payment = () => {
 
   const RenderOfCoveredMethod = (
     <div className="ROCM-background">
-      ENVIO A DOMICILIO&nbsp;&nbsp;-&nbsp;&nbsp;
+      ENVÍO A DOMICILIO&nbsp;&nbsp;-&nbsp;&nbsp;
       <p className="ROCM-txt-1">
         <strong>{ShippingPriceOnCurrencyFormat}</strong>
       </p>
@@ -157,7 +161,7 @@ const Payment = () => {
 
   const RenderOfNotCoveredMethod = (
     <div className="RONCM-background">
-      ENVIO A DOMICILIO -&nbsp;<strong>{ShippingPriceOnCurrencyFormat}</strong>
+      ENVÍO A DOMICILIO -&nbsp;<strong>{ShippingPriceOnCurrencyFormat}</strong>
     </div>
   );
 
@@ -210,8 +214,8 @@ const Payment = () => {
         </div>
 
         <div className="CheckoutPayment-C-B2">
-          <a
-            href="/preguntas_frecuentes/pagos"
+          <Link
+            to="/preguntas_frecuentes/pagos"
             target={"_blank"}
             className="CheckoutPayment-C-B2B1"
           >
@@ -229,9 +233,9 @@ const Payment = () => {
               </svg>
             </div>
             <div className="CheckoutPayment-C-B2B1B2">
-              ¿Como procesamos los pagos en nuestra tienda?
+              ¿Cómo procesamos los pagos en nuestra tienda?
             </div>
-          </a>
+          </Link>
         </div>
         <div className="CheckoutPayment-C-B3">
           <div className="CheckoutPayment-C-B3B1">

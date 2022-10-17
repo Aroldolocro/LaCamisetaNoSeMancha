@@ -162,7 +162,7 @@ const CheckoutPage = () => {
                 <div className="CP-C-B1B1B1B2B1">
                   <div className="CP-C-B1B1B1B2B1B1">
                     <p className={abrir6 ? "CP-txt-2-active" : "CP-txt-2"}>
-                      Informacion de envío
+                      Información de envío
                     </p>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -192,30 +192,27 @@ const CheckoutPage = () => {
             </div>
             <div className="CP-C-B1B1B3">
               <div className="CP-C-B1B1B3B1">
-                <a
-                  href={"/preguntas_frecuentes/devoluciones"}
-                  rel="noreferrer"
+                <Link
+                  to="/preguntas_frecuentes/devoluciones"
                   target={"_blank"}
                   className="CP-txt-3"
                 >
                   Políticas de devoluciones
-                </a>
-                <a
-                  href={"/preguntas_frecuentes/envios"}
-                  rel="noreferrer"
+                </Link>
+                <Link
+                  to="/preguntas_frecuentes/envios"
                   target={"_blank"}
                   className="CP-txt-3"
                 >
                   Políticas de envíos
-                </a>
-                <a
-                  href={"/preguntas_frecuentes/pagos"}
-                  rel="noreferrer"
+                </Link>
+                <Link
+                  to="/preguntas_frecuentes/pagos"
                   target={"_blank"}
                   className="CP-txt-3"
                 >
                   Políticas de pagos
-                </a>
+                </Link>
               </div>
             </div>
           </div>

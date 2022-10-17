@@ -1,9 +1,10 @@
 import "./MobileMenuTemporadas.css";
 import { AppContext } from "../../../../../../Context/Appcontext";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 const MobileMenuTemporadas = () => {
-  const { setOpenMenu1 } = useContext(AppContext);
+  const { setOpenMenu1, setOpenMenu } = useContext(AppContext);
   return (
     <div className={"MobileMenuTemporadas-background"}>
       <div className="MobileMenuTemporadas-content">
@@ -28,24 +29,48 @@ const MobileMenuTemporadas = () => {
           </div>
           <p className="MobileMenuTemporadas-txt-1">TEMPORADAS</p>
         </div>
-        <a href={`/temporadas/93-94`} className="MobileMenuTemporadas-C-B2">
+        <Link
+          onClick={() => setOpenMenu(false)}
+          to={`/temporadas/93-94`}
+          className="MobileMenuTemporadas-C-B2"
+        >
           <p className="MobileMenuTemporadas-txt-1">93/94</p>
-        </a>
-        <a href={`/temporadas/94-95`} className="MobileMenuTemporadas-C-B3">
+        </Link>
+        <Link
+          onClick={() => setOpenMenu(false)}
+          to={`/temporadas/94-95`}
+          className="MobileMenuTemporadas-C-B3"
+        >
           <p className="MobileMenuTemporadas-txt-1">94/95</p>
-        </a>
-        <a href={`/temporadas/95-96`} className="MobileMenuTemporadas-C-B4">
+        </Link>
+        <Link
+          onClick={() => setOpenMenu(false)}
+          to={`/temporadas/95-96`}
+          className="MobileMenuTemporadas-C-B4"
+        >
           <p className="MobileMenuTemporadas-txt-1">95/96</p>
-        </a>
-        <a href={`/temporadas/96-97`} className="MobileMenuTemporadas-C-B5">
+        </Link>
+        <Link
+          onClick={() => setOpenMenu(false)}
+          to={`/temporadas/96-97`}
+          className="MobileMenuTemporadas-C-B5"
+        >
           <p className="MobileMenuTemporadas-txt-1">96/97</p>
-        </a>
-        <a href={`/temporadas/98-99`} className="MobileMenuTemporadas-C-B6">
+        </Link>
+        <Link
+          onClick={() => setOpenMenu(false)}
+          to={`/temporadas/98-99`}
+          className="MobileMenuTemporadas-C-B6"
+        >
           <p className="MobileMenuTemporadas-txt-1">98/99</p>
-        </a>
-        <a href={`/temporadas/00-01`} className="MobileMenuTemporadas-C-B7">
+        </Link>
+        <Link
+          onClick={() => setOpenMenu(false)}
+          to={`/temporadas/00-01`}
+          className="MobileMenuTemporadas-C-B7"
+        >
           <p className="MobileMenuTemporadas-txt-1">00/01</p>
-        </a>
+        </Link>
       </div>
     </div>
   );

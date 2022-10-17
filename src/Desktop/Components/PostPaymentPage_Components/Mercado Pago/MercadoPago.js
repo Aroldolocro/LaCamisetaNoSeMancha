@@ -5,7 +5,7 @@ import { getFirestore, doc, updateDoc, getDoc } from "firebase/firestore";
 import { AppContext } from "../../../../Context/Appcontext";
 
 const MercadoPago = () => {
-  const { orderId, CleanLocalStorage, setProductlist } = useContext(AppContext);
+  const { orderId, CleanLocalStorage } = useContext(AppContext);
   const [searchParams] = useSearchParams();
   const [EstadoDePago, setEstadoDePago] = useState();
   const [PaymentId, setPaymentId] = useState();
@@ -18,7 +18,7 @@ const MercadoPago = () => {
   useEffect(() => {
     setEstadoDePago(searchParams.get("status"));
     setPaymentId(searchParams.get("payment_id"));
-  }, [searchParams, setProductlist, setPaymentId]);
+  }, [searchParams, setPaymentId]);
 
   useEffect(() => {
     const db = getFirestore();
@@ -81,6 +81,7 @@ const MercadoPago = () => {
   const RenderOfProductsOrdered = data2.map((product, index) => (
     <Link
       to={`/producto/${product.Id}`}
+      target={"_blank"}
       className="ROPO-background"
       key={index}
     >
@@ -264,8 +265,8 @@ const MercadoPago = () => {
           <p className="ROFO-txt-4">
             Tu pago realizado por Mercado Pago ha sido rechazado.
             <br />
-            Tu orden ha sido cancelada por Mercado Pago, ya séa que no dispones
-            de fondo o por seguridad
+            Tu orden ha sido cancelada por Mercado Pago, ya sea que no dispones
+            de fondo o por motivos de seguridad
           </p>
         </div>
         <div className="ROFO-C-B5">

@@ -37,7 +37,7 @@ const MobilePayment = () => {
 
   useEffect(() => {
     const montoo = OrderPriceAfterShippingCalculationOnNumberFormat;
-    fetch("http://localhost:5000/api", {
+    fetch("https://www.gifted-galileo.191-101-234-167.plesk.page/api", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -80,7 +80,7 @@ const MobilePayment = () => {
 
   const RenderOfMobileCoveredMethod = (
     <div className="RenderOfMobileCoveredMethod-background">
-      <p className="RenderOfMobileCoveredMethod-txt-1">ENVIO A DOMICILIO</p>
+      <p className="RenderOfMobileCoveredMethod-txt-1">ENVÍO A DOMICILIO</p>
       <p className="RenderOfMobileCoveredMethod-txt-2">
         {ShippingPriceOnCurrencyFormat}
       </p>
@@ -90,11 +90,15 @@ const MobilePayment = () => {
 
   const RenderOfMobileNotCoveredMethod = (
     <div className="RenderOfMobileNotCoveredMethod-background">
-      <p className="RenderOfMobileNotCoveredMethod-txt-1">ENVIO A DOMICILIO</p>
+      <p className="RenderOfMobileNotCoveredMethod-txt-1">ENVÍO A DOMICILIO</p>
       <p className="RenderOfMobileNotCoveredMethod-txt-2">
         {ShippingPriceOnCurrencyFormat}
       </p>
     </div>
+  );
+
+  const RenderOfMobilePaymentLoader = (
+    <div className="RenderOfMobilePaymentLoader"></div>
   );
 
   return (
@@ -134,8 +138,8 @@ const MobilePayment = () => {
               : RenderOfMobileNotCoveredMethod}
           </div>
         </div>
-        <a
-          href="/preguntas_frecuentes/pagos"
+        <Link
+          to="/preguntas_frecuentes/pagos"
           target={"_blank"}
           className="MobilePayment-C-B2"
         >
@@ -151,9 +155,9 @@ const MobilePayment = () => {
             <path d="M0 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V5zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V7a2 2 0 0 1-2-2H3z" />
           </svg>
           <p className="MobilePayment-txt-4">
-            ¿Como procesamos los pagos en nuestra tienda?
+            ¿Cómo procesamos los pagos en nuestra tienda?
           </p>
-        </a>
+        </Link>
         <div className="MobilePayment-C-B3">
           <div
             className="MobilePayment-C-B3B1"
@@ -196,14 +200,16 @@ const MobilePayment = () => {
               <path d="M2 5.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z" />
             </svg>
             <p className="MobilePayment-txt-7">
-              Despues de clickear "Pagar", una ventana de Mercado Pago se abrirá
+              Después de cliquear "Pagar", una ventana de Mercado Pago se abrirá
               para que puedas procesar tu pago.
             </p>
-            {Payment1 && (
+            {backendData ? (
               <form
                 id="MOBILE_FORM_ID"
                 onClick={() => setMpOrderGenerated(true)}
               />
+            ) : (
+              RenderOfMobilePaymentLoader
             )}
           </div>
           <div

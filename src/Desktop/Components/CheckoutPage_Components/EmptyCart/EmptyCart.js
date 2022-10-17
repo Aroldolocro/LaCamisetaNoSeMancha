@@ -29,7 +29,7 @@ const EmptyCart = () => {
                 </div>
 
                 <div className="CEC-C-B2B1B3">
-                  <p className="CEC-txt-2">VOLER A LA TIENDA</p>
+                  <p className="CEC-txt-2">VOLVER A LA TIENDA</p>
                 </div>
               </Link>
             </div>

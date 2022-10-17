@@ -204,8 +204,8 @@ const MobileMercadoPago = () => {
           <p className="MobileMercadoPago-txt-4">
             Tu pago realizado por Mercado Pago ha sido rechazado.
             <br />
-            Tu orden ha sido cancelada por Mercado Pago, ya séa que no dispones
-            de fondo o por seguridad
+            Tu orden ha sido cancelada por Mercado Pago, ya sea que no dispones
+            de fondo o por motivos de seguridad
           </p>
         )}
       </div>

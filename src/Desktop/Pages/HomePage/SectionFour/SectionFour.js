@@ -96,9 +96,9 @@ const SectionFour = () => {
           {S4dbProductsLoader}
         </div>
         <div className="S4-C-B4">
-          <a href={`/destacados`} className="S4-btn">
+          <Link to={"/destacados"} className="S4-btn">
             VER TODOS
-          </a>
+          </Link>
         </div>
       </div>
     </div>

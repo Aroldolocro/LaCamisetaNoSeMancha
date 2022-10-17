@@ -79,7 +79,7 @@ const MobileCheckoutPage = () => {
                 : "MobileCheckoutPage-txt-2"
             }
           >
-            Informacion de envío
+            Información de envío
           </p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -107,30 +107,27 @@ const MobileCheckoutPage = () => {
         {abrir6 && <MobileForm />}
         {abrir7 && <MobilePayment />}
         <div className="MobileCheckoutPage-C-B4">
-          <a
-            href={"/preguntas_frecuentes/devoluciones"}
-            rel="noreferrer"
+          <Link
+            to={"/preguntas_frecuentes/devoluciones"}
             target={"_blank"}
             className="MobileCheckoutPage-txt-3"
           >
             Políticas de devoluciones
-          </a>
-          <a
-            href={"/preguntas_frecuentes/envios"}
-            rel="noreferrer"
+          </Link>
+          <Link
+            to={"/preguntas_frecuentes/envios"}
             target={"_blank"}
             className="MobileCheckoutPage-txt-3"
           >
             Políticas de envíos
-          </a>
-          <a
-            href={"/preguntas_frecuentes/pagos"}
-            rel="noreferrer"
+          </Link>
+          <Link
+            to={"/preguntas_frecuentes/pagos"}
             target={"_blank"}
             className="MobileCheckoutPage-txt-3"
           >
             Políticas de pagos
-          </a>
+          </Link>
         </div>
       </div>
     </div>

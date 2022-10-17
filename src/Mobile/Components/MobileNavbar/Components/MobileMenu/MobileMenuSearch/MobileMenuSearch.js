@@ -1,10 +1,13 @@
 import "./MobileMenuSearch.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
 import { analytics } from "../../../../../../Firebase/firebase";
 import { logEvent } from "firebase/analytics";
+import { Link } from "react-router-dom";
+import { AppContext } from "../../../../../../Context/Appcontext";
 
 const MobileMenuSearch = () => {
+  const { setOpenMenu } = useContext(AppContext);
   const [data, setData] = useState([]);
   const [filtrado, setFiltrado] = useState([]);
 
@@ -41,9 +44,9 @@ const MobileMenuSearch = () => {
     .slice(0, 4)
     .map((valor, index) => {
       return (
-        <a
-          onClick={() => SendBuscadoToAnalitycs()}
-          href={`/producto/${valor.id}`}
+        <Link
+          onClick={() => SendBuscadoToAnalitycs() & setOpenMenu(false)}
+          to={`/producto/${valor.id}`}
           className="MobileMenuSearch_DB_Products-background"
           key={index}
         >
@@ -63,7 +66,7 @@ const MobileMenuSearch = () => {
               }).format(valor.precio)}
             </p>
           </div>
-        </a>
+        </Link>
       );
     });
 
