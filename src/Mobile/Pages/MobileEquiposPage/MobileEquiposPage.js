@@ -282,7 +282,11 @@ const MobileEquiposPage = () => {
           </div>
           <div className="MobileEquiposPage-C-B2B5">
             {data2.EquipoHistoria2
-              ? MobileEquiposPage_EquipoHistoria2
+              ? data2.EquipoHistoria2
+                ? MobileEquiposPage_EquipoHistoria2
+                : MobileEquiposPage_EquipoHistoria2_Loader
+              : data2.EquipoHistoria
+              ? MobileEquiposPage_EquipoHistoria
               : MobileEquiposPage_EquipoHistoria2_Loader}
           </div>
         </div>
