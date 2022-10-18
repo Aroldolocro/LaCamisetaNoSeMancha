@@ -139,7 +139,9 @@ const Payment = () => {
           <Link
             to={"/postpayment"}
             className="ROP2-button"
-            onClick={() => GenerarOrdenTransferencia()}
+            onClick={() =>
+              GenerarOrdenTransferencia() & setMpOrderGenerated(false)
+            }
           >
             Ya pagué
           </Link>

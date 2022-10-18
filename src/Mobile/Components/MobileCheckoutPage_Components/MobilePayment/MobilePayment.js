@@ -262,7 +262,9 @@ const MobilePayment = () => {
             <Link
               className="MobilePayment-btn-1"
               to={"/postpayment"}
-              onClick={() => GenerarOrdenTransferencia()}
+              onClick={() =>
+                GenerarOrdenTransferencia() & setMpOrderGenerated(false)
+              }
             >
               Ya pagué
             </Link>

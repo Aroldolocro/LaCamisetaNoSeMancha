@@ -13,8 +13,10 @@ import NullPaymentMethod from "../../Components/PostPaymentPage_Components/NullP
 import MobileTransferenciaBancaria from "../../../Mobile/Components/Desktop_PostPaymentPage_Components/MobileTransferenciaBancaria/MobileTransferenciaBancaria";
 import MobileMercadoPago from "../../../Mobile/Components/Desktop_PostPaymentPage_Components/MobileMercadoPago/MobileMercadoPago";
 import { AppContext } from "../../../Context/Appcontext";
+import { useSearchParams } from "react-router-dom";
 
 const PostPaymentPage = () => {
+  const [searchParams] = useSearchParams();
   window.scrollTo(0, 0);
   const {
     orderId,
@@ -32,11 +34,28 @@ const PostPaymentPage = () => {
   const [MercadoPagoState, setMercadoPagoState] = useState(false);
   const [TransferenciaState, setTransferenciaState] = useState(false);
   const [NullPaymentMethodState, setNullPaymentMethodState] = useState(false);
+  const [EstadoDePago, setEstadoDePago] = useState();
+  const [PaymentId, setPaymentId] = useState();
+  const [PaymentCheck, setPaymentCheck] = useState(false);
+
+  useEffect(() => {
+    setEstadoDePago(searchParams.get("status"));
+    setPaymentId(searchParams.get("payment_id"));
+    if (
+      EstadoDePago !== null &&
+      EstadoDePago !== undefined &&
+      PaymentId !== null &&
+      PaymentId !== undefined
+    ) {
+      setPaymentCheck(true);
+    }
+  }, [searchParams, setPaymentId, EstadoDePago, PaymentId]);
 
   useEffect(() => {
     if (
       MpOrderGenerated &&
-      OrderPriceAfterShippingCalculation !== ShippingPriceOnCurrencyFormat
+      OrderPriceAfterShippingCalculation !== ShippingPriceOnCurrencyFormat &&
+      PaymentCheck
     ) {
       GenerarOrdenMercadoPago();
       setMpOrderGenerated(false);
@@ -52,6 +71,7 @@ const PostPaymentPage = () => {
     OrderPriceAfterShippingCalculation,
     ShippingPriceOnCurrencyFormat,
     setProductlist,
+    PaymentCheck,
   ]);
 
   useEffect(() => {
